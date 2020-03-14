@@ -1,0 +1,54 @@
+# statusbar
+# Initialisation
+set -g status-position bottom
+set -g status-justify left
+set -g status-bg colour240
+set -g status-fg colour53
+#set -g status-attr dim
+set -g status-left ''
+
+#date et heure en bas à droite
+set -g status-right '#[fg=colour233,bg=colour201,bold] #(/home/maxime/.tmux/batterie.lua) #[fg=colour233,bg=colour164,bold] %d/%m #[fg=colour233,bg=colour89,bold] %H:%M '
+set -g status-right-length 50
+set -g status-left-length 20
+
+#indication sur la fenètre ouverte
+#setw -g window-status-current-fg colour234 #le numéro/nom 
+#setw -g window-status-current-bg colour165 #le fond
+#setw -g window-status-current-attr bold
+setw -g window-status-current-style 'fg=colour234 bg=colour165 bold'
+setw -g window-status-current-format ' #I#[fg=colour236]:#[fg=colour236]#W#[fg=colour236]#F ' #le petit texte
+
+#les autes fenètres
+#setw -g window-status-fg colour245 
+#setw -g window-status-bg colour89
+#setw -g window-status-attr none
+setw -g window-status-style 'fg=colour245 bg=colour89'
+setw -g window-status-format ' #I#[fg=colour250]:#[fg=colour250]#W#[fg=colour250]#F '
+
+# statusbar
+# Initialisation
+set -g status-position bottom
+set -g status-justify left
+set -g status-bg colour240
+set -g status-fg colour1
+set -g status-attr dim
+set -g status-left ''
+
+#date et heure en bas à droite
+set -g status-right '#[fg=colour233,bg=colour20,bold] %d/%m #[fg=colour233,bg=colour27,bold] %H:%M '
+set -g status-right-length 50
+set -g status-left-length 20
+
+#indication sur la fenètre ouverte
+setw -g window-status-current-fg colour234 #le numéro/nom 
+setw -g window-status-current-bg colour26 #le fond
+setw -g window-status-current-attr bold
+setw -g window-status-current-format ' #I#[fg=colour236]:#[fg=colour236]#W#[fg=colour236]#F ' #le petit texte
+
+#les autes fenètres
+setw -g window-status-fg colour245 
+setw -g window-status-bg colour19
+setw -g window-status-attr none
+setw -g window-status-format ' #I#[fg=colour250]:#[fg=colour250]#W#[fg=colour250]#F '
+

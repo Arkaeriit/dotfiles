@@ -1,0 +1,23 @@
+# statusbar
+# Initialisation
+set -g status-position bottom
+set -g status-justify left
+set -g status-bg colour248
+set -g status-fg colour53
+#set -g status-attr dim
+set -g status-left ''
+
+#date et heure en bas à droite
+set -g status-right '#[fg=colour233,bg=colour20,bold] %d/%m #[fg=colour233,bg=colour27,bold] %H:%M '
+set -g status-right '#[fg=colour233,bg=colour27,bold] #(/home/maxime/.tmux/batterie.lua) #[fg=colour233,bg=colour20,bold] %d/%m #[fg=colour232,bg=colour17,bold] %H:%M '
+set -g status-right-length 50
+set -g status-left-length 20
+
+#indication sur la fenètre ouverte
+setw -g window-status-current-style 'fg=colour245 bg=colour19'
+setw -g window-status-current-format ' #I#[fg=colour250]:#[fg=colour250]#W#[fg=colour250]#F ' #le petit texte
+
+#les autes fenètres
+setw -g window-status-style 'fg=colour245 bg=colour25'
+setw -g window-status-format ' #I#[fg=colour250]:#[fg=colour250]#W#[fg=colour250]#F '
+

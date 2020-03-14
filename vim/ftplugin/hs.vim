@@ -1,0 +1,4 @@
+
+"indendation
+set smartindent
+

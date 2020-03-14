@@ -1,0 +1,77 @@
+"execute pathogen#infect()
+
+"permet d'activer la coloration syntaxique
+syntax enable
+
+"utilise le theme voulu
+set background=dark
+"dark
+colorscheme dark-meadow 
+"light
+"colorscheme Base2Tone_MorningLight
+
+"controle le nombre de charactère que font les TAB
+set tabstop=4
+
+"permet d'être plus sur d l'utilisation continue des espaces
+set softtabstop=4
+
+"écrit des espaces quand on fait tab
+set expandtab  
+
+"permet une inentation intéligente
+set shiftwidth=4
+
+"indique le numéro de la ligne
+set number
+
+"surligne les recherches
+set hlsearch
+
+" use 256 colors in terminal
+if !has("gui_running")
+    set t_Co=256
+    set term=screen-256color
+endif
+
+"permet d'utiliser des  .vimrc locaux à un dossier tout en empéchant vim de faire des trucs louches avec des comandes
+set exrc
+set secure
+
+"permet d'utiliser des plugins specifiques à certain types de fichier
+filetype plugin on
+
+"considère les .h comme du c et pas du c++
+augroup project
+    autocmd!
+    autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
+augroup END
+
+"permet d'utiliser le clipboard général
+vnoremap <C-c> "+y
+inoremap <C-v> <Esc>"+P
+
+"permet d'avoir des racourssis clavier normaux
+noremap <C-s> <Esc>:w<Cr>
+inoremap <C-s> <Esc>:w<Cr>a
+noremap <C-q> <Esc>:q<Cr>
+inoremap <C-q> <Esc>:q<Cr>
+"Je n'autorise pas les do et undo en inserion car je ne peut pas limiter ces
+"actions à un seul mot
+"inoremap <C-z> <Esc>ua
+"inoremap <C-y> <Esc><C-r>a
+nnoremap <C-z> <Esc>u
+nnoremap <C-y> <C-r>
+inoremap <C-a> <Esc>gg0vG$
+"récupère les fonctions du Ctrl-R avec ctrl-i
+inoremap <C-i> <C-v>
+
+"empèche les bips en tty
+set visualbell
+
+"s'assure que les ftplugin marchent
+filetype plugin indent on 
+
+"contrôle de la souris
+set mouse=a
+

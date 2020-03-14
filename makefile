@@ -1,5 +1,5 @@
 
-save : saveVim
+save : saveVim saveFish saveTmux saveBash
 
 saveVim :
 	cp -fR ~/.vim/* vim/

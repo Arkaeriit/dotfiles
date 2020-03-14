@@ -27,6 +27,7 @@ restoreFish :
 restoreTmux :
 	mkdir -p ~/.tmux
 	cp -fR tmux/* ~/.tmux/
+	cp -fR tmux/.tmux.conf ~/.tmux/
 	ln -fs ~/.tmux/tmux.conf ~/.tmux.conf
 
 restoreBash :

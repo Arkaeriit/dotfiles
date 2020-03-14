@@ -14,3 +14,23 @@ saveTmux :
 saveBash :
 	cp -fr ~/.bash/* bash/
 
+restore : restoreVim restoreFish restoreTmux restoreBash
+
+restoreVim :
+	mkdir -p ~/.vim
+	cp -fR vim/* ~/.vim/
+
+restoreFish :
+	mkdir -p ~/.config/fish
+	cp -fR fish/* ~/.config/fish/
+
+restoreTmux :
+	mkdir -p ~/.tmux
+	cp -fR tmux/* ~/.tmux/
+	ln -fs ~/.tmux/tmux.conf ~/.tmux.conf
+
+restoreBash :
+	mkdir -p ~/.bash
+	cp -fR bash/* ~/.bash/
+	ln -fs ~/.bash/bashrc ~/.bashrc
+

@@ -2,6 +2,9 @@ configDir = ~/.config
 
 save : saveVim saveFish saveTmux saveBash saveProfile
 
+createSaveDirs :
+	mkdir -p vim fish bash tmux
+
 saveVim :
 	cp -fR $(configDir)/vim/* vim/
 

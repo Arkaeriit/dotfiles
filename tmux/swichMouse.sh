@@ -3,9 +3,9 @@
 if [ `cat ~/.tmux/swichMouseData` == yep ]
 then
     tmux set -g mouse off
-    echo nope > ~/.tmux/swichMouseData
+    echo nope > ~/.config/tmux/swichMouseData
 else
     tmux set -g mouse on
-    echo yep > ~/.tmux/swichMouseData 
+    echo yep > ~/.config/tmux/swichMouseData 
 fi
 

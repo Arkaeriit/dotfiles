@@ -5,7 +5,7 @@
 #                [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux
 #        fi
 #fi
-tmux &> /dev/null
+tmux -f "$XDG_CONFIG_HOME"/tmux/tmux.conf &> /dev/null
 
 ASCnotes read #lance ASCnotes
 

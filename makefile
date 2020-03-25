@@ -1,37 +1,41 @@
+configDir = ~/.config
 
-save : saveVim saveFish saveTmux saveBash
+save : saveVim saveFish saveTmux saveBash saveProfile
 
 saveVim :
-	cp -fR ~/.vim/* vim/
+	cp -fR $(configDir)/vim/* vim/
 
 saveFish :
-	cp -fR ~/.config/fish/* fish/
+	cp -fR $(configDir)/fish/* fish/
 
 saveTmux :
-	cp -fR ~/.tmux/* tmux/
-	cp -fR ~/.tmux.conf tmux/
+	cp -fR $(configDir)/tmux/* tmux/
 
 saveBash :
-	cp -fr ~/.bash/* bash/
+	cp -fr $(configDir)/bash/* bash/
 
-restore : restoreVim restoreFish restoreTmux restoreBash
+saveProfile :
+	cp -fr ~/.profile profile
+
+restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile
 
 restoreVim :
-	mkdir -p ~/.vim
-	cp -fR vim/* ~/.vim/
+	mkdir -p $(configDir)/vim
+	cp -fR vim/* $(configDir)/vim/
 
 restoreFish :
-	mkdir -p ~/.config/fish
-	cp -fR fish/* ~/.config/fish/
+	mkdir -p $(configDir)/fish
+	cp -fR fish/* $(configDir)/fish/
 
 restoreTmux :
-	mkdir -p ~/.tmux
-	cp -fR tmux/* ~/.tmux/
-	cp -fR tmux/.tmux.conf ~/.tmux/
-	ln -fs ~/.tmux/tmux.conf ~/.tmux.conf
+	mkdir -p $(configDir)/tmux
+	cp -fR tmux/* $(configDir)/tmux/
 
 restoreBash :
-	mkdir -p ~/.bash
-	cp -fR bash/* ~/.bash/
-	ln -fs ~/.bash/bashrc ~/.bashrc
+	mkdir -p $(configDir)/bash
+	cp -fR bash/* $(configDir)/bash/
+	ln -fs $(configDir)/bash/bashrc ~/.bashrc
+
+restoreProfile :
+	cp -f profile ~/.profile
 

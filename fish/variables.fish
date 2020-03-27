@@ -13,7 +13,7 @@ set -Ux XDG_DATA_HOME "$HOME/.local/share"
 set -Ux XDG_CONFIG_HOME "$HOME/.config"
 set -Ux XDG_CACHE_HOME "$HOME/.cache"
 
-#!/bin/bash
+# Évite d'encombrer ~/
 set -Ux ATOM_HOME "$XDG_DATA_HOME"/atom
 set -Ux HISTFILE "$XDG_DATA_HOME"/bash/history
 set -Ux GNUPGHOME "$XDG_DATA_HOME"/gnupg
@@ -29,3 +29,7 @@ set -Ux OCTAVE_HISTFILE "$XDG_CACHE_HOME/octave-hsts"
 set -Ux OCTAVE_SITE_INITFILE "$XDG_CONFIG_HOME/octave/octaverc"
 set -Ux WGETRC "$XDG_CONFIG_HOME/wgetrc"
 set -Ux VIMINIT ":source $XDG_CONFIG_HOME"/vim/vimrc
+
+# Path
+set PATH $HOME/.local/bin $PATH
+

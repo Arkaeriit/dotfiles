@@ -1,5 +1,6 @@
 #!/bin/bash
 
+XDG_CONFIG_HOME="$HOME/.config"
 source "$XDG_CONFIG_HOME/bash/variables.sh" #exportation de variables d'environement
 source "$XDG_CONFIG_HOME/bash/completion.sh" #autocompletion de bash
 source "$XDG_CONFIG_HOME/bash/color.sh" #alias collorés

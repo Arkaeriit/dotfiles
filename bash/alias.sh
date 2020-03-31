@@ -22,9 +22,3 @@ alias jc='echo "javac *.java" && javac *.java'
 alias power='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias makeDebug='make 2>&1 >/dev/null | head' #On met stdout dans stderr puis on ne regarde que le début de tout ça. Cela sert à s'occuper des erreurs une à une
 
-#alias ssh
-alias raspail='ssh maxpi@192.168.43.115' #via patate à bretelle
-#alias raspail='ssh maxpi@2a01:e34:ec00:1750:72b2:5ab1:7f00:ce60' #via duruy_box
-alias ENSshEA='ssh -p 7722 maxiboui49@kerosen.ensea.fr'
-alias DELLvolo='ssh -p 7654 maxime@192.168.1.15' #Le viex pc sur le delvolo
-

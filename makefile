@@ -1,6 +1,6 @@
 configDir = ~/.config
 
-save : saveVim saveFish saveTmux saveBash saveProfile
+save : saveVim saveFish saveTmux saveBash saveProfile saveSSH
 
 createSaveDirs :
 	mkdir -p vim fish bash tmux
@@ -20,7 +20,10 @@ saveBash :
 saveProfile :
 	cp -fr ~/.profile profile
 
-restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile
+saveSSH :
+	cp -fr ~/.ssh/config ssh
+
+restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile restoreSSH
 
 restoreVim :
 	mkdir -p $(configDir)/vim
@@ -41,4 +44,7 @@ restoreBash :
 
 restoreProfile :
 	cp -f profile ~/.profile
+
+restoreSSH :
+	cp -f ssh ~/.ssh/config
 

@@ -1,0 +1,16 @@
+Host abi
+    # Abi sur son mbp sur la Bbox Ginette
+    HostName 192.168.1.44
+    User abi
+
+Host raspail
+    # raspail sur la patate
+    HostName 192.168.43.115
+    User maxpi
+
+Host ensea
+    # Mon école
+    HostName kerosen.ensea.fr
+    User maxiboui49
+    Port 7722
+

@@ -1,5 +1,6 @@
 Host abi
     # Abi sur son mbp sur la Bbox Ginette
+    #HostName 192.168.1.44
     HostName 192.168.1.44
     User abi
 
@@ -14,3 +15,15 @@ Host ensea
     User maxiboui49
     Port 7722
 
+# *** do not forget to change 'enseaZ' to your proper identifier below
+# Shortcut for saclay.iot-lab.info
+Host iot-sac
+    User ensea4
+    HostName saclay.iot-lab.info
+
+# Shortcut to directly access the A8 nodes at saclay
+Host node-a8-*
+    User root
+    HostName %h
+    ProxyCommand ssh -q ensea4@saclay.iot-lab.info -W %h:%p
+    StrictHostKeyChecking no

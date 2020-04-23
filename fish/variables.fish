@@ -21,7 +21,6 @@ set -Ux GTK2_RC_FILES "$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 set -Ux ICEAUTHORITY "$XDG_CACHE_HOME"/ICEauthority
 set -Ux IPYTHONDIR "$XDG_CONFIG_HOME"/jupyter
 set -Ux JUPYTER_CONFIG_DIR "$XDG_CONFIG_HOME"/jupyter
-set -Ux _JAVA_OPTIONS -Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 set -Ux LESSKEY "$XDG_CONFIG_HOME"/less/lesskey
 set -Ux LESSHISTFILE "$XDG_CACHE_HOME"/less/history
 set -Ux NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc

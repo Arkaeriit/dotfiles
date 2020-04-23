@@ -1,0 +1,6 @@
+# couleur des bares entre les panes
+#set -g pane-border-fg white #outdated
+#set -g pane-active-border-fg colour53 #outdated
+set -g pane-border-style 'fg=white'
+set -g pane-active-border-style 'fg=colour20'
+

@@ -21,4 +21,5 @@ alias gc='git commit -m '
 alias jc='echo "javac *.java" && javac *.java'
 alias power='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias makeDebug='make 2>&1 >/dev/null | head' #On met stdout dans stderr puis on ne regarde que le début de tout ça. Cela sert à s'occuper des erreurs une à une
+alias ping='/usr/bin/ping -c 5'
 

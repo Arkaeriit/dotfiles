@@ -40,3 +40,8 @@ NC="\e[m"               # Color Reset
 PS1="\[$BBlue\]^[n.n]^\[\e[$BCyan\] \w >\[\e[m\]"
 PS2="\[$BBlue\]>[o.o]>\[\e[$BCyan] >>\[\e[m\]"
 
+#root
+#PS1="\[$BRed\]x[>.<]x\[\e[$BYellow\] \w \[$BRed\]>\[\e[m\]"
+#PS2="\[$BRed\]>[x.x]>\[\e[$BYellow] \[$BRed\]>>\[\e[m\]"
+
+

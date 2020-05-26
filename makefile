@@ -1,4 +1,5 @@
 configDir = ~/.config
+dataDir = ~/.local/share
 
 save : saveVim saveFish saveTmux saveBash saveProfile saveSSH
 
@@ -27,6 +28,9 @@ restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile restoreS
 
 restoreVim :
 	mkdir -p $(configDir)/vim
+	mkdir -p $(dataDir)/vim/swap
+	mkdir -p $(dataDir)/vim/undo
+	mkdir -p $(dataDir)/vim/backup
 	cp -fR vim/* $(configDir)/vim/
 
 restoreFish :

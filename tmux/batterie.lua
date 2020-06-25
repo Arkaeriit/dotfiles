@@ -16,15 +16,18 @@ max=tonumber(maxS:sub(#maxS-3,#maxS-1))
 per=tonumber(perS:sub(#perS-3,#perS-1))
 atc=math.tointeger(100*per/max)
 
+--symbol for charge. The look depend on the font and the terminal
+elec = '☳'
+--elec = '⚡'
 if etatS:sub(#etatS-8,#etatS)==" charging" then
     if atc>75 then
 	    bat="┃███┣"
     elseif atc>50 then
-	    bat="┃██⚡┣"
+	    bat="┃█"..elec.."█┣"
     elseif atc>25 then
-	    bat="┃█⚡ ┣"
+	    bat="┃█"..elec.." ┣"
     else
-	    bat="┃ ⚡ ┣"
+	    bat="┃ "..elec.." ┣"
     end
 else
     if atc>75 then

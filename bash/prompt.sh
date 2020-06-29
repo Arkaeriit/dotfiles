@@ -44,4 +44,7 @@ PS2="\[$BBlue\]>[o.o]>\[\e[$BCyan] >>\[\e[m\]"
 #PS1="\[$BRed\]o[>.<]o\[\e[$BYellow\] \w \[$BRed\]>\[\e[m\]"
 #PS2="\[$BRed\]>[x.x]>\[\e[$BYellow] \[$BRed\]>>\[\e[m\]"
 
+#travail
+#PS1="\[$BGreen\]o[^.^]o\[\e[$BWhite\] \w \[$BGreen\]>\[\e[m\]"
+#PS2="\[$BGreen\]>[o.o]>\[\e[$BWhite] >>\[\e[m\]"
 

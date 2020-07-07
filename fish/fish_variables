@@ -1,32 +1,32 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export ATOM_HOME:/home/maxime/\x2elocal/share/atom
+SETUVAR --export ATOM_HOME:$HOME/\x2elocal/share/atom
 SETUVAR CXX:/usr/bin/g\x2b\x2b
 SETUVAR EDITOR:vim
-SETUVAR --export GNUPGHOME:/home/maxime/\x2elocal/share/gnupg
-SETUVAR --export GTK2_RC_FILES:/home/maxime/\x2econfig/gtk\x2d2\x2e0/gtkrc
-SETUVAR --export HISTFILE:/home/maxime/\x2elocal/share/bash/history
-SETUVAR --export ICEAUTHORITY:/home/maxime/\x2ecache/ICEauthority
-SETUVAR --export IPYTHONDIR:/home/maxime/\x2econfig/jupyter
-SETUVAR --export JUPYTER_CONFIG_DIR:/home/maxime/\x2econfig/jupyter
-SETUVAR --export LESSHISTFILE:/home/maxime/\x2ecache/less/history
-SETUVAR --export LESSKEY:/home/maxime/\x2econfig/less/lesskey
-SETUVAR --export NPM_CONFIG_USERCONFIG:/home/maxime/\x2econfig/npm/npmrc
-SETUVAR --export OCTAVE_HISTFILE:/home/maxime/\x2ecache/octave\x2dhsts
-SETUVAR --export OCTAVE_SITE_INITFILE:/home/maxime/\x2econfig/octave/octaverc
-SETUVAR --export VIMINIT:\x3asource\x20/home/maxime/\x2econfig/vim/vimrc
-SETUVAR --export WGETRC:/home/maxime/\x2econfig/wgetrc
-SETUVAR --export XDG_CACHE_HOME:/home/maxime/\x2ecache
-SETUVAR --export XDG_CONFIG_HOME:/home/maxime/\x2econfig
-SETUVAR --export XDG_DATA_HOME:/home/maxime/\x2elocal/share
-SETUVAR --export XDG_DESKTOP_DIR:/home/maxime/Desktop
-SETUVAR --export XDG_DOCUMENTS_DIR:/home/maxime/Documents
-SETUVAR --export XDG_DOWNLOAD_DIR:/home/maxime/Downloads
-SETUVAR --export XDG_MUSIC_DIR:/home/maxime/Music
-SETUVAR --export XDG_PICTURES_DIR:/home/maxime/Pictures
-SETUVAR --export XDG_PUBLICSHARE_DIR:/home/maxime/Public
-SETUVAR --export XDG_TEMPLATES_DIR:/home/maxime/
-SETUVAR --export XDG_VIDEOS_DIR:/home/maxime/Videos
+SETUVAR --export GNUPGHOME:$HOME/\x2elocal/share/gnupg
+SETUVAR --export GTK2_RC_FILES:$HOME/\x2econfig/gtk\x2d2\x2e0/gtkrc
+SETUVAR --export HISTFILE:$HOME/\x2elocal/share/bash/history
+SETUVAR --export ICEAUTHORITY:$HOME/\x2ecache/ICEauthority
+SETUVAR --export IPYTHONDIR:$HOME/\x2econfig/jupyter
+SETUVAR --export JUPYTER_CONFIG_DIR:$HOME/\x2econfig/jupyter
+SETUVAR --export LESSHISTFILE:$HOME/\x2ecache/less/history
+SETUVAR --export LESSKEY:$HOME/\x2econfig/less/lesskey
+SETUVAR --export NPM_CONFIG_USERCONFIG:$HOME/\x2econfig/npm/npmrc
+SETUVAR --export OCTAVE_HISTFILE:$HOME/\x2ecache/octave\x2dhsts
+SETUVAR --export OCTAVE_SITE_INITFILE:$HOME/\x2econfig/octave/octaverc
+SETUVAR --export VIMINIT:\x3asource\x20$HOME/\x2econfig/vim/vimrc
+SETUVAR --export WGETRC:$HOME/\x2econfig/wgetrc
+SETUVAR --export XDG_CACHE_HOME:$HOME/\x2ecache
+SETUVAR --export XDG_CONFIG_HOME:$HOME/\x2econfig
+SETUVAR --export XDG_DATA_HOME:$HOME/\x2elocal/share
+SETUVAR --export XDG_DESKTOP_DIR:$HOME/Desktop
+SETUVAR --export XDG_DOCUMENTS_DIR:$HOME/Documents
+SETUVAR --export XDG_DOWNLOAD_DIR:$HOME/Downloads
+SETUVAR --export XDG_MUSIC_DIR:$HOME/Music
+SETUVAR --export XDG_PICTURES_DIR:$HOME/Pictures
+SETUVAR --export XDG_PUBLICSHARE_DIR:$HOME/Public
+SETUVAR --export XDG_TEMPLATES_DIR:$HOME/
+SETUVAR --export XDG_VIDEOS_DIR:$HOME/Videos
 SETUVAR __fish_initialized:3100
 SETUVAR fish_color_autosuggestion:5f5f5f
 SETUVAR fish_color_cancel:normal

@@ -27,3 +27,9 @@ Host node-a8-*
     HostName %h
     ProxyCommand ssh -q ensea4@saclay.iot-lab.info -W %h:%p
     StrictHostKeyChecking no
+
+# ssh textboard
+Host analog-city
+    User lowlife
+    HostName 45.79.250.220
+

@@ -48,3 +48,5 @@ export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME/octave/octaverc"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export VIMINIT=":source $XDG_CONFIG_HOME"/vim/vimrc
 
+
+export QSYS_ROOTDIR="/mnt/m.2_1/Quartus/quartus/sopc_builder/bin"

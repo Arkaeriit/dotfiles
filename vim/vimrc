@@ -41,6 +41,9 @@ set number
 "surligne les recherches
 set hlsearch
 
+"assure que le backspace marche
+set backspace=indent,eol,start
+
 " use 256 colors in terminal
 if !has("gui_running")
     set t_Co=256
@@ -81,6 +84,9 @@ inoremap <C-i> <C-v>
 
 "empèche les bips en tty
 set visualbell
+
+"utilise l'espace en tant que leader
+let mapleader = " "
 
 "s'assure que les ftplugin marchent
 filetype plugin indent on 

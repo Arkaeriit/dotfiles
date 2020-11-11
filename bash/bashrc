@@ -10,3 +10,5 @@ source "$XDG_CONFIG_HOME/bash/aliaslocal.sh" #alias local (racourcis...)
 source "$XDG_CONFIG_HOME/bash/setting.sh" #paramètres perso comme l'éditeur
 source "$XDG_CONFIG_HOME/bash/startup.sh" #programes à démarer automatiquement
 
+
+export QSYS_ROOTDIR="/mnt/m.2_1/Quartus/quartus/sopc_builder/bin"

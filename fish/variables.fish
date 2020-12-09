@@ -30,5 +30,8 @@ set -Ux WGETRC "$XDG_CONFIG_HOME/wgetrc"
 set -Ux VIMINIT ":source $XDG_CONFIG_HOME"/vim/vimrc
 
 # Path
-set PATH $HOME/.local/bin $PATH
+set PATH $HOME/.local/bin $PATH /mnt/m.2_1/Quartus/quartus/bin
+
+# Java
+set -Ux JAVA_HOME /usr/lib64/jvm/java-11-openjdk-11/
 

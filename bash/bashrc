@@ -3,12 +3,15 @@
 XDG_CONFIG_HOME="$HOME/.config"
 source "$XDG_CONFIG_HOME/bash/variables.sh" #exportation de variables d'environement
 source "$XDG_CONFIG_HOME/bash/completion.sh" #autocompletion de bash
-source "$XDG_CONFIG_HOME/bash/color.sh" #alias collorés
-source "$XDG_CONFIG_HOME/bash/prompt.sh" #prompt colloré
+source "$XDG_CONFIG_HOME/bash/color.sh" #alias collorÃÂ©s
+source "$XDG_CONFIG_HOME/bash/prompt.sh" #prompt collorÃÂ©
 source "$XDG_CONFIG_HOME/bash/alias.sh" #alias perso
 source "$XDG_CONFIG_HOME/bash/aliaslocal.sh" #alias local (racourcis...)
-source "$XDG_CONFIG_HOME/bash/setting.sh" #paramètres perso comme l'éditeur
-source "$XDG_CONFIG_HOME/bash/startup.sh" #programes à démarer automatiquement
+source "$XDG_CONFIG_HOME/bash/setting.sh" #paramÃÂ¨tres perso comme l'ÃÂ©diteur
+source "$XDG_CONFIG_HOME/bash/startup.sh" #programes ÃÂ  dÃÂ©marer automatiquement
 
 
-export QSYS_ROOTDIR="/mnt/m.2_1/Quartus/quartus/sopc_builder/bin"
+export QSYS_ROOTDIR="/mnt/m.2_1/altera/15.0/quartus/sopc_builder/bin"
+export ALTERAOCLSDKROOT="/mnt/m.2_1/altera/15.0/hld"
+export PATH="$PATH:$QSYS_ROOTDIR:$QSYS_ROOTDIR/../../bin"
+

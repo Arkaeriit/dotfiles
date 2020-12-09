@@ -8,6 +8,7 @@ SETUVAR --export GTK2_RC_FILES:/home/maxime/\x2econfig/gtk\x2d2\x2e0/gtkrc
 SETUVAR --export HISTFILE:/home/maxime/\x2elocal/share/bash/history
 SETUVAR --export ICEAUTHORITY:/home/maxime/\x2ecache/ICEauthority
 SETUVAR --export IPYTHONDIR:/home/maxime/\x2econfig/jupyter
+SETUVAR --export JAVA_HOME:/usr/lib64/jvm/java\x2d11\x2dopenjdk\x2d11/
 SETUVAR --export JUPYTER_CONFIG_DIR:/home/maxime/\x2econfig/jupyter
 SETUVAR --export LESSHISTFILE:/home/maxime/\x2ecache/less/history
 SETUVAR --export LESSKEY:/home/maxime/\x2econfig/less/lesskey
@@ -28,6 +29,7 @@ SETUVAR --export XDG_PUBLICSHARE_DIR:/home/maxime/Public
 SETUVAR --export XDG_TEMPLATES_DIR:/home/maxime/
 SETUVAR --export XDG_VIDEOS_DIR:/home/maxime/Videos
 SETUVAR __fish_initialized:3100
+SETUVAR --export fish_chev_vi:
 SETUVAR fish_color_autosuggestion:5f5f5f
 SETUVAR fish_color_cancel:normal
 SETUVAR fish_color_command:ffd700
@@ -52,7 +54,7 @@ SETUVAR fish_color_status:red
 SETUVAR fish_color_user:00ff00
 SETUVAR fish_color_valid_path:normal
 SETUVAR fish_greeting:Welcome\x20to\x20fish\x2c\x20the\x20friendly\x20interactive\x20shell\x0aType\x20\x60help\x60\x20for\x20instructions\x20on\x20how\x20to\x20use\x20fish
-SETUVAR fish_key_bindings:fish_default_key_bindings
+SETUVAR fish_key_bindings:fish_vi_key_bindings
 SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline

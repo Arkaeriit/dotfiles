@@ -25,5 +25,8 @@ export OCTAVE_HISTFILE="$XDG_CACHE_HOME/octave-hsts"
 export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME/octave/octaverc"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export VIMINIT=":source $XDG_CONFIG_HOME"/vim/vimrc
+
 PATH=$PATH:$HOME/.local/bin
+
+export JAVA_HOME=/usr/lib64/jvm/java-11-openjdk-11/
 

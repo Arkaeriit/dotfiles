@@ -1,31 +1,29 @@
 function fish_prompt
+    set prev_status $status
+    set main_color cyan
+    set sec_color blue
+    set error_color red
+    set smile '^[n.n]^'
     set -x $fish_prompt_pwd_dir_length 0 #permet de ne pas raccoursir le nom des dossiers
-    set_color -o blue 
-    echo -n '^[n.n]^ '
-    set_color -o cyan
+    set_color -o $sec_color 
+    echo -n $smile
+    echo -n ' '
+    set_color -o $main_color
     echo -n (prompt_pwd_full) 
-    if test $status -eq 0 #We want the color of the > to reflect the exit status of the last command
-        set_color cyan
+    set_color -o $sec_color
+    echo -n ' '
+    echo -n $fish_chev_vi #variable moddified by fish_mode_promp.fish to tell the vi mode
+    if test $prev_status -eq 0 #color evolutive promp
+        set_color $main_color
     else
-        set_color grey
+        set_color $error_color
     end
-    echo -n ' >'
+    echo -n '>'
     set_color normal    
 end
 
 #Alternative pour le travail:
-#function fish_prompt
-#    set -x $fish_prompt_pwd_dir_length 0 #permet de ne pas raccoursir le nom des dossiers
-#    set_color -o green
-#    echo -n 'o[^.^]o '
-#    set_color -o grey
-#    echo -n (prompt_pwd_full) 
-#    if test $status -eq 0 #We want the color of the > to reflect the exit status of the last command
-#        set_color green
-#    else
-#        set_color grey
-#    end
-#    echo -n ' >'
-#    set_color normal    
-#end
+#set smile 'o[^.^]o '
+#set main_color white
+#set sec_color green
 

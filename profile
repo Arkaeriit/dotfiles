@@ -49,4 +49,6 @@ export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export VIMINIT=":source $XDG_CONFIG_HOME"/vim/vimrc
 
 
-export QSYS_ROOTDIR="/mnt/m.2_1/Quartus/quartus/sopc_builder/bin"
+export QSYS_ROOTDIR="/mnt/m.2_1/altera/15.0/quartus/sopc_builder/bin"
+
+export ALTERAOCLSDKROOT="/mnt/m.2_1/altera/15.0/hld"

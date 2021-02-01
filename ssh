@@ -38,3 +38,8 @@ Host studentLab
     User ensea
     HostName 192.168.122.247
 
+# neo430 dev
+Host neo430dev
+    User max
+    HostName 192.168.122.183
+

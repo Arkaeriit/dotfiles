@@ -5,4 +5,5 @@ if test -d $SSH_CLIENT
 end
 
 ASCnotes read
+unset fish_chev_vi
 

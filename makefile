@@ -24,7 +24,7 @@ saveProfile :
 saveSSH :
 	cp -fr ~/.ssh/config ssh
 
-restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile restoreSSH
+restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile restoreSSH restoreVivado
 
 restoreVim :
 	mkdir -p $(configDir)/vim
@@ -51,4 +51,9 @@ restoreProfile :
 
 restoreSSH :
 	cp -f ssh ~/.ssh/config
+
+restoreVivado :
+	mkdir -p $(dataDir)/Xilinx/editor
+	cp -f vivado/editor/* $(dataDir)/Xilinx/editor
+	cp -f vivado/vivado $(binDir)/
 

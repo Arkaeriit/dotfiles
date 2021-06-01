@@ -30,10 +30,10 @@ nnoremap <F4> :set background=dark<Enter>:colorscheme dark-meadow<Enter>
 set tabstop=4
 
 "permet d'être plus sur d l'utilisation continue des espaces
-set softtabstop=4
+"set softtabstop=4
 
 "écrit des espaces quand on fait tab
-set expandtab  
+"set expandtab  
 
 "permet une inentation intéligente
 set shiftwidth=4
@@ -46,6 +46,9 @@ set hlsearch
 
 "assure que le backspace marche
 set backspace=indent,eol,start
+
+"affiche les longue lignes sur plusieur lignes
+set wrap
 
 " use 256 colors in terminal
 if !has("gui_running")

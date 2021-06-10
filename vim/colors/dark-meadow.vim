@@ -51,6 +51,10 @@ function! s:highlight(group, fg, bg, style)
     \ . " gui="       . a:style
 endfunction
 
+"Cusor status bar color
+call s:highlight("StatusLine",    s:Grey7,  s:Grey66, s:none)
+call s:highlight("StatusLineNC",  s:Grey42, s:Grey66, s:none)
+
 " Syntax highlighting groups
 "
 " For reference on what each group does, please refer to this:

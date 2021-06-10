@@ -66,7 +66,7 @@ filetype plugin on
 "considère les .h comme du c et pas du c++
 augroup project
     autocmd!
-    autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
+    autocmd BufRead,BufNewFile *.h,*.c set filetype=c
 augroup END
 
 "permet d'utiliser le clipboard général
@@ -99,4 +99,13 @@ filetype plugin indent on
 
 "contrôle de la souris
 set mouse=a
+
+"Arrete d'utiliser Esc pour quiter le mode insertion
+inoremap jk <esc>
+
+"Status line
+set laststatus=2               "Always visible
+set statusline=%f\ -\ %Y\ %r\  "Left side (name and type)
+set statusline+=%=             " Switch to the right side
+set statusline+=%l\ %c%V\ %P   "Right side (Position)
 

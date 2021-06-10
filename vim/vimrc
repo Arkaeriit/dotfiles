@@ -14,17 +14,29 @@ set ruler
 "permet d'activer la coloration syntaxique
 syntax enable
 
-"utilise le theme voulu
-"dark
-set background=dark
-colorscheme dark-meadow 
-"light
-"set background=light
-"colorscheme Base2Tone_MorningLight
+"Configure la liste des thèmes
+function ThemeList(themeNumber)
+	if a:themeNumber == 0
+		"dark (default)
+		set background=dark
+		colorscheme dark-meadow 
+	elseif a:themeNumber == 1
+		"light
+		set background=light
+		colorscheme Base2Tone_MorningLight
+	else
+		call ThemeList(0)
+	endif
+endfunction
+call ThemeList(0)
 
 "Change theme on the fly
-nnoremap <F3> :set background=light<Enter>:colorscheme Base2Tone_MorningLight<Enter>
-nnoremap <F4> :set background=dark<Enter>:colorscheme dark-meadow<Enter>
+let g:MyThemeCount=0
+function CycleTheme()
+	let g:MyThemeCount = (g:MyThemeCount + 1) % 2
+	call ThemeList(g:MyThemeCount)
+endfunction
+nnoremap <F3> :call CycleTheme()<Enter>
 
 "controle le nombre de charactère que font les TAB
 set tabstop=4

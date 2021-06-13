@@ -1,33 +1,33 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export ATOM_HOME:/home/mbouillot/\x2elocal/share/atom
+SETUVAR --export ATOM_HOME:/home/maxime/\x2elocal/share/atom
 SETUVAR CXX:/usr/bin/g\x2b\x2b
 SETUVAR EDITOR:vim
-SETUVAR --export GNUPGHOME:/home/mbouillot/\x2elocal/share/gnupg
-SETUVAR --export GTK2_RC_FILES:/home/mbouillot/\x2econfig/gtk\x2d2\x2e0/gtkrc
-SETUVAR --export HISTFILE:/home/mbouillot/\x2elocal/share/bash/history
-SETUVAR --export ICEAUTHORITY:/home/mbouillot/\x2ecache/ICEauthority
-SETUVAR --export IPYTHONDIR:/home/mbouillot/\x2econfig/jupyter
+SETUVAR --export GNUPGHOME:/home/maxime/\x2elocal/share/gnupg
+SETUVAR --export GTK2_RC_FILES:/home/maxime/\x2econfig/gtk\x2d2\x2e0/gtkrc
+SETUVAR --export HISTFILE:/home/maxime/\x2elocal/share/bash/history
+SETUVAR --export ICEAUTHORITY:/home/maxime/\x2ecache/ICEauthority
+SETUVAR --export IPYTHONDIR:/home/maxime/\x2econfig/jupyter
 SETUVAR --export JAVA_HOME:/usr/lib64/jvm/java\x2d11\x2dopenjdk\x2d11/
-SETUVAR --export JUPYTER_CONFIG_DIR:/home/mbouillot/\x2econfig/jupyter
-SETUVAR --export LESSHISTFILE:/home/mbouillot/\x2ecache/less/history
-SETUVAR --export LESSKEY:/home/mbouillot/\x2econfig/less/lesskey
-SETUVAR --export NPM_CONFIG_USERCONFIG:/home/mbouillot/\x2econfig/npm/npmrc
-SETUVAR --export OCTAVE_HISTFILE:/home/mbouillot/\x2ecache/octave\x2dhsts
-SETUVAR --export OCTAVE_SITE_INITFILE:/home/mbouillot/\x2econfig/octave/octaverc
-SETUVAR --export VIMINIT:\x3asource\x20/home/mbouillot/\x2econfig/vim/vimrc
-SETUVAR --export WGETRC:/home/mbouillot/\x2econfig/wgetrc
-SETUVAR --export XDG_CACHE_HOME:/home/mbouillot/\x2ecache
-SETUVAR --export XDG_CONFIG_HOME:/home/mbouillot/\x2econfig
-SETUVAR --export XDG_DATA_HOME:/home/mbouillot/\x2elocal/share
-SETUVAR --export XDG_DESKTOP_DIR:/home/mbouillot/Desktop
-SETUVAR --export XDG_DOCUMENTS_DIR:/home/mbouillot/Documents
-SETUVAR --export XDG_DOWNLOAD_DIR:/home/mbouillot/Downloads
-SETUVAR --export XDG_MUSIC_DIR:/home/mbouillot/Music
-SETUVAR --export XDG_PICTURES_DIR:/home/mbouillot/Pictures
-SETUVAR --export XDG_PUBLICSHARE_DIR:/home/mbouillot/Public
-SETUVAR --export XDG_TEMPLATES_DIR:/home/mbouillot/
-SETUVAR --export XDG_VIDEOS_DIR:/home/mbouillot/Videos
+SETUVAR --export JUPYTER_CONFIG_DIR:/home/maxime/\x2econfig/jupyter
+SETUVAR --export LESSHISTFILE:/home/maxime/\x2ecache/less/history
+SETUVAR --export LESSKEY:/home/maxime/\x2econfig/less/lesskey
+SETUVAR --export NPM_CONFIG_USERCONFIG:/home/maxime/\x2econfig/npm/npmrc
+SETUVAR --export OCTAVE_HISTFILE:/home/maxime/\x2ecache/octave\x2dhsts
+SETUVAR --export OCTAVE_SITE_INITFILE:/home/maxime/\x2econfig/octave/octaverc
+SETUVAR --export VIMINIT:\x3asource\x20/home/maxime/\x2econfig/vim/vimrc
+SETUVAR --export WGETRC:/home/maxime/\x2econfig/wgetrc
+SETUVAR --export XDG_CACHE_HOME:/home/maxime/\x2ecache
+SETUVAR --export XDG_CONFIG_HOME:/home/maxime/\x2econfig
+SETUVAR --export XDG_DATA_HOME:/home/maxime/\x2elocal/share
+SETUVAR --export XDG_DESKTOP_DIR:/home/maxime/Desktop
+SETUVAR --export XDG_DOCUMENTS_DIR:/home/maxime/Documents
+SETUVAR --export XDG_DOWNLOAD_DIR:/home/maxime/Downloads
+SETUVAR --export XDG_MUSIC_DIR:/home/maxime/Music
+SETUVAR --export XDG_PICTURES_DIR:/home/maxime/Pictures
+SETUVAR --export XDG_PUBLICSHARE_DIR:/home/maxime/Public
+SETUVAR --export XDG_TEMPLATES_DIR:/home/maxime/
+SETUVAR --export XDG_VIDEOS_DIR:/home/maxime/Videos
 SETUVAR __fish_initialized:3100
 SETUVAR --export fish_chev_vi:
 SETUVAR fish_color_autosuggestion:5f5f5f

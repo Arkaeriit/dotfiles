@@ -14,26 +14,56 @@ set ruler
 "permet d'activer la coloration syntaxique
 syntax enable
 
-"utilise le theme voulu
-"dark
-set background=dark
-colorscheme dark-meadow 
-"light
-"set background=light
-"colorscheme Base2Tone_MorningLight
+"Configure la liste des thèmes
+function ThemeList(themeNumber)
+	if a:themeNumber == 0
+		"dark (default)
+		set background=dark
+		colorscheme dark-meadow 
+	elseif a:themeNumber == 1
+		"light
+		set background=light
+		colorscheme Base2Tone_MorningLight
+	elseif a:themeNumber == 2
+		set background=light
+		colorscheme pencil
+	elseif a:themeNumber == 3
+		set background=dark
+		colorscheme hashpunk
+	elseif a:themeNumber == 4
+		set background=dark
+		colorscheme oldbook8
+	elseif a:themeNumber == 5
+		set background=dark
+		colorscheme hashpunk-lapis
+	elseif a:themeNumber == 6
+		set background=dark
+		colorscheme duotone-darkearth
+	elseif a:themeNumber == 7
+		set background=dark
+		colorscheme photon
+	else
+		call ThemeList(0)
+	endif
+endfunction
+call ThemeList(1111) "Goes to default
 
 "Change theme on the fly
-nnoremap <F3> :set background=light<Enter>:colorscheme Base2Tone_MorningLight<Enter>
-nnoremap <F4> :set background=dark<Enter>:colorscheme dark-meadow<Enter>
+let g:MyThemeCount=0
+function CycleTheme()
+	let g:MyThemeCount = (g:MyThemeCount + 1) % 8
+	call ThemeList(g:MyThemeCount)
+endfunction
+nnoremap <F3> :call CycleTheme()<Enter>:echom g:colors_name<Enter>
 
 "controle le nombre de charactère que font les TAB
 set tabstop=4
 
 "permet d'être plus sur d l'utilisation continue des espaces
-set softtabstop=4
+"set softtabstop=4
 
 "écrit des espaces quand on fait tab
-set expandtab  
+"set expandtab  
 
 "permet une inentation intéligente
 set shiftwidth=4
@@ -46,6 +76,9 @@ set hlsearch
 
 "assure que le backspace marche
 set backspace=indent,eol,start
+
+"affiche les longue lignes sur plusieur lignes
+set wrap
 
 " use 256 colors in terminal
 if !has("gui_running")
@@ -63,7 +96,7 @@ filetype plugin on
 "considère les .h comme du c et pas du c++
 augroup project
     autocmd!
-    autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
+    autocmd BufRead,BufNewFile *.h,*.c set filetype=c
 augroup END
 
 "permet d'utiliser le clipboard général
@@ -96,4 +129,13 @@ filetype plugin indent on
 
 "contrôle de la souris
 set mouse=a
+
+"Arrete d'utiliser Esc pour quiter le mode insertion
+inoremap jk <esc>
+
+"Status line
+set laststatus=2               "Always visible
+set statusline=%f\ -\ %Y\ %r\  "Left side (name and type)
+set statusline+=%=             " Switch to the right side
+set statusline+=%l\ %c%V\ %P   "Right side (Position)
 

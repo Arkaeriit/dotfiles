@@ -117,6 +117,9 @@ nnoremap <C-y> <C-r>
 inoremap <C-a> <Esc>gg0vG$
 "récupère les fonctions du Ctrl-R avec ctrl-i
 inoremap <C-i> <C-v>
+"case insensitive search
+nnoremap <C-f> /\c
+inoremap <C-f> /\c
 
 "empèche les bips en tty
 set visualbell

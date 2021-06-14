@@ -70,6 +70,9 @@ set shiftwidth=4
 
 "indique le numéro de la ligne
 set number
+set norelativenumber "Par default, force le mode non relatif
+nnoremap <C-n> :set relativenumber!<Cr>
+
 
 "surligne les recherches
 set hlsearch

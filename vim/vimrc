@@ -56,6 +56,25 @@ function CycleTheme()
 endfunction
 nnoremap <F3> :call CycleTheme()<Enter>:echom g:colors_name<Enter>
 
+"Change spell checking on the fly
+let g:spellCount = 0
+function ToogleSpell()
+	let g:spellCount = g:spellCount + 1
+	let l:trueNumber = g:spellCount % 3
+	if l:trueNumber == 0
+		set nospell
+		echom "No spell checking"
+	elseif l:trueNumber == 1
+		set spell spelllang=en_us
+		echom "English spell checking"
+	else
+		set spell spelllang=fr
+		echom "French spell checking"
+	endif
+endfunction
+nnoremap <F4> :call ToogleSpell()<Enter>
+
+
 "controle le nombre de charactère que font les TAB
 set tabstop=4
 
@@ -72,7 +91,6 @@ set shiftwidth=4
 set number
 set norelativenumber "Par default, force le mode non relatif
 nnoremap <C-n> :set relativenumber!<Cr>
-
 
 "surligne les recherches
 set hlsearch
@@ -122,7 +140,8 @@ inoremap <C-a> <Esc>gg0vG$
 inoremap <C-i> <C-v>
 "case insensitive search
 nnoremap <C-f> /\c
-inoremap <C-f> /\c
+inoremap <Esc><C-f> /\c
+inoremap <C-g> <Esc>/1233#{<Cr>i 
 
 "empèche les bips en tty
 set visualbell

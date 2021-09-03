@@ -43,3 +43,8 @@ Host neo430dev
     User max
     HostName 192.168.122.183
 
+# SSH chatroor
+Host devzat
+    HostName devzat.hackclub.com
+    User Arkaeriit
+

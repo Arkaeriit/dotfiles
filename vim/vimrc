@@ -118,6 +118,7 @@ filetype plugin on
 augroup project
     autocmd!
     autocmd BufRead,BufNewFile *.h,*.c set filetype=c
+    autocmd BufRead,BufNewFile *.nelua set filetype=lua
 augroup END
 
 "permet d'utiliser le clipboard général

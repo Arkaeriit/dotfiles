@@ -43,3 +43,8 @@ Host neo430dev
     User max
     HostName 192.168.122.183
 
+# Chatroom
+Host devzat
+	User Arkaeriit
+	Hostname devzat.hackclub.com
+

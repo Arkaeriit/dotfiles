@@ -142,7 +142,13 @@ inoremap <C-i> <C-v>
 "case insensitive search
 nnoremap <C-f> /\c
 inoremap <Esc><C-f> /\c
-inoremap <C-g> <Esc>/1233#{<Cr>i 
+"stop search
+inoremap <C-g> <Esc>/ 1233#{<Cr>i 
+noremap <C-g> <Esc>/ 1233#{<Cr>i 
+"Omega
+inoremap <C-O> Ω
+execute "set <M-o>=\eo"
+inoremap <M-o> ω
 
 "empèche les bips en tty
 set visualbell

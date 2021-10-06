@@ -147,8 +147,7 @@ inoremap <C-g> <Esc>/  1233#{<Cr>i
 noremap <C-g> <Esc>/ 1233#{<Cr>
 "Omega
 inoremap <C-O> Ω
-execute "set <M-o>=\eo"
-inoremap <M-o> ω
+inoremap <C-P> ω
 
 "empèche les bips en tty
 set visualbell

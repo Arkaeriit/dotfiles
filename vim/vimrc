@@ -143,8 +143,8 @@ inoremap <C-i> <C-v>
 nnoremap <C-f> /\c
 inoremap <Esc><C-f> /\c
 "stop search
-inoremap <C-g> <Esc>/  1233#{<Cr>i 
-noremap <C-g> <Esc>/ 1233#{<Cr>
+inoremap <C-g> <Esc>/  1233#{<Cr>:echom "Search cleared."<Cr>i 
+noremap <C-g> <Esc>/ 1233#{<Cr>:echom "Search cleared."<Cr>
 "Omega
 inoremap <C-O> Ω
 inoremap <C-P> ω

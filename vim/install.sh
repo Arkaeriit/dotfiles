@@ -14,15 +14,6 @@ mkdir -p bundle/killersheep/plugin
 mv killersheep/plugin/* bundle/killersheep/plugin/
 rm -Rf killersheep
 
-# YCP
-mkdir -p bundle
-cd bundle
-git clone https://github.com/ycm-core/YouCompleteMe.git
-cd YouCompleteMe
-git submodule update --init --recursive
-python3 install.py
-cd ../..
-
 # NerdCommenter
 cd bundle
 git clone https://github.com/preservim/nerdcommenter.git

@@ -9,7 +9,7 @@ set -g status-left ''
 
 #date et heure en bas à droite
 set -g status-right '#[fg=colour233,bg=colour20,bold] %d/%m #[fg=colour233,bg=colour27,bold] %H:%M '
-set -g status-right '#[fg=colour233,bg=colour33,bold] #(~/.config/tmux/batterie.lua) #[fg=colour233,bg=colour27,bold] %Y-%m-%d #[fg=colour232,bg=colour21,bold] %H:%M '
+set -g status-right '##[fg=colour233,bg=colour27,bold] %Y-%m-%d #[fg=colour232,bg=colour21,bold] %H:%M '
 set -g status-right-length 50
 set -g status-left-length 20
 

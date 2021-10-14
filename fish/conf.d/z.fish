@@ -1,2 +1,2 @@
-source (lua /home/maxime/.local/share/z.lua/z.lua --init fish | psub)
+source (lua $HOME/.local/share/z.lua/z.lua --init fish | psub)
 

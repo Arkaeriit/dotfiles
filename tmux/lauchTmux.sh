@@ -1,2 +1,2 @@
 #!/bin/sh
-tmux -f /home/maxime/.config/tmux/tmux.conf
+tmux -f $HOME/.config/tmux/tmux.conf

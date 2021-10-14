@@ -8,7 +8,7 @@ set -g status-fg colour53
 set -g status-left ''
 
 #date et heure en bas à droite
-set -g status-right '#[fg=colour233,bg=colour201,bold] #(/home/maxime/.tmux/batterie.lua) #[fg=colour233,bg=colour164,bold] %d/%m #[fg=colour233,bg=colour89,bold] %H:%M '
+set -g status-right '#[fg=colour233,bg=colour201,bold] #($HOME/.tmux/batterie.lua) #[fg=colour233,bg=colour164,bold] %d/%m #[fg=colour233,bg=colour89,bold] %H:%M '
 set -g status-right-length 50
 set -g status-left-length 20
 

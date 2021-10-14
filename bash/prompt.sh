@@ -37,8 +37,8 @@ NC="\e[m"               # Color Reset
 #PS1="\[\e[1;34m\]^[n.n]^\[\e[1;36m\] \w ➤\[\e[m\]"
 #PS2="\[\e[1;34m\]>[o.-]>\[\e[1;36m\] ➤➤\[\e[m\]"
 #normal cursor
-PS1="\[$BBlue\]^[n.n]^\[\e[$BCyan\] \w >\[\e[m\]"
-PS2="\[$BBlue\]>[o.o]>\[\e[$BCyan] >>\[\e[m\]"
+PS1="\[$BRed\]v[-.-]>π\[\e[$BGreen\] \w >\[\e[m\]"
+PS2="\[$BRed\]>[o.o]>\[\e[$BBreen] >>\[\e[m\]"
 
 #root
 #PS1="\[$BRed\]o[>.<]o\[\e[$BYellow\] \w \[$BRed\]>\[\e[m\]"
@@ -47,4 +47,5 @@ PS2="\[$BBlue\]>[o.o]>\[\e[$BCyan] >>\[\e[m\]"
 #travail
 #PS1="\[$BGreen\]o[^.^]o\[\e[$BWhite\] \w \[$BGreen\]>\[\e[m\]"
 #PS2="\[$BGreen\]>[o.o]>\[\e[$BWhite] >>\[\e[m\]"
+
 

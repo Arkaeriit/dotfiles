@@ -70,10 +70,6 @@ restoreProfile :
 restoreSSH :
 	cp -f ssh ~/.ssh/config
 
-restoreVivado :
-	mkdir -p $(dataDir)/Xilinx/editor
-	cp -f vivado/editor/* $(dataDir)/Xilinx/editor
-	cp -f vivado/vivado $(binDir)/
 
 restoreNewsboat :
 	mkdir -p $(configDir)/newsboat

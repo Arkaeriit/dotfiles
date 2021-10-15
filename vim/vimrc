@@ -79,10 +79,10 @@ nnoremap <F4> :call ToogleSpell()<Enter>
 set tabstop=4
 
 "permet d'être plus sur d l'utilisation continue des espaces
-"set softtabstop=4
+set softtabstop=4
 
 "écrit des espaces quand on fait tab
-"set expandtab  
+set expandtab  
 
 "permet une inentation intéligente
 set shiftwidth=4

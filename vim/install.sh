@@ -1,9 +1,10 @@
 #!/bin/sh
 
 #CSCOPE
-wget http://cscope.sourceforge.net/cscope_maps.vim
-mkdir -b bundle/cscope/plugin
-mv cscope_maps.vim bundle/cscope/plugin
+git clone https://github.com/Arkaeriit/cscope_map_fork.git
+mkdir -p bundle/cscope/plugin
+mv cscope_map_fork/* bundle/cscope/plugin
+rm -Rf cscope_map_fork
 
 #Killersheep
 git clone https://github.com/vim/killersheep.git

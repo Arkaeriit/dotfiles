@@ -1,10 +1,14 @@
 #!/bin/sh
+
+#CSCOPE
+wget http://cscope.sourceforge.net/cscope_maps.vim
+mkdir -b bundle/cscope/plugin
+mv cscope_maps.vim bundle/cscope/plugin
+
 #Killersheep
 git clone https://github.com/vim/killersheep.git
-mkdir -p autoload
-mkdir -p plugin
-mv killersheep/autoload/* autoload/
-mv killersheep/plugin/* plugin/
+mkdir -p bundle/killersheep/plugin
+mv killersheep/plugin/* bundle/killersheep/plugin/
 rm -Rf killersheep
 
 #YCP

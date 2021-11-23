@@ -151,6 +151,9 @@ inoremap <C-O> Ω
 inoremap <C-P> ω
 " Remplace tous les tabs par 3 espaces
 nnoremap <F5> :%s/	/    /g<Cr>:echom "Replaced all tabs."<Cr>
+" Remove anoying history popup
+nnoremap q: :q
+nnoremap Q: q:
 
 "empèche les bips en tty
 set visualbell

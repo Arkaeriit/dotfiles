@@ -45,6 +45,12 @@ Host neo430dev
 
 # Chatroom
 Host devzat
-	User Arkaeriit
-	Hostname devzat.hackclub.com
+    User Arkaeriit
+    Hostname devzat.hackclub.com
+
+# Soft serve
+Host soft-serve
+    User mbouillot
+    Hostname git.bobignou.red
+    Port 23231
 

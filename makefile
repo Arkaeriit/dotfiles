@@ -1,5 +1,6 @@
 configDir = ~/.config
 dataDir = ~/.local/share
+binDir = ~/.local/bin
 
 save : saveVim saveFish saveTmux saveBash saveProfile saveSSH
 

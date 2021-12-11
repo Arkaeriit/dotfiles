@@ -13,6 +13,7 @@ mv killersheep/plugin/* bundle/killersheep/plugin/
 rm -Rf killersheep
 
 #YCP
+mkdir -p bundle
 cd bundle
 git clone https://github.com/ycm-core/YouCompleteMe.git
 cd YouCompleteMe

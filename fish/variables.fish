@@ -35,3 +35,6 @@ set PATH $HOME/.local/bin $PATH /mnt/m.2_1/Quartus/quartus/bin $HOME/embedded-so
 # Java
 set -Ux JAVA_HOME /usr/lib64/jvm/java-11-openjdk-11/
 
+# Personal charm cloud
+set -Ux CHARM_HOST charm.bobignou.red
+

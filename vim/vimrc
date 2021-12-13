@@ -149,6 +149,8 @@ noremap <C-g> :noh<Cr>:echom "Search cleared."<Cr>
 "Omega
 inoremap <C-O> Ω
 inoremap <C-P> ω
+"œ
+inoremap <C-O><C-E> œ
 " Remplace tous les tabs par 3 espaces
 nnoremap <F5> :%s/	/    /g<Cr>:echom "Replaced all tabs."<Cr>
 " Remove anoying history popup

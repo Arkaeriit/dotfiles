@@ -80,6 +80,7 @@ call s:highlight('PreProc',                   s:Grey54,             s:clear,    
 call s:highlight('Include',                   s:Purple4,            s:clear,    s:italic    )
 call s:highlight('Define',                    s:Magenta2,           s:clear,    s:italic    )
 call s:highlight('Macro',                     s:HotPink,            s:clear,    s:italic    )
+call s:highlight('ColorColumn',               s:DeepSkyBlue3,       s:clear,    s:italic    )
 call s:highlight('PreCondit',                 s:Purple4,            s:clear,    s:italic    )
 call s:highlight('Type',                      s:MediumOrchid1,      s:clear,    s:bold      )
 call s:highlight('StorageClass',              s:Purple3,            s:clear,    s:bold      )

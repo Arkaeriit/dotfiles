@@ -4,11 +4,6 @@ Host abi
     HostName 192.168.1.44
     User abi
 
-Host raspail
-    # raspail sur la patate
-    HostName 192.168.43.115
-    User maxpi
-
 Host ensea
     # Mon école
     HostName kerosen.ensea.fr
@@ -45,6 +40,24 @@ Host neo430dev
 
 # SSH chatroor
 Host devzat
-    HostName devzat.hackclub.com
     User Arkaeriit
+    Hostname devzat.hackclub.com
+
+# Soft serve
+Host soft-serve
+    User mbouillot
+    Hostname git.bobignou.red
+    Port 23231
+
+# Raspail
+Host bobignou
+    HostName bobignou.red
+    User maki
+    Port 2244
+
+# Arrakis
+Host arrakis
+    HostName bobignou.red
+    User maki
+    Port 2255
 

@@ -4,6 +4,7 @@ set directory=$XDG_DATA_HOME/vim/swap
 set backupdir=$XDG_DATA_HOME/vim/backup
 set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
 set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after
+set packpath=$XDG_CONFIG_HOME/vim/pack
 
 "Active les plugins
 execute pathogen#infect()
@@ -16,64 +17,84 @@ syntax enable
 
 "Configure la liste des thèmes
 function ThemeList(themeNumber)
-	if a:themeNumber == 0
-		"dark (default)
-		set background=dark
-		colorscheme dark-meadow 
-	elseif a:themeNumber == 1
-		"light
-		set background=light
-		colorscheme Base2Tone_MorningLight
-	elseif a:themeNumber == 2
-		set background=light
-		colorscheme pencil
-	elseif a:themeNumber == 3
-		set background=dark
-		colorscheme hashpunk
-	elseif a:themeNumber == 4
-		set background=dark
-		colorscheme oldbook8
-	elseif a:themeNumber == 5
-		set background=dark
-		colorscheme hashpunk-lapis
-	elseif a:themeNumber == 6
-		set background=dark
-		colorscheme duotone-darkearth
-	elseif a:themeNumber == 7
-		set background=dark
-		colorscheme photon
-	else
-		call ThemeList(0)
-	endif
+    if a:themeNumber == 0
+        "dark (default)
+        set background=dark
+        colorscheme dark-meadow 
+    elseif a:themeNumber == 1
+        "light
+        set background=light
+        colorscheme Base2Tone_MorningLight
+    elseif a:themeNumber == 2
+        set background=light
+        colorscheme pencil
+    elseif a:themeNumber == 3
+        set background=dark
+        colorscheme hashpunk
+    elseif a:themeNumber == 4
+        set background=dark
+        colorscheme oldbook8
+    elseif a:themeNumber == 5
+        set background=dark
+        colorscheme hashpunk-lapis
+    elseif a:themeNumber == 6
+        set background=dark
+        colorscheme duotone-darkearth
+    elseif a:themeNumber == 7
+        set background=dark
+        colorscheme photon
+    else
+        call ThemeList(0)
+    endif
 endfunction
 call ThemeList(1111) "Goes to default
 
 "Change theme on the fly
 let g:MyThemeCount=0
 function CycleTheme()
-	let g:MyThemeCount = (g:MyThemeCount + 1) % 8
-	call ThemeList(g:MyThemeCount)
+    let g:MyThemeCount = (g:MyThemeCount + 1) % 8
+    call ThemeList(g:MyThemeCount)
 endfunction
 nnoremap <F3> :call CycleTheme()<Enter>:echom g:colors_name<Enter>
 
 "Change spell checking on the fly
 let g:spellCount = 0
 function ToogleSpell()
-	let g:spellCount = g:spellCount + 1
-	let l:trueNumber = g:spellCount % 3
-	if l:trueNumber == 0
-		set nospell
-		echom "No spell checking"
-	elseif l:trueNumber == 1
-		set spell spelllang=en_us
-		echom "English spell checking"
-	else
-		set spell spelllang=fr
-		echom "French spell checking"
-	endif
+    let g:spellCount = g:spellCount + 1
+    let l:trueNumber = g:spellCount % 3
+    if l:trueNumber == 0
+        set nospell
+        echom "No spell checking"
+    elseif l:trueNumber == 1
+        set spell spelllang=en_us
+        echom "English spell checking"
+    else
+        set spell spelllang=fr
+        echom "French spell checking"
+    endif
 endfunction
 nnoremap <F4> :call ToogleSpell()<Enter>
 
+"Add or remove a color line
+let g:colorColumnCount = 0
+function ToogleColorColumn()
+    let g:colorColumnCount = g:colorColumnCount + 1
+    let l:trueCount = g:colorColumnCount % 4
+    if l:trueCount == 0
+        set colorcolumn=
+        echom "Color column disbled"
+    elseif l:trueCount == 1
+        set colorcolumn=80
+        echom "Color column at 80 column"
+    elseif l:trueCount == 2
+        set colorcolumn=50
+        echom "Color column at 50 column"
+    else
+        set colorcolumn=100
+        echom "Color column at 100 column"
+    endif
+endfunction
+nnoremap <F6> :call ToogleColorColumn()<Enter>
 
 "controle le nombre de charactère que font les TAB
 set tabstop=4
@@ -142,7 +163,19 @@ inoremap <C-i> <C-v>
 "case insensitive search
 nnoremap <C-f> /\c
 inoremap <Esc><C-f> /\c
-inoremap <C-g> <Esc>/1233#{<Cr>i 
+"stop search
+inoremap <C-g> <Esc>:noh<Cr>:echom "Search cleared."<Cr>i
+noremap <C-g> :noh<Cr>:echom "Search cleared."<Cr>
+"Omega
+inoremap <C-O> Ω
+inoremap <C-P> ω
+"œ
+inoremap <C-O><C-E> œ
+" Remplace tous les tabs par 3 espaces
+nnoremap <F5> :%s/	/    /g<Cr>:echom "Replaced all tabs."<Cr>
+" Remove anoying history popup
+nnoremap q: :q
+nnoremap Q: q:
 
 "empèche les bips en tty
 set visualbell

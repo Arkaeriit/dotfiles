@@ -47,7 +47,7 @@ Host devzat
 
 # Soft serve
 Host soft-serve
-    User mbouillot
+    User maki
     Hostname git.bobignou.red
     Port 23231
 

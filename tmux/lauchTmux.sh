@@ -1,2 +1,2 @@
 #!/bin/sh
-tmux -f $HOME/.config/tmux/tmux.conf
+tmux -f /home/maki/.config/tmux/tmux.conf

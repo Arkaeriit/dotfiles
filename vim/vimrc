@@ -8,6 +8,7 @@ set packpath=$XDG_CONFIG_HOME/vim/pack
 
 "Active les plugins
 execute pathogen#infect()
+set encoding=utf-8
 
 "permet de connaitre sa position
 set ruler

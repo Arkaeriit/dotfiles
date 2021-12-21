@@ -1,5 +1,7 @@
 #!/bin/sh
 
+/bin/rm -rfv bundle
+
 #CSCOPE
 git clone https://github.com/Arkaeriit/cscope_map_fork.git
 mkdir -p bundle/cscope/plugin

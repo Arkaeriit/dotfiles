@@ -54,6 +54,10 @@ Host bobignou
     HostName bobignou.red
     User maki
     Port 2244
+Host raspail
+    HostName bobignou.red
+    User maki
+    Port 2244
 
 # Arrakis
 Host arrakis

@@ -1,0 +1,8 @@
+# Colors candy theme
+color background        color199 color17
+color listnormal        color199 color17
+color listfocus         color93  color200
+color listnormal_unread color93  color17  bold
+color listfocus_unread  color93  color200 bold
+color info              color199 color91   
+color article           color199 color17

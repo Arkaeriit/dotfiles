@@ -1,0 +1,13 @@
+# Ease of life
+browser firefox
+auto-reload yes
+download-retries 3
+reload-time 10
+
+# Colors
+include ~/.config/newsboat/color_candy
+#include ~/.config/newsboat/color_neon
+#include ~/.config/newsboat/color_red
+
+# Fun
+user-agent "My RSS reader"

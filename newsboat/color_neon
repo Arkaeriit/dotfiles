@@ -1,0 +1,9 @@
+# Colors neon theme
+color background        color198 color16
+color listnormal        color200 color16
+color listfocus         color27  color200
+color listnormal_unread color27  color16  bold
+color listfocus_unread  color27  color200 bold
+color info              color198 color18   
+color article           color200 color16
+

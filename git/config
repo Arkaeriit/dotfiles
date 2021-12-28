@@ -1,0 +1,32 @@
+[user]
+	email = maxbouillot@gmail.com
+	name = Maxime Bouillot
+
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	st = status
+	trash = !git add ':/*' && git stash
+
+[color]
+	  branch = auto
+	    diff = auto
+		  status = auto
+[color "branch"]
+	  current = yellow reverse
+	    local = yellow
+		  remote = green
+[color "diff"]
+	  meta = yellow bold
+	    frag = magenta bold
+		  old = red bold
+		    new = green bold
+[color "status"]
+	  added = yellow
+	    changed = green
+		  untracked = cyan
+
+[branch]
+	autosetuprebase = always
+[rerere]
+	enabled = true
+

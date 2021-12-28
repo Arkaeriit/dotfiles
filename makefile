@@ -2,10 +2,10 @@ configDir = ~/.config
 dataDir = ~/.local/share
 binDir = ~/.local/bin
 
-save : saveVim saveFish saveTmux saveBash saveProfile saveSSH saveNewsboat
+save : saveVim saveFish saveTmux saveBash saveProfile saveSSH saveNewsboat saveGit
 
 createSaveDirs :
-	mkdir -p vim fish bash tmux newsboat
+	mkdir -p vim fish bash tmux newsboat git
 
 saveVim :
 	cp -fR $(configDir)/vim/* vim/
@@ -26,9 +26,12 @@ saveSSH :
 	cp -fr ~/.ssh/config ssh
 
 saveNewsboat :
-	cp -fr $(configDir)/newsboat newsboat
+	cp -fr $(configDir)/newsboat/* newsboat/
 
-restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile restoreSSH restoreVivado restoreNewsboat
+saveGit :
+	cp -fr $(configDir)/git/* git/
+
+restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile restoreSSH restoreVivado restoreNewsboat restoreGit
 
 restoreVim :
 	mkdir -p $(configDir)/vim
@@ -64,4 +67,8 @@ restoreVivado :
 restoreNewsboat :
 	mkdir -p $(configDir)/newsboat
 	cp -fr saveNewsboat/* $(configDir)/newsboat/
+
+restoreGit :
+	mkdir -p $(configDir)/git
+	cp -fr git/* $(configDir)/git
 

@@ -5,7 +5,7 @@ binDir = ~/.local/bin
 save : saveVim saveFish saveTmux saveBash saveProfile saveSSH saveNewsboat
 
 createSaveDirs :
-	mkdir -p vim fish bash tmux
+	mkdir -p vim fish bash tmux newsboat
 
 saveVim :
 	cp -fR $(configDir)/vim/* vim/

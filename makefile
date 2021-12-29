@@ -71,7 +71,7 @@ restoreVivado :
 
 restoreNewsboat :
 	mkdir -p $(configDir)/newsboat
-	cp -fr saveNewsboat/* $(configDir)/newsboat/
+	cp -fr newsboat/* $(configDir)/newsboat/
 
 restoreGit :
 	mkdir -p $(configDir)/git

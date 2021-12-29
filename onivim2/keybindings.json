@@ -1,0 +1,37 @@
+
+[
+//Seetheonivimdocumentationfordetailsontheformat:
+//https://onivim.github.io/docs/configuration/key-bindings
+//Addkeybindingshere,forexample:
+//{"key":"<TAB>","command":"workbench.action.quickOpen","when":"editorTextFocus"},
+//{"key":"jk","command":"vim.esc","when":"insertMode"},
+//{"key":"<C-C>","command":"jjjj","when":"visualMode"}
+
+  // Copy-paste
+  {"from":"<C-V>","to":"<Esc>\"+P","when":"insertMode"},
+  {"from":"<C-C>","to":"\"+y","when":"visualMode"},
+  // Search
+  {"from":"<C-F>","to":"/\\c","when":"normalMode"},
+  {"from":"<C-F>","to":"<Esc>/\\c","when":"insertMode"},
+  {"from":"<C-g>","to":"<Esc>:noh<Cr>:echom\"Searchcleared.\"<Cr>i","when":"insertMode"},
+  {"from":"<C-g>","to":":noh<Cr>:echom\"Searchcleared.\"<Cr>","when":"normalMode"},
+  // Windows-itées
+  {"from":"<C-Y>","to":"<C-R>","when":"normalMode"},
+  {"from":"<C-S>","to":":w<Cr>","when":"normalMode"},
+  {"from":"<C-S>","to":"<Esc>:w<Cr>i","when":"insertMode"},
+  {"from":"<C-Q>","to":":q<Cr>","when":"normalMode"},
+  {"from":"<C-Q>","to":"<Esc>:q<Cr>","when":"insertMode"},
+  {"from":"<C-A>","to":"<Esc>gg0vG$","when":"insertMode"},
+  {"from":"<C-G>","to":"<Esc>/1234££$⅜§¢®<Cr>i","when":"insertMode"},
+  // Char spéciaux
+  {"from":"<C-o>","to":"Ω","when":"insertMode"},
+  {"from":"<C-p>","to":"ω","when":"insertMode"},
+  {"from":"<C-o><C-e>","to":"œ","when":"insertMode"},
+  // Comment in and out
+  {"from": "<Leader>cc", "to": ":s/^/\\/\\//<Cr>:noh<Cr>:echom\"\"<Cr>", "when": "normalMode"},
+  {"from": "<Leader>cc", "to": ":s/^/\\/\\//<Cr>:noh<Cr>:echom\"\"<Cr>", "when": "visualMode"},
+  {"from": "<Leader>cu", "to": ":s/^\\/\\//<Cr>:noh<Cr>:echom\"\"<Cr>", "when": "normalMode"},
+  {"from": "<Leader>cu", "to": ":s/^\\/\\//<Cr>:noh<Cr>:echom\"\"<Cr>", "when": "visualMode"},
+  //{"from":"<F5>","to":":%s/	/    /g<Cr>:echom\"Replacedalltabs.\"<Cr>","when":"normalMode"}, //Does not work in onivim
+  {"from":"jk","to":"<Esc>","when":"insertMode"}
+]

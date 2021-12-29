@@ -2,36 +2,41 @@ configDir = ~/.config
 dataDir = ~/.local/share
 binDir = ~/.local/bin
 
-save : saveVim saveFish saveTmux saveBash saveProfile saveSSH saveNewsboat saveGit
+save : saveVim saveFish saveTmux saveBash saveProfile saveSSH saveNewsboat saveGit saveOnivim2
 
+.PHONY : createSaveDirs 
 createSaveDirs :
-	mkdir -p vim fish bash tmux newsboat git
+	mkdir -p vim fish bash tmux newsboat git onivim2
 
-saveVim :
+saveVim : createSaveDirs
 	cp -fR $(configDir)/vim/* vim/
 
-saveFish :
+saveFish : createSaveDirs
 	cp -fR $(configDir)/fish/* fish/
 
-saveTmux :
+saveTmux : createSaveDirs
 	cp -fR $(configDir)/tmux/* tmux/
 
-saveBash :
+saveBash : createSaveDirs
 	cp -fr $(configDir)/bash/* bash/
 
-saveProfile :
+saveProfile : createSaveDirs
 	cp -fr ~/.profile profile
 
-saveSSH :
+saveSSH : createSaveDirs
 	cp -fr ~/.ssh/config ssh
 
-saveNewsboat :
+saveNewsboat : createSaveDirs
 	cp -fr $(configDir)/newsboat/* newsboat/
 
-saveGit :
+saveGit : createSaveDirs
 	cp -fr $(configDir)/git/* git/
 
-restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile restoreSSH restoreVivado restoreNewsboat restoreGit
+saveOnivim2 : createSaveDirs
+	cp -f $(configDir)/oni2/configuration.json onivim2/
+	cp -f $(configDir)/oni2/keybindings.json onivim2/
+
+restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile restoreSSH restoreVivado restoreNewsboat restoreGit restoreOnivim2
 
 restoreVim :
 	mkdir -p $(configDir)/vim
@@ -71,4 +76,8 @@ restoreNewsboat :
 restoreGit :
 	mkdir -p $(configDir)/git
 	cp -fr git/* $(configDir)/git
+
+restoreOnivim2 :
+	mkdir -p $(configDir)/oni2
+	cp -f onivim2/* $(configDir)/oni2/
 

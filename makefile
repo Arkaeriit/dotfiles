@@ -2,11 +2,11 @@ configDir = ~/.config
 dataDir = ~/.local/share
 binDir = ~/.local/bin
 
-save : saveVim saveFish saveTmux saveBash saveProfile saveSSH saveNewsboat saveGit saveOnivim2
+save : saveVim saveFish saveTmux saveBash saveProfile saveSSH saveNewsboat saveGit saveOnivim2 saveAmfora
 
 .PHONY : createSaveDirs 
 createSaveDirs :
-	mkdir -p vim fish bash tmux newsboat git onivim2
+	mkdir -p vim fish bash tmux newsboat git onivim2 amfora
 
 saveVim : createSaveDirs
 	cp -fR $(configDir)/vim/* vim/
@@ -36,7 +36,10 @@ saveOnivim2 : createSaveDirs
 	cp -f $(configDir)/oni2/configuration.json onivim2/
 	cp -f $(configDir)/oni2/keybindings.json onivim2/
 
-restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile restoreSSH restoreVivado restoreNewsboat restoreGit restoreOnivim2
+saveAmfora : createSaveDirs
+	cp -f $(configDir)/amfora/* amfora/
+
+restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile restoreSSH restoreVivado restoreNewsboat restoreGit restoreOnivim2 restoreAmfora
 
 restoreVim :
 	mkdir -p $(configDir)/vim
@@ -80,4 +83,8 @@ restoreGit :
 restoreOnivim2 :
 	mkdir -p $(configDir)/oni2
 	cp -f onivim2/* $(configDir)/oni2/
+
+restoreAmfora :
+	mkdir -p $(configDir)/amfora
+	cp -f amfora/* $(configDir)/amfora/*
 

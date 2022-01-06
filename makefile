@@ -86,5 +86,5 @@ restoreOnivim2 :
 
 restoreAmfora :
 	mkdir -p $(configDir)/amfora
-	cp -f amfora/* $(configDir)/amfora/*
+	cp -f amfora/* $(configDir)/amfora/
 

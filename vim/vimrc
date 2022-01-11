@@ -193,7 +193,7 @@ filetype plugin indent on
 set mouse=a
 
 "Arrete d'utiliser Esc pour quiter le mode insertion
-inoremap jk <esc>
+inoremap kj <esc>
 
 "Status line
 set laststatus=2               "Always visible

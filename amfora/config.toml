@@ -165,7 +165,7 @@ bind_tab0 = "à"
 # bind_add_bookmark
 # bind_save
 # bind_reload
-# bind_back
+bind_back = ["q", "b"]
 # bind_forward
 # bind_moveup
 # bind_movedown
@@ -177,7 +177,7 @@ bind_tab0 = "à"
 # bind_close_tab
 # bind_next_tab
 # bind_prev_tab
-# bind_quit
+bind_quit = ["Q", "Ctrl-Q", "Ctrl-C"]
 # bind_help
 # bind_sub: for viewing the subscriptions page
 # bind_add_sub

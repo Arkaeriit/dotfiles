@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export ATOM_HOME:/home/mbouillot/\x2elocal/share/atom
+SETUVAR --export BROWSER:firefox
 SETUVAR --export CHARM_HOST:charm\x2ebobignou\x2ered
 SETUVAR CXX:/usr/bin/g\x2b\x2b
 SETUVAR EDITOR:vim

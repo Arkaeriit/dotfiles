@@ -38,3 +38,8 @@ set -Ux JAVA_HOME /usr/lib64/jvm/java-11-openjdk-11/
 # Personal charm cloud
 set -Ux CHARM_HOST charm.bobignou.red
 
+# Defaults tools
+set -Ux EDITOR vim
+set -Ux BROWSER firefox
+set -Ux PAGER bat
+

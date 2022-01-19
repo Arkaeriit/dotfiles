@@ -7,5 +7,7 @@ git checkout master &&
     git cherry-pick "$commit" &&
     git push origin master &&
     git checkout "$branch" &&
-    git rebase master
+    git rebase master &&
+    git push "$branch" -f &&
+    echo "Done!"
 

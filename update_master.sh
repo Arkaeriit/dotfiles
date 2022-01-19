@@ -8,6 +8,6 @@ git checkout master &&
     git push origin master &&
     git checkout "$branch" &&
     git rebase master &&
-    git push "$branch" -f &&
+    git push origin "$branch" -f &&
     echo "Done!"
 

@@ -41,5 +41,5 @@ set -Ux CHARM_HOST charm.bobignou.red
 # Defaults tools
 set -Ux EDITOR vim
 set -Ux BROWSER firefox
-set -Ux PAGER bat
+set -Ux PAGER bat --tabs 4 --plain --number --decorations auto --color always --paging auto --theme Nord --wrap never
 

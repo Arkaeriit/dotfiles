@@ -33,3 +33,8 @@ cd bundle
 git clone https://github.com/kien/rainbow_parentheses.vim.git
 cd ..
 
+# Minimap
+cd bundle
+git clone https://github.com/severin-lemaignan/vim-minimap.git
+cd ..
+

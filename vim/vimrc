@@ -204,7 +204,7 @@ set statusline+=%l\ %c%V\ %P   "Right side (Position)
 " DevzatCopy, a command to copy the buffer in a way that is pastable on devzat
 function DevzatCopy_fnc()
     %s/$/\\n/
-    normal ggVGJ
+    %s/\n//
     %s/\\n /\\n/g
     normal I```\nkjA```kjV"+yu
     echom "Copied the buffer to be pasted on devzat."

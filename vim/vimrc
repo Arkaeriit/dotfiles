@@ -201,3 +201,14 @@ set statusline=%f\ -\ %Y\ %r\  "Left side (name and type)
 set statusline+=%=             " Switch to the right side
 set statusline+=%l\ %c%V\ %P   "Right side (Position)
 
+" DevzatCopy, a command to copy the buffer in a way that is pastable on devzat
+function DevzatCopy_fnc()
+    %s/$/\\n/
+    normal ggVGJ
+    %s/\\n /\\n/g
+    normal I```\nkjA```kjV"+yu
+    echom "Copied the buffer to be pasted on devzat."
+endfunction
+
+command DevzatCopy :call DevzatCopy_fnc()
+

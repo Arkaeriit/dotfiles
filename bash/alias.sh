@@ -27,7 +27,7 @@ alias ping='/usr/bin/ping -c 5'
 alias root='exec sudo su' # Makes you root and leave the shell afterward
 alias analog-city='sshpass -p hightech ssh analog-city' # Connect to the SSH textboard with the password
 alias copy='xclip -selection clipboard' # Put what is piped here into the X.org clipboard
-alias cppchecl_all='cppcheck --quiet --enable=all --suppress=missingIncludeSystem $argv 2>&1 | $PAGER' # Run cppckeck with all options and pipe the result into the pager
+alias cppcheck_all='cppcheck --quiet --enable=all --suppress=missingIncludeSystem $argv 2>&1 | $PAGER' # Run cppckeck with all options and pipe the result into the pager
 alias gpom='git push origin master' # Push the master branch to origin
 alias make_verif='/usr/bin/make clean -j && /usr/bin/make -j 32 || /usr/bin/make && bell' # Runs a quick make and if there is an error, runs it slow to pinpoint where the issue is.
 alias pagevim="vim -S ~/.config/vim/pager.vim -" # Runs vim as a pager reading from stdin

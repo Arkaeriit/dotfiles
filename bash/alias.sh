@@ -33,6 +33,8 @@ alias make_verif='/usr/bin/make clean -j && /usr/bin/make -j 32 || /usr/bin/make
 alias pagevim="vim -S ~/.config/vim/pager.vim -" # Runs vim as a pager reading from stdin
 alias :q="exit"
 alias sayFR="espeak "$argv" -g 5 -s 130 --stdout -v fr | aplay" # Text to speech en français
+alias pastable-csv='sed -e "s/,/\t/g" ' # This quick sed transform makes a csv into something pastable on Google sheet. This should be used along with the copy alias.
+
 
 # Convert the file given as argument into a mp3 file
 ffmpeg-to-mp3() {

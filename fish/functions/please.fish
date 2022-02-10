@@ -1,3 +1,7 @@
+# Runs the last command as root
+
 function please
-    bash -c "sudo $(fc -ln -1) $argv"
+    set cmd $history[1]
+    fish -c "sudo $cmd"
 end
+

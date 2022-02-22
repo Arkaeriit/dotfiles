@@ -4,7 +4,7 @@ function fish_prompt
     set main_color white
     set sec_color green
     set error_color red
-    set smile '^[n.n]^ '
+    set smile 'o[^.^]o '
     set -x $fish_prompt_pwd_dir_length 0 # permet de ne pas raccoursir le nom des dossiers
     set __pwd (prompt_pwd_full)" "
 

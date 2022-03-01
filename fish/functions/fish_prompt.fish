@@ -11,16 +11,26 @@ function fish_prompt
     # Checking the size of the prompt and removing excessive elements
     set long_prompt "$smile $__pwd $fish_chev_vi >"
     set len_prompt (string length "$long_prompt")
-    if test $len_prompt -ge $COLUMNS
-        set __pwd ""
-        set smaler_prompt "$smile $fish_chev_vi >"
-        set len_prompt (string length "$smaler_promt")
-        if test $len_prompt -ge $COLUMNS
-            set smile ""
-            set smol_prompt "$fish_chev_vi >"
-            set len_prompt (string length "$smol_promt")
-            if test $len_prompt -ge $COLUMNS
-                set fish_chev_vi ""
+    if test $len_prompt -ge $COLUMNS # Testing full path
+        set __pwd (prompt_pwd)" "
+        set long_prompt "$smile $__pwd $fish_chev_vi >"
+        set len_prompt (string length "$long_prompt")
+        if test $len_prompt -ge $COLUMNS # Testing reduced path
+            set __pwd (basename $PWD)" "
+            set long_ish_prompt "$smile $__pwd $fish_chev_vi >"
+            set len_prompt (string length "$long_ish_prompt")
+            if test $len_prompt -ge $COLUMNS # Testing only basename of dir
+                set __pwd ""
+                set smaler_prompt "$smile $fish_chev_vi >"
+                set len_prompt (string length "$smaler_promt")
+                if test $len_prompt -ge $COLUMNS # Testing no dir name
+                    set smile ""
+                    set smol_prompt "$fish_chev_vi >"
+                    set len_prompt (string length "$smol_promt")
+                    if test $len_prompt -ge $COLUMNS # Testing no smile
+                        set fish_chev_vi "" # No smile and no vi mode indication
+                    end
+                end
             end
         end
     end

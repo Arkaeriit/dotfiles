@@ -25,23 +25,11 @@ function ThemeList(themeNumber)
     elseif a:themeNumber == 1
         "light
         set background=light
-        colorscheme Base2Tone_MorningLight
-    elseif a:themeNumber == 2
-        set background=light
         colorscheme pencil
-    elseif a:themeNumber == 3
-        set background=dark
-        colorscheme hashpunk
-    elseif a:themeNumber == 4
-        set background=dark
-        colorscheme oldbook8
-    elseif a:themeNumber == 5
+    elseif a:themeNumber == 2
         set background=dark
         colorscheme hashpunk-lapis
-    elseif a:themeNumber == 6
-        set background=dark
-        colorscheme duotone-darkearth
-    elseif a:themeNumber == 7
+    elseif a:themeNumber == 3
         set background=dark
         colorscheme photon
     else
@@ -53,7 +41,7 @@ call ThemeList(1111) "Goes to default
 "Change theme on the fly
 let g:MyThemeCount=0
 function CycleTheme()
-    let g:MyThemeCount = (g:MyThemeCount + 1) % 8
+    let g:MyThemeCount = (g:MyThemeCount + 1) % 4
     call ThemeList(g:MyThemeCount)
 endfunction
 nnoremap <F3> :call CycleTheme()<Enter>:echom g:colors_name<Enter>

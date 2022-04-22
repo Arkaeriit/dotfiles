@@ -199,3 +199,8 @@ endfunction
 
 command DevzatCopy :call DevzatCopy_fnc()
 
+" Whitespace characters
+set listchars=eol:↵,tab:⇤-⇥,trail:○,extends:>,precedes:<,space:·,nbsp:●
+noremap <F8> :set list!<CR>
+inoremap <F8> <Esc>:set list!<CR>i
+

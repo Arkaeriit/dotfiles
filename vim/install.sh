@@ -38,3 +38,6 @@ cd bundle
 git clone https://github.com/severin-lemaignan/vim-minimap.git
 cd ..
 
+# Custom Help
+ln -S $PWD/custom_help bundle/custom_help
+

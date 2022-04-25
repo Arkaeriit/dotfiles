@@ -36,15 +36,15 @@ function ThemeList(themeNumber)
         call ThemeList(0)
     endif
 endfunction
-call ThemeList(1111) "Goes to default
 
 "Change theme on the fly
-let g:MyThemeCount=0
 function CycleTheme()
     let g:MyThemeCount = (g:MyThemeCount + 1) % 4
     call ThemeList(g:MyThemeCount)
 endfunction
 nnoremap <F3> :call CycleTheme()<Enter>:echom g:colors_name<Enter>
+let g:MyThemeCount=-1 "Goes to default
+call CycleTheme()
 
 "Change spell checking on the fly
 let g:spellCount = 0

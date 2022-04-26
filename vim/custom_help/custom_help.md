@@ -157,7 +157,9 @@ Alternatively, instead of using Pathogen, native plugins can be used. They have 
 
 Tabs are configured to be replaced with 4 spaces. This is made by setting the variables `shiftwidth`, `tabstop`, and `softtabstop` to 4 each. The transformation of spaces into tabs is made by setting the variable `expandtab`.
 
-Use `<F5>` to replace all tabs by 4 spaces. __TODO: make the inverse transform and only replace leadings tabs.__
+Use `<F5><Space>` to replace leading tabs by 4 spaces and `<F5><Tab>` to replace leading 4 spaces by tabs.
+
+__TODO: Make a proper plugin out of this.__
 
 ### Status
 
@@ -255,7 +257,8 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 
 ### Shortcuts
 
-* `<F5>` replaces all tabs with 4 spaces.
+* `<F5><Space>` replaces leading tabs with 4 spaces.
+* `<F5><Tab>` replaces leading 4 spaces with tabs.
 * `Q:` instead of `q:` is used to show the command history.
 * `:DevzatCopy` copies the text to be pasted in the Devzat chat-room.
 * `kj` leaves insert mode.

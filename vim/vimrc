@@ -160,13 +160,29 @@ inoremap <C-O> Ω
 inoremap <C-P> ω
 "œ
 inoremap <C-O><C-E> œ
-" Remplace tous les tabs par 3 espaces
-nnoremap <F5> :%s/	/    /g<Cr>:echom "Replaced all tabs."<Cr>
 " Remove anoying history popup
 nnoremap q: :q
 nnoremap Q: q:
 " Rainbow parenthesis
 nnoremap <F7> :RainbowParenthesesToggle<Cr>:RainbowParenthesesLoadSquare<Cr>:RainbowParenthesesLoadBraces<Cr>:RainbowParenthesesLoadChevrons<Cr>
+
+" Tabs
+function SwapLeading(from, to)
+    let l:i = 9
+    while i >= 0
+        let l:exec = "silent! %s/\\(" . a:from . "\\)\\{"  . l:i . "\\}\\(" . a:from . "\\)/"
+        let l:j = 0
+        while l:j < l:i
+            let l:exec = l:exec . a:from
+            let l:j = l:j + 1
+        endwhile
+        let l:exec = l:exec . a:to . "/"
+        execute l:exec
+        let l:i = l:i - 1
+    endwhile
+endfunction
+nnoremap <F5><Space> mt:call SwapLeading("	", "    ")<Cr>'t
+nnoremap <F5><Tab> mt:call SwapLeading("    ", "	")<Cr>'t
 
 "empèche les bips en tty
 set visualbell

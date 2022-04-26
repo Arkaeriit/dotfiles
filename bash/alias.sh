@@ -53,3 +53,9 @@ vimtmp () {
 	vim $name && rm -f $name
 }
 
+# Open a tldr page from gemini in Amfora
+agtldr() {
+    prg=$1
+    amfora "gemini://freeshell.de/tldr/$prg.gmi"
+}
+

@@ -262,6 +262,8 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 * `Q:` instead of `q:` is used to show the command history.
 * `:DevzatCopy` copies the text to be pasted in the Devzat chat-room.
 * `kj` leaves insert mode.
+* `<C-R>` in insert mode insert a raw key (`<C-V>` in normal Vim).
+* `<C-T>` in insert mode insert a tab.
 
 ### Plugins
 

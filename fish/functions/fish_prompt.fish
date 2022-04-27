@@ -1,8 +1,8 @@
 function fish_prompt
     # Symbols definition
     set prev_status $status
-    set main_color 96C7C1
-    set sec_color DED9C4
+    set main_color F8D08D
+    set sec_color D000C0
     set error_color red
     set smile '^[n.n]^ '
     set -x $fish_prompt_pwd_dir_length 0 # permet de ne pas raccoursir le nom des dossiers

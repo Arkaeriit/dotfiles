@@ -188,6 +188,8 @@ A ruler can be added to easily see the length of lines. Press `<F6>` to toggle t
 * 50 chars lines.
 * 100 chars lines.
 
+It is possible to cut the line to the current ruler with the keybinding `<leader><F6>`.
+
 ### Miscellaneous
 
 Setting the variable `mouse` to `a` enables the use of the mouse. The mouse can be used to move the cursor or select text.
@@ -264,6 +266,7 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 * `kj` leaves insert mode.
 * `<C-R>` in insert mode insert a raw key (`<C-V>` in normal Vim).
 * `<C-T>` in insert mode insert a tab.
+* `<leader><F6>` cut the current line to the ruler.
 
 ### Plugins
 
@@ -284,7 +287,7 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 * `<leader>cu` to uncomment it.
 
 #### `rainbow_parentheses`
-* `<F5>` to toggle.
+* `<F7>` to toggle.
 
 #### `vim-minimap`
 * `<leader>mm` to open the mini-map.

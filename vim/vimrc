@@ -222,3 +222,29 @@ set listchars=eol:↵,tab:⇤-⇥,trail:○,extends:>,precedes:<,space:·,nbsp:�
 noremap <F8> :set list!<CR>
 inoremap <F8> <Esc>:set list!<CR>a
 
+" Auto cut to vertical ruller
+
+" Tell if the current line is longuer than the given argument
+function IsLineLonguer(len)
+    let l:pos = getcurpos()
+    let l:pos[2] = a:len + 1
+    call setpos(".", l:pos)
+    let l:pos = getcurpos()[2]
+    return l:pos > a:len
+endfunction
+
+" Cut a line in multiple lines that are shorter than the given argument
+" Cut line at spaces
+function CutToLen(len)
+    while IsLineLonguer(a:len)
+        exec "normal hF r\n"
+    endwhile
+endfunction
+    
+" Cut to the shortest vertical ruller
+function CutToRuller()
+    let l:len = &colorcolumn + 1 - 1
+    call CutToLen(l:len)
+endfunction
+
+nnoremap <leader><F6> :call CutToRuller()<Cr>

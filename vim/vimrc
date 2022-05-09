@@ -22,7 +22,7 @@ function ThemeList(themeNumber)
         "dark (default)
         set background=dark
         colorscheme dark-meadow 
-    elseif a:themeNumber == 1
+    elseif a:themeNumber == 1 "This theme needs to change as it causes issues with md files
         "light
         set background=light
         colorscheme pencil

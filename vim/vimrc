@@ -237,7 +237,7 @@ endfunction
 " Cut line at spaces
 function CutToLen(len)
     while IsLineLonguer(a:len)
-        exec "normal hF r\n"
+        exec "normal F r\n"
     endwhile
 endfunction
     

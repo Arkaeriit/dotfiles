@@ -89,26 +89,6 @@ scrollbar = "auto"
 # This is done to help color blind users
 underline = true
 
-
-[auth]
-# Authentication settings
-# Note the use of single quotes for values, so that backslashes will not be escaped.
-
-[auth.certs]
-# Client certificates
-# Set URL equal to path to client cert file
-#
-# "example.com" = 'mycert.crt'      # Cert is used for all paths on this domain
-# "example.com/dir/"=  'mycert.crt' # Cert is used for /dir/ and everything below only
-#
-# See the comment at the beginning of this file for examples of all valid types of
-# URLs, ports and schemes can be used too
-
-[auth.keys]
-# Client certificate keys
-# Same as [auth.certs] but the path is to the client key file.
-
-
 [keybindings]
 # If you have a non-US keyboard, use bind_tab1 through bind_tab0 to
 # setup the shift-number bindings: Eg, for US keyboards (the default):
@@ -337,3 +317,15 @@ header = true
 # Theme
 [theme]
 include = '/home/mbouillot/.config/amfora/one_dark.toml'
+
+# Crypto
+[auth]
+
+[auth.certs]
+"astrobotany.mozz.us" = "~/.local/share/amfora/Arkaeriit_gemini_client_cert.pem"
+"tilde.cafe" = "~/.local/share/amfora/Arkaeriit_gemini_client_cert.pem"
+
+[auth.keys]
+"astrobotany.mozz.us" = "~/.local/share/amfora/Arkaeriit_gemini_client_key.pem"
+"tilde.cafe" = "~/.local/share/amfora/Arkaeriit_gemini_client_key.pem"
+

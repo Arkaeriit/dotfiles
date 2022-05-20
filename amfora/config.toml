@@ -324,8 +324,10 @@ include = '/home/mbouillot/.config/amfora/one_dark.toml'
 [auth.certs]
 "astrobotany.mozz.us" = "~/.local/share/amfora/Arkaeriit_gemini_client_cert.pem"
 "tilde.cafe" = "~/.local/share/amfora/Arkaeriit_gemini_client_cert.pem"
+"gemini://station.martinrue.com" = "~/.local/share/amfora/Arkaeriit_gemini_client_cert.pem"
 
 [auth.keys]
 "astrobotany.mozz.us" = "~/.local/share/amfora/Arkaeriit_gemini_client_key.pem"
 "tilde.cafe" = "~/.local/share/amfora/Arkaeriit_gemini_client_key.pem"
+"gemini://station.martinrue.com" = "~/.local/share/amfora/Arkaeriit_gemini_client_key.pem"
 

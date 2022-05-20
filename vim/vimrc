@@ -162,6 +162,8 @@ inoremap <C-O> Ω
 inoremap <C-P> ω
 "œ
 inoremap <C-O><C-E> œ
+"·
+inoremap <C-P><C-M> ·
 " Remove anoying history popup
 nnoremap q: :q
 nnoremap Q: q:

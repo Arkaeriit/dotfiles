@@ -18,20 +18,14 @@ syntax enable
 
 "Configure la liste des thèmes
 function ThemeList(themeNumber)
-    if a:themeNumber == 0
-        "dark (default)
-        set background=dark
-        colorscheme dark-meadow 
-    elseif a:themeNumber == 1 "This theme needs to change as it causes issues with md files
-        "light
-        set background=light
-        colorscheme pencil
-    elseif a:themeNumber == 2
-        set background=dark
-        colorscheme hashpunk-lapis
-    elseif a:themeNumber == 3
-        set background=dark
-        colorscheme photon
+    if a:themeNumber == 0 " dark high contrast
+        colorscheme jardin-urbain
+    elseif a:themeNumber == 1 " dark low contrast
+        colorscheme confiserie
+    elseif a:themeNumber == 2 " light low contrast
+        colorscheme champ-de-blé
+    elseif a:themeNumber == 3 " light high contrast
+        colorscheme fusain
     else
         call ThemeList(0)
     endif

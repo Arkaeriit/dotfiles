@@ -166,7 +166,8 @@ inoremap <C-O><C-E> œ
 nnoremap q: :q
 nnoremap Q: q:
 " Rainbow parenthesis
-nnoremap <F7> :RainbowParenthesesToggle<Cr>:RainbowParenthesesLoadSquare<Cr>:RainbowParenthesesLoadBraces<Cr>:RainbowParenthesesLoadChevrons<Cr>
+nnoremap <F7> :RainbowParenthesesToggle<Cr>:RainbowParenthesesLoadSquare<Cr>:RainbowParenthesesLoadBraces<Cr>
+
 
 " Tabs
 function SwapLeading(from, to)
@@ -248,3 +249,4 @@ function CutToRuller()
 endfunction
 
 nnoremap <leader><F6> :call CutToRuller()<Cr>
+

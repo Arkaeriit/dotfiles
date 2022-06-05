@@ -120,14 +120,14 @@ endfunction
 "------------------------------- Groups theming -------------------------------"
 
 " Basic Vim groups
-call s:highlight_group      ('Normal',         s:Charcoal,    s:White)
+call s:highlight_group      ('Normal',         s:Black,       s:White)
 call s:highlight_group      ("Comment",        s:LightGray,   s:DarkGray)
 call s:highlight_group      ("Constant",       s:DeepBlue,    s:White)
 call s:highlight_group      ("String",         s:Burgundy,    s:White)
 call s:highlight_group      ("Character",      s:DarkBlue,    s:White)
-call s:highlight_group      ("Number",         s:Gray,        s:White)
+call s:highlight_group      ("Number",         s:Charcoal,    s:White)
 call s:highlight_group      ("Boolean",        s:Burgundy,    s:White)
-call s:highlight_group      ("Float",          s:Gray,        s:White)
+call s:highlight_group      ("Float",          s:Charcoal,    s:White)
 call s:highlight_group      ("Identifier",     s:DarkBlue,    s:White)
 call s:highlight_group      ("Function",       s:DarkBlue,    s:White)
 call s:highlight_group      ("Statement",      s:BlueBerry,   s:White)

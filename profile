@@ -47,7 +47,15 @@ export OCTAVE_HISTFILE="$XDG_CACHE_HOME/octave-hsts"
 export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME/octave/octaverc"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export VIMINIT=":source $XDG_CONFIG_HOME"/vim/vimrc
-
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export GOPATH="$XDG_DATA_HOME"/go
+export TERMINFO="$XDG_DATA_HOME"/terminfo
+export TERMINFO_DIRS="$XDG_DATA_HOME"/terminfo:/usr/share/terminfo
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export WINEPREFIX="$XDG_DATA_HOME"/wine
 
 export QSYS_ROOTDIR="/mnt/m.2_1/altera/15.0/quartus/sopc_builder/bin"
 

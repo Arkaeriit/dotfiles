@@ -6,7 +6,7 @@
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	st = status
 	ca = commit --amend
-	trash = !git add ':/*' && git stash
+    trash = !git status -s | sed s:^.:: | cut -d ' ' -f 2 | xargs git add && git stash
 	deep-restore = !git restore --staged ':/*' && git restore ':/*'
 	restoreconf = restore ':/**/.config'
 

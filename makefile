@@ -42,7 +42,7 @@ saveAmfora : createSaveDirs
 saveAlacritty :
 	cp -f $(configDir)/alacritty.yml ./alacritty.yml
 
-restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile restoreSSH restoreVivado restoreNewsboat restoreGit restoreOnivim2 restoreAmfora restoreAlacritty
+restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile restoreSSH restoreNewsboat restoreGit restoreOnivim2 restoreAmfora restoreAlacritty
 
 restoreVim :
 	mkdir -p $(configDir)/vim

@@ -5,10 +5,13 @@
 [alias]
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	st = status
+	co = checkout
 	ca = commit --amend
     trash = !git status -s | sed s:^.:: | cut -d ' ' -f 2 | xargs git add && git stash
-	deep-restore = !git restore --staged ':/*' && git restore ':/*'
+	full-restore = !git restore --staged ':/*' && git restore ':/*'
+	deep-restore = "!for i in $(git submodule status --recursive | cut -d ' ' -f 3); do cd $i ; git full-restore ; cd - 1> /dev/null ; done; git full-restore"
 	restoreconf = restore ':/**/.config'
+    suir = submodule update --init --recursive
 
 [color]
 	branch = auto
@@ -30,6 +33,7 @@
 
 [branch]
 	autosetuprebase = always
+
 [rerere]
 	enabled = true
 

@@ -195,8 +195,10 @@ filetype plugin indent on
 "contrôle de la souris
 set mouse=a
 
-"Arrete d'utiliser Esc pour quiter le mode insertion
+"Alternatives à utiliser Esc pour quiter le mode insertion
 inoremap kj <esc>
+inoremap ² <esc>
+inoremap ế ²
 
 "Status line
 set laststatus=2               "Always visible

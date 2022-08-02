@@ -38,6 +38,11 @@ cd bundle
 git clone https://github.com/severin-lemaignan/vim-minimap.git
 cd ..
 
+# Vim-Fish
+cd bundle
+git clone https://github.com/dag/vim-fish.git
+cd ..
+
 # Custom Help
 ln -s $PWD/custom_help bundle/custom_help
 

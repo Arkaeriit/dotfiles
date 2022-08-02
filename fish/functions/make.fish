@@ -6,6 +6,6 @@ function make
 		return 1
 	end
     set MAKE (which make)
-	$MAKE || bell_and_fail && echo -n \a
+	$MAKE $argv || bell_and_fail && echo -n \a
 end
 

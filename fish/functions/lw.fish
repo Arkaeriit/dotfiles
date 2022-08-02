@@ -1,5 +1,5 @@
 # Runs libreoffice writer
 
-function lw
+function lw -d "libreoffice writer"
     libreoffice --writer $argv
 end

@@ -1,5 +1,6 @@
-#Efface une variable
-function unset
+# Erases a variable
+
+function unset -d "erase a variable"
     set --erase $argv
 end
 

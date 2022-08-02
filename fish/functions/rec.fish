@@ -1,4 +1,5 @@
-function rec
+# Performs audio recording
+
+function rec -d "perform audio recording"
     sox -t alsa default $argv
-    #permet de faire des enregistrements audio
 end

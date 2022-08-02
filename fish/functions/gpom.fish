@@ -2,7 +2,7 @@
 
 # Push the master branch to origin
 
-function gpom
+function gpom -d "git push origin master"
     git push origin master $argv
 end
 

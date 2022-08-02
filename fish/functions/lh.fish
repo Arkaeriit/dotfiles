@@ -1,6 +1,6 @@
-#!/usr/local/bin/fish
+# ls -lh
 
-function lh
+function lh -d "ls -lh"
     ls  -lh $argv
 end
 

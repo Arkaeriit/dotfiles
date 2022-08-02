@@ -8,3 +8,4 @@ function prompt_pwd_full
     set -l realhome ~
     echo $PWD | sed -e "s|^$realhome|~|" -e 's-\([^/.]{'"$fish_prompt_pwd_dir_length"'}\)[^/]*/-\1/-g'
 end
+

@@ -1,6 +1,6 @@
-#!/usr/local/bin/fish
+# ls -l
 
-function ll
+function ll -d "ls -l"
     ls -l $argv
 end
 

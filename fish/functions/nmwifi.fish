@@ -1,3 +1,5 @@
-function nmwifi
-    bash -c "nmcli device wifi $argv"
+# Shorthand for nmcli wifi
+
+function nmwifi -d "nmcli device wifi"
+    nmcli device wifi $argv
 end

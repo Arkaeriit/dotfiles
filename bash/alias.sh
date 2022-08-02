@@ -60,25 +60,36 @@ agtldr() {
     amfora "gemini://freeshell.de/tldr/$prg.gmi"
 }
 
+
+
+# Gère le traitement utilisé dans gted et goto. Le premier argument est la commande à lancer, le second est un argument pour find et le troisième est optionellement le dossier de départ.
+GENERIC_GTED_GOTO() {
+    if [ -z "$1" ]
+    then
+        return 2
+    fi
+    if [ -n "$3" ]
+    then
+        source=$3
+    else
+        source='/'
+    fi
+    target=$(find "$source" $2 2> /dev/null | fzf -e +m -i) #On inclu les fichiers masqués #on cherche les correspondances exactes, seules, la case ne compte pas 
+    if test -n "$target"
+    then
+        "$1" "$target"
+    else
+        return 1
+    fi
+}
+
 #Permet de se diriger vers un dossier ou le dossier contenant le fichier activé par fzf on peut donner un argument en entrée pour choisir le dossier de départ
 goto() {
-    if test -n "$1"
-    then
-        target=$1
-    else
-        target='/'
-    fi
-    cd $(find $target -type d 2> /dev/null | fzf -e +m -i) #On inclu les fichiers masqués #on cherche les correspondances exactes, seules, la case ne compte pas
+    GENERIC_GTED_GOTO cd "-type d" $1
 }
 
 #Permet de se modifier un fichier trouvé gràce à fzf. On peut donner un argument pour choisir le fichier de départ
 gted() {
-    if test -n "$1"
-    then
-        target=$1
-    else
-        target='/'
-    fi
-    $EDITOR $(find $target 2> /dev/null | fzf -e +m -i) #On inclu les fichiers masqués #on cherche les correspondances exactes, seules, la case ne compte pas
+    GENERIC_GTED_GOTO $EDITOR "" $1
 }
 

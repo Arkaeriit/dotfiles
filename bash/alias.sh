@@ -11,8 +11,8 @@ alias .......='cd ../../../../../..'
 alias ........='cd ../../../../../../..'
 alias lh='ls -lh'
 alias ll='ls -l'
-alias moc='if [ -z $TMUX ]; then if [ $TERM == linux ]; then mocp -O ASCIILines=yes; else mocp; fi; else mocp -O ASCIILines=yes -O XTermTheme=/usr/share/moc/themes/darkdot_theme -O Theme=/usr/share/moc/themes/darkdot_theme; fi;' #music player, on prend en compte que l'affichage est un peu nul dans tmux
-alias mocmoc='if [ -z $TMUX ]; then if [ $TERM == linux ]; then exec mocp -O ASCIILines=yes; else exec mocp; fi; else exec mocp -O ASCIILines=yes -O XTermTheme=/usr/share/moc/themes/darkdot_theme -O Theme=/usr/share/moc/themes/darkdot_theme; fi;' #comme moc mais coupe la session après, parfait poour les tty
+alias moc='if [ -z $TMUX ]; then if [ $TERM == linux ]; then mocp -O ASCIILines=yes; else mocp; fi; else mocp -O ASCIILines=yes -O XTermTheme=/usr/share/moc/themes/darkdot_theme -O Theme=/usr/share/moc/themes/darkdot_theme; fi;' # Runs mocp taking into account that the display might be bad on TMUX
+alias mocmoc='if [ -z $TMUX ]; then if [ $TERM == linux ]; then exec mocp -O ASCIILines=yes; else exec mocp; fi; else exec mocp -O ASCIILines=yes -O XTermTheme=/usr/share/moc/themes/darkdot_theme -O Theme=/usr/share/moc/themes/darkdot_theme; fi;' # Exec in moc alias
 alias rec='sox -t alsa default' #permet de faire des enregistrements audio
 alias dimentions='/home/maxime/Programmation/Cperso/ncurse/dimentions/quelleDimentions'
 alias Off='systemctl poweroff'
@@ -29,18 +29,18 @@ alias power='upower -i /org/freedesktop/UPower/devices/battery_BAT0' # Display i
 alias makeDebug='make 2>&1 >/dev/null | head' #On met stdout dans stderr puis on ne regarde que le début de tout ça. Cela sert à s'occuper des erreurs une à une
 alias ping='/usr/bin/ping -c 5'
 alias root='exec sudo su' # Makes you root and leave the shell afterward
-alias analog-city='sshpass -p hightech ssh analog-city' # Connect to the SSH textboard with the password
+alias analog-city='sshpass -p hightech ssh analog-city' # Connect to the analog-city SSH textboard with the password
 alias copy='xclip -selection clipboard' # Put what is piped here into the X.org clipboard. Alternatively, it can be used to copy a file.
-alias cppcheck_all='cppcheck --quiet --enable=all --suppress=missingIncludeSystem $argv 2>&1 | $PAGER' # Run cppckeck with all options and pipe the result into the pager
 alias gpom='git push origin master' # Push the master branch to origin
 alias make_verif='/usr/bin/make clean -j && /usr/bin/make -j 32 || /usr/bin/make && bell' # Runs a quick make and if there is an error, runs it slow to pinpoint where the issue is.
 alias pagevim="vim -S ~/.config/vim/pager.vim -" # Runs vim as a pager reading from stdin
 alias :q="exit"
-alias sayFR="espeak "$argv" -g 5 -s 130 --stdout -v fr | aplay" # Text to speech en français
 alias pastable-csv='sed -e "s/,/\t/g" ' # This quick sed transform makes a csv into something pastable on Google sheet. This should be used along with the copy alias.
 alias dot-to-comma='sed "s/\./\,/g"'
 alias pager="$PAGER" # Run the PAGER environement variable
-alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts" # Prevents history file to be made in the home dirrectory
+alias wget="wget --hsts-file=\"$XDG_DATA_HOME/wget-hsts\"" # Prevents history file to be made in the home dirrectory
+alias cgrep="grep -PRI --include '*.h' --include '*.c'" # grep on C source files
+alias embeter-maki="tmux attach -t (tmux ls | grep attached | head -n 1 | awk -F ':' '{print $1}')" #copies the first tmux session on the terminal
 
 
 # Convert the file given as argument into a mp3 file
@@ -91,5 +91,15 @@ goto() {
 #Permet de se modifier un fichier trouvé gràce à fzf. On peut donner un argument pour choisir le fichier de départ
 gted() {
     GENERIC_GTED_GOTO $EDITOR "" $1
+}
+
+# Run cppckeck with all options and pipe the result into the pager
+cppcheck_all() {
+    cppcheck --quiet --enable=all --suppress=missingIncludeSystem $@ 2>&1 | $PAGER 
+}
+
+# Text to speech en français
+sayFR() {
+    espeak "$@" -g 5 -s 130 --stdout -v fr | aplay
 }
 

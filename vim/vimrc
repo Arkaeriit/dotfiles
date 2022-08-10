@@ -127,6 +127,7 @@ augroup END
 
 "permet d'utiliser le clipboard général
 vnoremap <C-c> "+y
+vnoremap <C-x> "+y:'<,'>d<Cr>
 inoremap <C-v> <Esc>"+P
 
 "permet d'avoir des racourssis clavier normaux

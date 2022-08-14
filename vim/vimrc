@@ -152,12 +152,12 @@ inoremap <Esc><C-f> /\c
 "stop search
 inoremap <C-g> <Esc>:noh<Cr>:echom "Search cleared."<Cr>i
 noremap <C-g> :noh<Cr>:echom "Search cleared."<Cr>
-"Omega
-inoremap <C-O> Ω
-inoremap <C-P> ω
-"œ
+" Special chars
+inoremap <C-O><C-P> ω
+inoremap <C-O><C-G> Ω
+inoremap <C-S><C-P> σ
+inoremap <C-S><C-G> Σ
 inoremap <C-O><C-E> œ
-"·
 inoremap <C-P><C-M> ·
 " Remove anoying history popup
 nnoremap q: :q

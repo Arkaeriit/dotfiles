@@ -2,7 +2,7 @@ configDir = ~/.config
 dataDir = ~/.local/share
 binDir = ~/.local/bin
 
-save : saveVim saveFish saveTmux saveBash saveProfile saveSSH saveNewsboat saveGit saveOnivim2 saveAmfora
+save : saveVim saveFish saveTmux saveBash saveProfile saveSSH saveNewsboat saveGit saveOnivim2 saveAmfora saveAlacritty
 
 .PHONY : createSaveDirs 
 createSaveDirs :
@@ -39,7 +39,10 @@ saveOnivim2 : createSaveDirs
 saveAmfora : createSaveDirs
 	cp -f $(configDir)/amfora/* amfora/
 
-restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile restoreSSH restoreVivado restoreNewsboat restoreGit restoreOnivim2 restoreAmfora
+saveAlacritty :
+	cp -f $(configDir)/alacritty.yml ./alacritty.yml
+
+restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile restoreSSH restoreVivado restoreNewsboat restoreGit restoreOnivim2 restoreAmfora restoreAlacritty
 
 restoreVim :
 	mkdir -p $(configDir)/vim
@@ -87,4 +90,8 @@ restoreOnivim2 :
 restoreAmfora :
 	mkdir -p $(configDir)/amfora
 	cp -f amfora/* $(configDir)/amfora/
+
+restoreAlacritty :
+	mkdir -p $(configDir)
+	cp -f alacritty.yml $(configDir)/alacritty.yml
 

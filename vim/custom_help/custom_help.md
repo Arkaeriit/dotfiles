@@ -241,8 +241,10 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 
 ### Special characters
 
-* `<C-O>` in insert mode adds a "Ω".
-* `<C-P>` in insert mode adds a "ω".
+* `<C-O><C-P>` in insert mode adds a "ω".
+* `<C-O><C-G>` in insert mode adds a "Ω".
+* `<C-S><C-P>` in insert mode adds a "σ".
+* `<C-S><C-G>` in insert mode adds a "Σ".
 * `<C-O><C-E>` in insert mode adds a "œ".
 * `<C-P><C-M>` in instet mode adds a "·".
 

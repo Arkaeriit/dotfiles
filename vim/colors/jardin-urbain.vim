@@ -159,7 +159,7 @@ call s:highlight_group      ("Todo",           s:Yellow,     s:Black)
 
 " UI groups
 call s:highlight_group      ('Visual',         s:Black,      s:Gray)
-call s:highlight_group      ('Cursor',         s:LightGray,  s:Black)
+call s:highlight_group      ('Cursor',         s:Black,      s:White)
 call s:highlight_group      ('LineNr',         s:Beige,      s:Black)
 call s:highlight_group      ('CursorLineNr',   s:Burgundy,   s:Black)
 call s:highlight_group      ('ColorColumn',    s:clear,      s:DarkBlue)

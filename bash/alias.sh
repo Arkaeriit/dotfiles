@@ -54,6 +54,12 @@ vimtmp () {
 	vim $name && rm -f $name
 }
 
+# Open vim to write in the X clipboard
+vimtype() {
+	name=$(head -n 1 /dev/random | base32 | head -n1)
+	vim $name && sed -z -i -e 's:\n$::' $name && copy $name && /bin/rm -f $name
+}
+
 # Open a tldr page from gemini in Amfora
 agtldr() {
     prg=$1

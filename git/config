@@ -40,3 +40,5 @@
 [rerere]
 	enabled = true
 
+[core]
+	excludesFile = /home/mbouillot/.config/git/gitignore

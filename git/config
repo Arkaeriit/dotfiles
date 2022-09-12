@@ -14,6 +14,7 @@
     suir = submodule update --init --recursive
     plom = !"if git branch --list | sed 's:*::; s: *:: ' | grep master > /dev/null; then git pull origin master; else if git branch --list | sed 's:*::; s: *:: ' | grep main > /dev/null; then git pull origin main; else echo 'No branch named main or master found' > /dev/stderr; false; fi; fi"
     psom = !"if git branch --list | sed 's:*::; s: *:: ' | grep master > /dev/null; then git push origin master; else if git branch --list | sed 's:*::; s: *:: ' | grep main > /dev/null; then git push origin main; else echo 'No branch named main or master found' > /dev/stderr; false; fi; fi"
+    trash-restore = stash apply stash@{0}
 
 
 [color]

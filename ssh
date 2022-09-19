@@ -50,6 +50,7 @@ Host soft-serve
     User mbouillot
     Hostname git.bobignou.red
     Port 23231
+    IdentityFile ~/.ssh/id_rsa
 
 # Raspail
 Host bobignou

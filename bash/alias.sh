@@ -109,3 +109,10 @@ sayFR() {
     espeak "$@" -g 5 -s 130 --stdout -v fr | aplay
 }
 
+# Initialize an empty cscope database
+cscope-init() {
+    FILENAME=$(tempfile -s .c -p MT-C-File-)
+    cscope -b $FILENAME 
+    /bin/rm -f $FILENAME
+}
+

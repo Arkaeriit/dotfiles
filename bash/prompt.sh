@@ -51,8 +51,8 @@ dynamic_chevron_color() {
 COL_ERROR_ON_STATUS="\e\$(dynamic_chevron_color \$((\$?==0?0:1)))"
 
 COL_ERROR="$Red"
-COL_PWD="$BYellow"
-COL_EXTRA="$BPurple"
+COL_PWD="$BWhite"
+COL_EXTRA="$BBlue"
 
 PS1="\[$COL_EXTRA\]$SMILE1\[\e[$COL_PWD\] \w \[$COL_ERROR_ON_STATUS\]>$NC"
 PS2="\[$COL_EXTRA\]$SMILE2\[\e[$COL_PWD\] \[$COL_PWD\]>>$NC"

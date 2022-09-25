@@ -65,3 +65,9 @@ Host arrakis
     User maki
     Port 2255
 
+# Vultr VPS
+Host vultr
+    Hostname vltr.bobignou.red
+    User maki
+    Port 22
+

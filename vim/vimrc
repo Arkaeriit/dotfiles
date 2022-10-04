@@ -251,3 +251,10 @@ endfunction
 
 nnoremap <leader><F6> :call CutToRuller()<Cr>
 
+" Prevent error when scroling right after entering in normal mode
+let s:i = 10
+while s:i <= 99
+    let s:cmd = "cnoremap ;" . s:i . "M <bs><bs><bs><bs><bs><bs><bs><bs><bs><bs><bs><cr>" 
+    exec s:cmd
+    let s:i += 1
+endwhile

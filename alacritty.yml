@@ -26,14 +26,14 @@ font:
     family: IBM Plex Mono
 
   # Point size
-  size: 8.0
+  size: 7.5
 
-# Colors (Snazzy)
+# Colors
 colors:
   # Default colors
   primary:
-    background: '0x282a36'
-    foreground: '0xeff0eb'
+    background: '0x282828'
+    foreground: '0xf3efef'
 
   # Normal colors
   normal:

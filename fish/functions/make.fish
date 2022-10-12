@@ -2,8 +2,9 @@
 
 function make
 	function bell_and_fail
+        set last_status $status
         echo -n \a
-		return 1
+		return $last_status
 	end
     set MAKE (which make)
 	$MAKE $argv || bell_and_fail && echo -n \a

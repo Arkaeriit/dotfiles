@@ -116,3 +116,13 @@ cscope-init() {
     /bin/rm -f $FILENAME
 }
 
+make() {
+    bell_and_fail() {
+        s=$?
+        printf '\a'
+        return $s
+    }
+    MAKE=$(which make)
+    $MAKE $@ || bell_and_fail && printf '\a'
+}
+

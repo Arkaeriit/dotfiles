@@ -46,3 +46,8 @@ cd ..
 # Custom Help
 ln -s $PWD/custom_help bundle/custom_help
 
+# Vim-Hex
+cd bundle
+git clone https://github.com/Arkaeriit/vim-hex.git
+cd ..
+

@@ -260,3 +260,12 @@ while s:i <= 99
     exec s:cmd
     let s:i += 1
 endwhile
+
+" Consider *.bin and *.exe files as binaries
+augroup Binary
+  au!
+  au BufReadPre,FileReadPre,BufNewFile *.bin let &bin=1
+  au BufReadPre,FileReadPre,BufNewFile *.exe let &bin=1
+augroup END
+
+

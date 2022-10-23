@@ -36,9 +36,10 @@ Multiple themes are usable. To cycle between them, use the key `<F3>`. The main 
 
 The currently installed themes are:
 
-1. `dark-meadow` (dark)
-2. `pencil` (light)
-3. `photon` (dark)
+1. `jardin-urbain` (dark high contrast)
+2. `confiserie` (dark low contrast)
+3. `champ-de-blé` (light low contrast)
+3. `fusain` (light high contrast)
 
 ### Adding new colors
 
@@ -129,6 +130,12 @@ Adds a mini-map on the left side of the screen. Use `<leader>mm` to open the min
 
 #### `YouCompleteMe`
 This very big plugin adds auto-completion and some function definition in Python. The installation process is a bit more involved than the other plugins but this is handled in the `install.sh` script.
+
+### `vim-fish`
+Add syntax support for fish scripts.
+
+### `vim-hex`
+Edit binary files in hex.
 
 ### Making a new plugin
 

@@ -209,7 +209,7 @@ inoremap ế ²
 set laststatus=2               "Always visible
 set statusline=%f\ -\ %Y\ %r\  "Left side (name and type)
 set statusline+=%=             " Switch to the right side
-set statusline+=%l\ %c%V\ %P   "Right side (Position)
+set statusline+=%m\ %l\ %c%V\ %P   "Right side (Position)
 
 " DevzatCopy, a command to copy the buffer in a way that is pastable on devzat
 function DevzatCopy_fnc()

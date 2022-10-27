@@ -6,7 +6,6 @@ source "$XDG_CONFIG_HOME/bash/completion.sh" #autocompletion de bash
 source "$XDG_CONFIG_HOME/bash/color.sh" #alias collorÃÂ©s
 source "$XDG_CONFIG_HOME/bash/prompt.sh" #prompt collorÃÂ©
 source "$XDG_CONFIG_HOME/bash/alias.sh" #alias perso
-source "$XDG_CONFIG_HOME/bash/aliaslocal.sh" #alias local (racourcis...)
 source "$XDG_CONFIG_HOME/bash/setting.sh" #paramÃÂ¨tres perso comme l'ÃÂ©diteur
 source "$XDG_CONFIG_HOME/bash/startup.sh" #programes ÃÂ  dÃÂ©marer automatiquement
 

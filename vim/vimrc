@@ -161,6 +161,7 @@ inoremap <C-D><C-P> δ
 inoremap <C-D><C-G> Δ
 inoremap <C-O><C-E> œ
 inoremap <C-P><C-M> ·
+inoremap <C-I><C-F> ∞
 " Remove anoying history popup
 nnoremap q: :q
 nnoremap Q: q:

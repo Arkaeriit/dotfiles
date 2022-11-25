@@ -15,7 +15,7 @@
     plom = !"REMOTE=origin && if git remote | grep source > /dev/null; then REMOTE=source; fi && if git branch --list | sed 's:*::; s: *:: ' | grep master > /dev/null; then git pull $REMOTE master; else if git branch --list | sed 's:*::; s: *:: ' | grep main > /dev/null; then git pull $REMOTE main; else echo 'No branch named main or master found' > /dev/stderr; false; fi; fi"
     psom = !"if git branch --list | sed 's:*::; s: *:: ' | grep master > /dev/null; then git push origin master; else if git branch --list | sed 's:*::; s: *:: ' | grep main > /dev/null; then git push origin main; else echo 'No branch named main or master found' > /dev/stderr; false; fi; fi"
     trash-restore = stash apply stash@{0}
-    cof = !"git checkout $(git branch --list | sed 's:\\*::; s: *:: ' | fzf)"
+    cof = !"git checkout $(git branch --list | sed 's:\\*::; s: *:: ' | fzf --cycle --border)"
     k = !"gitk"
 
 [color]

@@ -214,10 +214,15 @@ __TODO: learn more about this to use it.__
 ### Table of content
 
 * C
+* bin and exe
 
 ### C
 
 To comply with my company's coding rules, in C, raw tabs are used instead of 4 spaces.
+
+### `.bin` and `.exe`
+
+`.bin` and `.exe` are automatically opened with vim-hex.
 
 
 
@@ -257,6 +262,7 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 * `<C-O><C-E>` in insert mode adds a "œ".
 * `<C-P><C-M>` in instet mode adds a "·".
 * `<C-N><C-F>` in instet mode adds a "∞".
+* `<C-space>` in instet mode adds a non breaking space.
 
 ### Search
 

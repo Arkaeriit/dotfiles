@@ -217,7 +217,7 @@ set statusline+=%m\ %l\ %c%V\ %P   "Right side (Position)
 function DevzatCopy_fnc()
     %s/$/\\n/
     %s/\n//
-    normal I```\nkjA```kjV"+yu
+    normal 0i```\nkjA```kjV"+yu
     echom "Copied the buffer to be pasted on devzat."
 endfunction
 

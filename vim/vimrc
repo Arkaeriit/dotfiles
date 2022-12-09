@@ -162,6 +162,7 @@ inoremap <C-D><C-G> Δ
 inoremap <C-O><C-E> œ
 inoremap <C-P><C-M> ·
 inoremap <C-N><C-F> ∞
+inoremap <C-P><C-P><C-P> …
 inoremap <C-space>  
 " Remove anoying history popup
 nnoremap q: :q

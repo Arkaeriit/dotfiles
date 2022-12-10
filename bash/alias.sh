@@ -128,8 +128,8 @@ make() {
 rm() {
     if command -v rem > /dev/null
     then
-        rem --rm-mode $?
+        rem --rm-mode $@
     else
-        rm $?
+        rm $@
     fi
 }

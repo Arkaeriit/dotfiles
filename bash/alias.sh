@@ -20,7 +20,6 @@ alias muteMic='amixer set Capture toggle'
 alias findHere='find . -name ' # Find a file in the working directory
 alias nmwifi='nmcli device wifi'
 alias sudo='sudo '
-alias rm='echo "rm est désactivé. Utilisez /bin/rm." && echo "Utilisation de rem à la place."  && rem -q '
 alias please='sudo $(fc -ln -1)'
 alias lw='libreoffice --writer'
 alias gc='git commit -m '
@@ -126,3 +125,11 @@ make() {
     $MAKE $@; bell_and_report
 }
 
+rm() {
+    if command -v rem > /dev/null
+    then
+        rem --rm-mode $?
+    else
+        rm $?
+    fi
+}

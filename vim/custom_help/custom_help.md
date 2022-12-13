@@ -262,8 +262,9 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 * `<C-O><C-E>` in insert mode adds a "œ".
 * `<C-P><C-M>` in instet mode adds a "·".
 * `<C-N><C-F>` in instet mode adds a "∞".
-* `<C-P><C-P><C-P>` in instet mode adds a "…"
-* `<C-space>` in instet mode adds a non breaking space.
+* `<C-P><C-P><C-P>` in instet mode adds a "…".
+* `<C-space>` in insert mode adds a non breaking space.
+* `OnO` in insert mode writes "ÓnÒ".
 
 ### Search
 

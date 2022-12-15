@@ -147,6 +147,23 @@ rm() {
     fi
 }
 
+# Edit an address from an embedded firmware
+edit_addr () {
+    if [ -n "$1" ]
+    then
+        if arm-none-eabi-addr2line $1 -e objs/app.elf > /dev/null 2> /dev/null
+        then
+            arm-none-eabi-addr2line $1 -e objs/app.elf | sed "s/:/ +/" | xargs vim
+        else
+            echo "Elf file or address invalid." > /dev/stderr
+            return 2
+        fi
+    else
+        echo "Give an address, pretty please." > /dev/stderr
+        return 1
+    fi
+}
+
 # Replace a name by an other in a whole directory.
 rename-symbol () {
     if [ -z "$1" ] || [ -z "$2" ]

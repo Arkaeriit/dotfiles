@@ -47,9 +47,15 @@ ffmpeg-to-mp3() {
     ffmpeg -i $1 -vn -ar 44100 -ac 2 -b:a 192k $1.mp3
 }
 
-# Open vim as a scratch pad.
+# Open vim as a scratch pad. Give filetype as argument
 vimtmp () {
+    sufix="txt"
+    if [ -n "$1" ]
+    then
+        sufix="$1"
+    fi
 	name=$(head -n 1 /dev/random | base32 | head -n1)
+    name="$name.$sufix"
 	vim "/tmp/$name" && rm -f -v "/tmp/$name"
 }
 

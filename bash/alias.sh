@@ -50,7 +50,7 @@ ffmpeg-to-mp3() {
 # Open vim as a scratch pad.
 vimtmp () {
 	name=$(head -n 1 /dev/random | base32 | head -n1)
-	vim "/tmp/$name" && rm -f "/tmp/$name"
+	vim "/tmp/$name" && rm -f -v "/tmp/$name"
 }
 
 # Open vim to write in the X clipboard

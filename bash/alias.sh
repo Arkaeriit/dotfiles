@@ -40,6 +40,7 @@ alias pager="$PAGER" # Run the PAGER environement variable
 alias wget="wget --hsts-file=\"$XDG_DATA_HOME/wget-hsts\"" # Prevents history file to be made in the home dirrectory
 alias cgrep="grep -PRI --include '*.h' --include '*.c'" # grep on C source files
 alias embeter-maki="tmux attach -t (tmux ls | grep attached | head -n 1 | awk -F ':' '{print $1}')" #copies the first tmux session on the terminal
+alias _giberish="head -c 80 /dev/random | base32 | head -n1 #" # Echo some noise
 
 
 # Convert the file given as argument into a mp3 file
@@ -54,14 +55,14 @@ vimtmp () {
     then
         sufix="$1"
     fi
-	name=$(head -n 1 /dev/random | base32 | head -n1)
+	name=$(_giberish)
     name="$name.$sufix"
 	vim "/tmp/$name" && rm -f -v "/tmp/$name"
 }
 
 # Open vim to write in the X clipboard
 vimtype() {
-	name=$(head -n 1 /dev/random | base32 | head -n1)
+	name=$(_giberish)
 	vim $name && sed -z -i -e 's:\n$::' $name && copy $name && /bin/rm -f $name
 }
 
@@ -116,7 +117,8 @@ sayFR() {
 
 # Initialize an empty cscope database
 cscope-init() {
-    FILENAME=$(tempfile -s .c -p MT-C-File-)
+    FILENAME=$(_giberish).c
+    touch $FILENAME
     cscope -b $FILENAME 
     /bin/rm -f $FILENAME
 }

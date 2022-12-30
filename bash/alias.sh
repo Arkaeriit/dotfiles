@@ -22,6 +22,7 @@ alias nmwifi='nmcli device wifi'
 alias sudo='sudo '
 alias please='sudo $(fc -ln -1)'
 alias lw='libreoffice --writer'
+alias lc='libreoffice --calc'
 alias gc='git commit -m '
 alias jc='echo "javac *.java" && javac *.java'
 alias power='upower -i /org/freedesktop/UPower/devices/battery_BAT0' # Display info about the battery

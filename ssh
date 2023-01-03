@@ -61,7 +61,7 @@ Host raspail
 
 # Arrakis
 Host arrakis
-    HostName bobignou.red
+    HostName arrakis.bobignou.red
     User maki
     Port 2255
 

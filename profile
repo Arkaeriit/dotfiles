@@ -63,3 +63,4 @@ export INPUTRC="$XDG_CONFIG_HOME"/inputrc
 export QSYS_ROOTDIR="/mnt/m.2_1/altera/15.0/quartus/sopc_builder/bin"
 
 export ALTERAOCLSDKROOT="/mnt/m.2_1/altera/15.0/hld"
+. "/home/maki/.local/share/cargo/env"

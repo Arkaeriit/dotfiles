@@ -142,3 +142,17 @@ rm() {
         rm $@
     fi
 }
+
+# Replace a name by an other in a whole directory.
+rename-symbol () {
+    if [ -z "$1" ] || [ -z "$2" ]
+    then
+        echo "Usage: rename_symbol <old symbol> <new symbol>" > /dev/stderr
+        return 1
+    fi
+    for i in $(find *)
+    do
+        sed -i "s:$1:$2:g" $i
+    done
+}
+

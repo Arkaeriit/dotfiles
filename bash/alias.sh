@@ -108,7 +108,10 @@ gted() {
 
 # Run cppckeck with all options and pipe the result into the pager
 cppcheck_all() {
-    cppcheck --quiet --enable=all --suppress=unusedFunction --suppress=missingIncludeSystem $@ 2>&1 | $PAGER 
+    cppcheck -j 20 --quiet --enable=all --suppress=unusedFunction --suppress=missingIncludeSystem $@ 2>&1 | $PAGER 
+}
+cppcheck_sane() {
+    cppcheck -j 20 --quiet --enable=warning,information,performance --suppress=unusedFunction --suppress=missingIncludeSystem $@ 2>&1 | $PAGER 
 }
 
 # Text to speech en français

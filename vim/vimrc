@@ -280,4 +280,5 @@ let g:formatters_c   = ['personal_c']
 let g:formatters_cpp = ['personal_c']
 let g:formatters_cs  = ['personal_c']
 inoremap <C-F> <Esc>:Autoformat<Cr>mzGo<Esc>'zi
+nnoremap <C-A><C-F> <Esc>:Autoformat<Cr>mzGo<Esc>'z
 

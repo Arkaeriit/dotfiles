@@ -262,6 +262,8 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 * `<C-S><C-G>` in insert mode adds a "Σ".
 * `<C-D><C-P>` in insert mode adds a "δ".
 * `<C-D><C-G>` in insert mode adds a "Δ".
+* `<C-P><C-P>` in insert mode adds a "π".
+* `<C-P><C-G>` in insert mode adds a "Π".
 * `<C-O><C-E>` in insert mode adds a "œ".
 * `<C-P><C-M>` in instet mode adds a "·".
 * `<C-N><C-F>` in instet mode adds a "∞".

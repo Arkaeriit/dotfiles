@@ -159,6 +159,8 @@ inoremap <C-S><C-P> σ
 inoremap <C-S><C-G> Σ
 inoremap <C-D><C-P> δ
 inoremap <C-D><C-G> Δ
+inoremap <C-P><C-P> π
+inoremap <C-P><C-G> Π
 inoremap <C-O><C-E> œ
 inoremap <C-P><C-M> ·
 inoremap <C-N><C-F> ∞

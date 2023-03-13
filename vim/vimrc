@@ -272,4 +272,10 @@ augroup Binary
   au BufReadPre,FileReadPre,BufNewFile *.exe let &bin=1
 augroup END
 
+" vim-autoformat
+let g:formatdef_personal_c = '"astyle --style=java --indent=spaces=4 --add-braces --attach-closing-while --attach-extern-c --indent-switches --min-conditional-indent=1 --pad-comma --pad-header --align-pointer=type --attach-return-type --convert-tabs"'
+let g:formatters_c   = ['personal_c']
+let g:formatters_cpp = ['personal_c']
+let g:formatters_cs  = ['personal_c']
+inoremap <C-F> <Esc>:Autoformat<Cr>mzGo<Esc>'zi
 

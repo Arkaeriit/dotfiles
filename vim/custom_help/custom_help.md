@@ -131,6 +131,9 @@ Adds a mini-map on the left side of the screen. Use `<leader>mm` to open the min
 #### `YouCompleteMe`
 This very big plugin adds auto-completion and some function definition in Python. The installation process is a bit more involved than the other plugins but this is handled in the `install.sh` script.
 
+#### `vim-autoformat`
+Formats the code when pressing `<C-F>` in insert mode. As of now, only C and C++ are handled thanks to `astyle`. As I like it, a new line is kept at the end of the file.
+
 ### `vim-fish`
 Add syntax support for fish scripts.
 
@@ -311,6 +314,9 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 
 #### `rainbow_parentheses`
 * `<F7>` to toggle.
+
+#### `vim-autoformat`
+* `<C-F>` in insert mode to format the text.
 
 #### `vim-minimap`
 * `<leader>mm` to open the mini-map.

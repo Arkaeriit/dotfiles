@@ -51,3 +51,8 @@ cd bundle
 git clone https://github.com/Arkaeriit/vim-hex.git
 cd ..
 
+# Vim-autoformat
+cd bundle
+git clone https://github.com/vim-autoformat/vim-autoformat.git
+cd ..
+

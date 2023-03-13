@@ -265,9 +265,9 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 * `<C-P><C-P>` in insert mode adds a "π".
 * `<C-P><C-G>` in insert mode adds a "Π".
 * `<C-O><C-E>` in insert mode adds a "œ".
-* `<C-P><C-M>` in instet mode adds a "·".
-* `<C-N><C-F>` in instet mode adds a "∞".
-* `<C-P><C-P><C-P>` in instet mode adds a "…".
+* `<C-P><C-M>` in insert mode adds a "·".
+* `<C-N><C-F>` in insert mode adds a "∞".
+* `<C-P><C-P><C-P>` in insert mode adds a "…".
 * `<C-space>` in insert mode adds a non breaking space.
 * `OnO` in insert mode writes "ÓnÒ".
 
@@ -291,7 +291,7 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 * `:DevzatCopy` copies the text to be pasted in the Devzat chat-room.
 * `kj` leaves insert mode.
 * `²` leaves insert mode as well.
-* `ế` gets back the ² that is used for leaving inser.
+* `ế` gets back the ² that is used for leaving insert.
 * `<C-R>` in insert mode insert a raw key (`<C-V>` in normal Vim).
 * `<C-T>` in insert mode insert a tab.
 * `<leader><F6>` cut the current line to the ruler.

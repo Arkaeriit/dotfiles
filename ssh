@@ -38,7 +38,7 @@ Host neo430dev
     User max
     HostName 192.168.122.183
 
-# SSH chatroom
+# SSH chatroor
 Host devzat
     User Arkaeriit
     Hostname devzat.hackclub.com
@@ -119,4 +119,11 @@ Host devzat-admin
 Host git.pptie.de
     IdentitiesOnly yes
     IdentityFile ~/.ssh/id_netatmo_perso
+
+Host localDevzat
+    User max
+    Hostname 127.9.9.9
+    Port 2222
+    IdentitiesOnly yes
+    IdentityFile ~/dev/perso/mining_Devzat_id/key.mine
 

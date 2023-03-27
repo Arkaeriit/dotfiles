@@ -1,7 +1,6 @@
 setlocal cindent
 "noremap <f5> <Esc>:!make<Cr>
 "noremap <f6> <Esc>:!lindent %<Cr>y<Cr>:!rm %~<Cr><Cr>
-set noexpandtab
 
 " Highlight Class and Function names
 "syn match    cCustomFunc     "\w\+\s*("  contains=cParen,cCppParen

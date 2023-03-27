@@ -79,17 +79,18 @@ function ToogleColorColumn()
 endfunction
 nnoremap <F6> :call ToogleColorColumn()<Enter>
 
-"controle le nombre de charactère que font les TAB
-set tabstop=4
-
-"permet d'être plus sur d l'utilisation continue des espaces
-set softtabstop=4
+" Set the size of a tabulation, the combinaison of all those variables makes
+" for a smarter tabulation
+function Set_indent_space(size)
+    let &tabstop=a:size
+    let &softtabstop=a:size
+    let &shiftwidth=a:size
+endfunction
+call Set_indent_space(4)
 
 "écrit des espaces quand on fait tab
 set expandtab  
 
-"permet une inentation intéligente
-set shiftwidth=4
 
 "indique le numéro de la ligne
 set number
@@ -124,6 +125,11 @@ augroup project
     autocmd BufRead,BufNewFile *.h,*.c set filetype=c
     autocmd BufRead,BufNewFile *.ino set filetype=arduino
     autocmd BufRead,BufNewFile *.nelua set filetype=lua
+augroup END
+
+" With some filetypes, change some rules
+augroup indent_gt
+    autocmd BufRead,BufNewFile *.ino call Set_indent_space(2)
 augroup END
 
 "permet d'utiliser le clipboard général

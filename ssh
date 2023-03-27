@@ -42,6 +42,8 @@ Host neo430dev
 Host devzat
     User Arkaeriit
     Hostname devzat.hackclub.com
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/id_devzat
 
 # Soft serve
 Host soft-serve

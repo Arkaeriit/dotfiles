@@ -140,6 +140,9 @@ Add syntax support for fish scripts.
 ### `vim-hex`
 Edit binary files in hex.
 
+### `vim-localrc`
+When editing a file, search for `.local.vimrc` in each parent directory of the file. Those files are then executed as configuration.
+
 ### Making a new plugin
 
 To make a new plugin, one have to create its directory in `bundle`. In the plugin's directory, a directory named `plugin` have to be made. The plugin's code must be written in the latter. Furthermore, a directory named `autoload` can be made, but as I don't understand well what is `autoload`, I never used it yet.

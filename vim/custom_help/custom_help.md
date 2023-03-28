@@ -143,6 +143,16 @@ Edit binary files in hex.
 ### `vim-localrc`
 When editing a file, search for `.local.vimrc` in each parent directory of the file. Those files are then executed as configuration.
 
+### `vim-ruler`
+A ruler can be added to easily see the length of lines. Press `<F6>` to toggle the various rulers. The available rulers are:
+
+* No ruler.
+* 80 chars lines.
+* 50 chars lines.
+* 100 chars lines.
+
+It is possible to cut the line to the current ruler with the keybinding `<leader><F6>`.
+
 ### Making a new plugin
 
 To make a new plugin, one have to create its directory in `bundle`. In the plugin's directory, a directory named `plugin` have to be made. The plugin's code must be written in the latter. Furthermore, a directory named `autoload` can be made, but as I don't understand well what is `autoload`, I never used it yet.
@@ -163,7 +173,6 @@ Alternatively, instead of using Pathogen, native plugins can be used. They have 
 * Status
 * Line numbers
 * White-space
-* Rulers
 * Miscellaneous
 
 ### Tabs
@@ -191,17 +200,6 @@ To toggle between relative and absolute line numbering, use `<C-N>`.
 By default, all white-space are left white. Using `<F8>` in normal or insert mode replace toggles a mode where they can be seen.
 
 White-space categories are spaces, tabs, trailing spaces, non-separable spaces, and end of line.
-
-### Rulers
-
-A ruler can be added to easily see the length of lines. Press `<F6>` to toggle the various rulers. The available rulers are:
-
-* No ruler.
-* 80 chars lines.
-* 50 chars lines.
-* 100 chars lines.
-
-It is possible to cut the line to the current ruler with the keybinding `<leader><F6>`.
 
 ### Miscellaneous
 
@@ -297,7 +295,6 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 * `ế` gets back the ² that is used for leaving insert.
 * `<C-R>` in insert mode insert a raw key (`<C-V>` in normal Vim).
 * `<C-T>` in insert mode insert a tab.
-* `<leader><F6>` cut the current line to the ruler.
 
 ### Plugins
 
@@ -327,4 +324,8 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 #### `vim-minimap`
 * `<leader>mm` to open the mini-map.
 * `<leader>mc` to close the mini map.
+
+#### `vim-ruler`
+* `<F6>` cycles through the rulers.
+* `<leader><F6>` cut the current line to the ruler.
 

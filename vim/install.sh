@@ -61,3 +61,8 @@ cd bundle
 git clone https://github.com/thinca/vim-localrc.git
 cd ..
 
+# Vim-ruler
+cd bundle
+git clone https://github.com/Arkaeriit/vim-ruler
+cd ..
+

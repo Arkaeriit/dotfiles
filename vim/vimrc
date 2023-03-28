@@ -58,27 +58,6 @@ function ToogleSpell()
 endfunction
 nnoremap <F4> :call ToogleSpell()<Enter>
 
-"Add or remove a color line
-let g:colorColumnCount = 0
-function ToogleColorColumn()
-    let g:colorColumnCount = g:colorColumnCount + 1
-    let l:trueCount = g:colorColumnCount % 4
-    if l:trueCount == 0
-        set colorcolumn=
-        echom "Color column disbled"
-    elseif l:trueCount == 1
-        set colorcolumn=80
-        echom "Color column at 80 column"
-    elseif l:trueCount == 2
-        set colorcolumn=50
-        echom "Color column at 50 column"
-    else
-        set colorcolumn=100
-        echom "Color column at 100 column"
-    endif
-endfunction
-nnoremap <F6> :call ToogleColorColumn()<Enter>
-
 " Set the size of a tabulation, the combinaison of all those variables makes
 " for a smarter tabulation
 function Set_indent_space(size)
@@ -90,7 +69,6 @@ call Set_indent_space(4)
 
 "écrit des espaces quand on fait tab
 set expandtab  
-
 
 "indique le numéro de la ligne
 set number
@@ -239,32 +217,6 @@ set listchars=eol:↵,tab:⇤-⇥,trail:○,extends:>,precedes:<,space:·,nbsp:�
 noremap <F8> :set list!<CR>
 inoremap <F8> <Esc>:set list!<CR>a
 
-" Auto cut to vertical ruller
-
-" Tell if the current line is longuer than the given argument
-function IsLineLonguer(len)
-    let l:pos = getcurpos()
-    let l:pos[2] = a:len + 1
-    call setpos(".", l:pos)
-    let l:pos = getcurpos()[2]
-    return l:pos > a:len
-endfunction
-
-" Cut a line in multiple lines that are shorter than the given argument
-" Cut line at spaces
-function CutToLen(len)
-    while IsLineLonguer(a:len)
-        exec "normal F r\n"
-    endwhile
-endfunction
-    
-" Cut to the shortest vertical ruller
-function CutToRuller()
-    let l:len = &colorcolumn + 1 - 1
-    call CutToLen(l:len)
-endfunction
-
-nnoremap <leader><F6> :call CutToRuller()<Cr>
 
 " Prevent error when scroling right after entering in normal mode
 let s:i = 10
@@ -290,4 +242,8 @@ let g:formatdef_arduino = '"astyle --style=java --indent=spaces=2 --add-braces -
 let g:formatters_arduino  = ['arduino']
 inoremap <C-F> <Esc>:Autoformat<Cr>mzGo<Esc>'zi
 nnoremap <C-A><C-F> <Esc>:Autoformat<Cr>mzGo<Esc>'z
+
+" vim-ruler
+nnoremap <F6> :RulerCycle<Cr>
+nnoremap <leader><F6> :RulerCut<Cr>
 

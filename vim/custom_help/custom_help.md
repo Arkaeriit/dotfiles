@@ -25,7 +25,7 @@ This page documents all the modification I added to VIM. Furthermore, there is s
 ### Default
 
 #### Theme
-The default color is the dark theme `dark-meadow`. As it is a dark theme, I have to set the variable `background` to `dark`.
+The default color is the dark theme `jardin-urbain`. As it is a dark theme, I have to set the variable `background` to `dark`.
 
 #### Upgrade to do later
 I like this theme because, as I disabled italics in tmux, a lot of highlights are in the background. I might need to change the theme if I want to enable italics. Furthermore, as I use 256 color, the result is very bright and saturated, which I like. It I want to use more colors, I will need to teak it to be brighter in true color mode.

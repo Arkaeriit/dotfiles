@@ -134,6 +134,9 @@ This very big plugin adds auto-completion and some function definition in Python
 #### `vim-autoformat`
 Formats the code when pressing `<C-F>` in insert mode or `<C-A><C-F>` in normal mode. As of now, only C and C++ are handled thanks to `astyle`. As I like it, a new line is kept at the end of the file.
 
+### `vim-ezgreek`
+Pressing `<C-G>` in normal mode followed by the transliteration of a Greek letter writes that Greek letter.
+
 ### `vim-fish`
 Add syntax support for fish scripts.
 
@@ -257,14 +260,6 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 
 ### Special characters
 
-* `<C-O><C-P>` in insert mode adds a "ω".
-* `<C-O><C-G>` in insert mode adds a "Ω".
-* `<C-S><C-P>` in insert mode adds a "σ".
-* `<C-S><C-G>` in insert mode adds a "Σ".
-* `<C-D><C-P>` in insert mode adds a "δ".
-* `<C-D><C-G>` in insert mode adds a "Δ".
-* `<C-P><C-P>` in insert mode adds a "π".
-* `<C-P><C-G>` in insert mode adds a "Π".
 * `<C-O><C-E>` in insert mode adds a "œ".
 * `<C-P><C-M>` in insert mode adds a "·".
 * `<C-N><C-F>` in insert mode adds a "∞".
@@ -320,6 +315,9 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 #### `vim-autoformat`
 * `<C-F>` in insert mode to format the text.
 * `<C-A><C-F>` in normal mode to format the text.
+
+### `vim-ezgreek`
+* `<C-G>` in insert mode prefixes a Greek transliteration.
 
 #### `vim-minimap`
 * `<leader>mm` to open the mini-map.

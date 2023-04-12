@@ -56,6 +56,11 @@ cd bundle
 git clone https://github.com/vim-autoformat/vim-autoformat.git
 cd ..
 
+# Vim-ezgreek
+cd bundle
+git clone https://github.com/Arkaeriit/vim-ezgreek.git
+cd ..
+
 # Vim-localrc
 cd bundle
 git clone https://github.com/thinca/vim-localrc.git

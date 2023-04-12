@@ -134,11 +134,11 @@ This very big plugin adds auto-completion and some function definition in Python
 #### `vim-autoformat`
 Formats the code when pressing `<C-F>` in insert mode or `<C-A><C-F>` in normal mode. As of now, only C and C++ are handled thanks to `astyle`. As I like it, a new line is kept at the end of the file.
 
-### `vim-ezgreek`
-Pressing `<C-G>` in normal mode followed by the transliteration of a Greek letter writes that Greek letter.
-
 ### `vim-fish`
 Add syntax support for fish scripts.
+
+### `vim-hellenika`
+Pressing `<C-G>` in normal mode followed by the transliteration of a Greek letter writes that Greek letter.
 
 ### `vim-hex`
 Edit binary files in hex.
@@ -316,7 +316,7 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 * `<C-F>` in insert mode to format the text.
 * `<C-A><C-F>` in normal mode to format the text.
 
-### `vim-ezgreek`
+### `vim-hellenika`
 * `<C-G>` in insert mode prefixes a Greek transliteration.
 
 #### `vim-minimap`

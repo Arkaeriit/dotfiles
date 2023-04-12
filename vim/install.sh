@@ -46,19 +46,19 @@ cd ..
 # Custom Help
 ln -s $PWD/custom_help bundle/custom_help
 
-# Vim-Hex
-cd bundle
-git clone https://github.com/Arkaeriit/vim-hex.git
-cd ..
-
 # Vim-autoformat
 cd bundle
 git clone https://github.com/vim-autoformat/vim-autoformat.git
 cd ..
 
-# Vim-ezgreek
+# Vim-hellenika
 cd bundle
-git clone https://github.com/Arkaeriit/vim-ezgreek.git
+git clone https://github.com/Arkaeriit/vim-hellenika.git
+cd ..
+
+# Vim-Hex
+cd bundle
+git clone https://github.com/Arkaeriit/vim-hex.git
 cd ..
 
 # Vim-localrc

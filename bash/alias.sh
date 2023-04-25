@@ -154,9 +154,9 @@ rename-symbol () {
         echo "Usage: rename_symbol <old symbol> <new symbol>" > /dev/stderr
         return 1
     fi
-    for i in $(find *)
+    for file in $(grep -RF "$1" | cut -d : -f 1 | sort | uniq)
     do
-        sed -i "s:$1:$2:g" $i
+        sed -i "s:$1:$2:g" $file
     done
 }
 

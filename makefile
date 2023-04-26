@@ -92,6 +92,7 @@ restoreSSH :
 .PHONY: restoreVivado
 restoreVivado :
 	mkdir -p $(dataDir)/Xilinx/editor
+	mkdir -p $(binDir)
 	cp -f vivado/editor/* $(dataDir)/Xilinx/editor
 	cp -f vivado/vivado $(binDir)/
 

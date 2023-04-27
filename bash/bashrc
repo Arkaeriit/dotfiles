@@ -10,7 +10,7 @@ source "$XDG_CONFIG_HOME/bash/setting.sh" #paramÃÂ¨tres perso comme l'Ã�
 source "$XDG_CONFIG_HOME/bash/startup.sh" #programes ÃÂ  dÃÂ©marer automatiquement
 
 
-export QSYS_ROOTDIR="/mnt/m.2_1/altera/15.0/quartus/sopc_builder/bin"
+export QSYS_ROOTDIR="/mnt/hdd1/data/maki/Quartus/quartus/sopc_builder/bin"
 export ALTERAOCLSDKROOT="/mnt/m.2_1/altera/15.0/hld"
 export PATH="$PATH:$QSYS_ROOTDIR:$QSYS_ROOTDIR/../../bin"
 

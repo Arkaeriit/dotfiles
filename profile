@@ -60,6 +60,6 @@ export KDEHOME="$XDG_CONFIG_HOME"/kde
 export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 export INPUTRC="$XDG_CONFIG_HOME"/inputrc
 
-export QSYS_ROOTDIR="/mnt/m.2_1/altera/15.0/quartus/sopc_builder/bin"
+export QSYS_ROOTDIR="/mnt/hdd1/data/maki/Quartus/quartus/sopc_builder/bin"
 
 export ALTERAOCLSDKROOT="/mnt/m.2_1/altera/15.0/hld"

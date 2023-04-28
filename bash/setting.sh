@@ -17,3 +17,5 @@ else
     fi
 fi
 
+eval "$(lua $HOME/.config/fish/z/z.lua --init bash)"
+

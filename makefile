@@ -56,6 +56,7 @@ saveAlacritty :
 
 .PHONY: restore
 restore : restoreVim restoreFish restoreTmux restoreBash restoreProfile restoreSSH restoreVivado restoreNewsboat restoreGit restoreOnivim2 restoreAmfora restoreAlacritty
+	touch $(configDir)/wgetrc
 
 .PHONY: restoreVim
 restoreVim :

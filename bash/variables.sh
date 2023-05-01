@@ -35,6 +35,9 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export WINEPREFIX="$XDG_DATA_HOME"/wine
+export KDEHOME="$XDG_CONFIG_HOME"/kde
+export LESSHISTFILE="$XDG_STATE_HOME"/less/history
+export INPUTRC="$XDG_CONFIG_HOME"/inputrc
 
 PATH=$PATH:$HOME/.local/bin
 

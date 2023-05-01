@@ -38,7 +38,8 @@ set -Ux _JAVA_OPTIONS -Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 set -Ux PYTHONSTARTUP "$XDG_CONFIG_HOME/python/pythonrc"
 set -Ux RUSTUP_HOME "$XDG_DATA_HOME"/rustup
 set -Ux WINEPREFIX "$XDG_DATA_HOME"/wine
-
+set -Ux KDEHOME "$XDG_CONFIG_HOME"/kde
+set -Ux INPUTRC "$XDG_CONFIG_HOME"/inputrc
 
 # Path
 set PATH $HOME/.local/bin $PATH /mnt/m.2_1/Quartus/quartus/bin $HOME/embedded-software/embedded/toolchain/arm-cortex-nano/arm-cortex-nano/bin

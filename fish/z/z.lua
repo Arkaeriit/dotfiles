@@ -116,7 +116,7 @@ os.path.sep = windows and '\\' or '/'
 -- Global Variable
 -----------------------------------------------------------------------
 MAX_AGE = 5000
-DATA_FILE = '~/.zlua'
+DATA_FILE = '~/.local/share/zlua'
 PRINT_MODE = '<stdout>'
 PWD = ''
 Z_METHOD = 'frecent'

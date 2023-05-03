@@ -165,3 +165,14 @@ gc () {
         git commit --amend
 }
 
+# Show hexdump with hexyl if possible and hd otherwise
+hd () {
+alias hd='hexyl'
+    if command -v hexyl > /dev/null
+    then
+        hexyl $@
+    else
+        command hd $@
+    fi
+}
+

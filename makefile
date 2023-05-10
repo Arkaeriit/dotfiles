@@ -145,3 +145,8 @@ update_master: update_branch
 		git push origin "$$branch" -f && \
 		echo "Done!"
 
+.PHONY: scripts
+scripts: 
+	cd $(configDir)/vim && \
+		./install.sh
+

@@ -1,4 +1,4 @@
-#!/usr/bin/env fish
+#!/bin/sh
 curl -R -O http://www.lua.org/ftp/lua-5.4.4.tar.gz &&
     tar -xzf lua-5.4.4.tar.gz &&
     cd lua-5.4.4 &&

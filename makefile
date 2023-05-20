@@ -148,5 +148,11 @@ update_master: update_branch
 .PHONY: scripts
 scripts: 
 	cd $(configDir)/vim && \
-		./install.sh
+		./install.sh && \
+		cd - && \
+		cd fish/z/ && \
+		./get-lua.fish && \
+		cd - && \
+		cd install && \
+		./ASCnotes.sh
 

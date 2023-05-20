@@ -1,4 +1,4 @@
 #!/bin/bash
 
-ASCnotes read #lance ASCnotes
+ASCnotes read 21600 #lance ASCnotes
 

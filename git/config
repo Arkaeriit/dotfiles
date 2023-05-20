@@ -17,6 +17,7 @@
     trash-restore = stash apply stash@{0}
     cof = !"git checkout $(git branch --list | sed 's:\\*::; s: *:: ' | fzf --cycle --border)"
     k = !"gitk"
+    lg-all = !"git branch -a | sed 's:^[^A-Za-z0-9]*::' | grep remotes | sed 's: .*::'  | xargs git lg"
 
 [color]
 	branch = auto

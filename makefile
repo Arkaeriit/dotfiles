@@ -151,7 +151,7 @@ scripts:
 		./install.sh && \
 		cd - && \
 		cd fish/z/ && \
-		./get-lua.fish && \
+		./get-lua.sh && \
 		cd - && \
 		cd install && \
 		./ASCnotes.sh

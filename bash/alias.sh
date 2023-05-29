@@ -42,6 +42,7 @@ alias cgrep="grep -PRI --include '*.h' --include '*.c'" # grep on C source files
 alias embeter-maki="tmux attach -t (tmux ls | grep attached | head -n 1 | awk -F ':' '{print $1}')" #copies the first tmux session on the terminal
 alias _giberish="head -c 80 /dev/random | base32 | head -n1 #" # Echo some noise
 alias ddsync="sudo dd conv=fdatasync bs=4M status=progress" # Sane dd defaults
+alias tat0="tmux attach -t 0 #" # Launch tmux default session
 
 
 # Convert the file given as argument into a mp3 file

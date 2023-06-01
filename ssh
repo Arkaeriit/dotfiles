@@ -73,3 +73,15 @@ Host vultr
     User maki
     Port 22
 
+# Arrakis's Debian VM
+Host arrakis-debian-vm
+    ProxyJump arrakis
+    User max
+    Hostname 192.168.122.162
+
+# Caen server
+Host caen-server
+    ProxyJump arrakis-debian-vm
+    Hostname 192.168.1.53
+    User ark
+

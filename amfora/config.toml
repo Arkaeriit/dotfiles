@@ -316,7 +316,7 @@ header = true
 
 # Theme
 [theme]
-include = '/home/mbouillot/.config/amfora/one_dark.toml'
+include = '~/.config/amfora/one_dark.toml'
 
 # Crypto
 [auth]

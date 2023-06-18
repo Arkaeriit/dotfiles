@@ -146,13 +146,18 @@ update_master: update_branch
 		echo "Done!"
 
 .PHONY: scripts
-scripts: 
-	cd $(configDir)/vim && \
+scripts:
+	cd install && \
+		./get-lua-5.2.sh && \
+		cd -
+		cd $(configDir)/vim && \
 		./install.sh && \
 		cd - && \
-		cd fish/z/ && \
-		./get-lua.sh && \
+		cd $(configDir)/vim/bundle/vim-hex/autoload && \
+		make && \
 		cd - && \
 		cd install && \
+		./get-lua-5.4.sh && \
 		./ASCnotes.sh
+		cd -
 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xbel
+  PUBLIC "+//IDN python.org//DTD XML Bookmark Exchange Language 1.1//EN//XML"
+         "http://www.python.org/topics/xml/dtds/xbel-1.1.dtd">
+<xbel version="1.1">
+    <bookmark href="gemini://gemini.bobignou.red/">
+        <title>Bobignou</title>
+    </bookmark>
+    <bookmark href="gemini://freeshell.de/tldr/">
+        <title>tldr</title>
+    </bookmark>
+    <bookmark href="gemini://ew.srht.site/index.gmi">
+        <title>ew</title>
+    </bookmark>
+    <bookmark href="gemini://lyk.so/">
+        <title>lyk.so</title>
+    </bookmark>
+    <bookmark href="gemini://0x00ff.pl/">
+        <title>0x00ff</title>
+    </bookmark>
+    <bookmark href="gemini://bbs.geminispace.org/">
+        <title>🌒 BBS</title>
+    </bookmark>
+    <bookmark href="gemini://skyjake.fi/~Cosmos/">
+        <title>Cosmos</title>
+    </bookmark>
+    <bookmark href="gemini://lesogorov.site/glog.gmi">
+        <title>lesogorov</title>
+    </bookmark>
+
+    <bookmark href="gemini://mozz.us/">
+        <title>mozz.us</title>
+    </bookmark>
+    <bookmark href="gemini://station.martinrue.com/">
+        <title>Station</title>
+    </bookmark>
+    <bookmark href="gemini://warmedal.se/~antenna/">
+        <title>Antena</title>
+    </bookmark>
+</xbel>

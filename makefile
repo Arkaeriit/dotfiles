@@ -49,6 +49,7 @@ saveOnivim2 : createSaveDirs
 .PHONY: saveAmfora
 saveAmfora : createSaveDirs
 	cp -f $(configDir)/amfora/* amfora/
+	cp -f $(dataDir)/amfora/*.json $(dataDir)/amfora/*.xml amfora/
 
 .PHONY: saveAlacritty
 saveAlacritty :
@@ -116,7 +117,8 @@ restoreOnivim2 :
 .PHONY: restoreAmfora
 restoreAmfora :
 	mkdir -p $(configDir)/amfora
-	cp -f amfora/* $(configDir)/amfora/
+	cp -f amfora/*.toml $(configDir)/amfora/
+	cp -f amfora/*.xml amfora/*.json $(dataDir)/amfora/
 
 .PHONY: restoreAlacritty
 restoreAlacritty :

@@ -160,6 +160,6 @@ scripts:
 		cd - && \
 		cd install && \
 		./get-lua-5.4.sh && \
-		./ASCnotes.sh
+		./ASCnotes.sh && \
 		cd -
 

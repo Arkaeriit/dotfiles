@@ -132,8 +132,8 @@ inoremap <C-R> <C-V>
 "Insert a raw tab with Ctrl-T
 inoremap <C-T> <C-V><Tab>
 "case insensitive search
-nnoremap <C-f> /\c
-inoremap <Esc><C-f> /\c
+nnoremap <C-f> /\v\c
+inoremap <Esc><C-f> /\v\c
 "stop search
 inoremap <C-g> <Esc>:noh<Cr>:echom "Search cleared."<Cr>i
 noremap <C-g> :noh<Cr>:echom "Search cleared."<Cr>

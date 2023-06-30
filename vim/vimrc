@@ -150,8 +150,6 @@ nnoremap q: :q
 nnoremap Q: q:
 " Rainbow parenthesis
 nnoremap <F7> :RainbowParenthesesToggle<Cr>:RainbowParenthesesLoadSquare<Cr>:RainbowParenthesesLoadBraces<Cr>
-" Commands on QWERTY
-nnoremap ; :
 
 
 " Tabs
@@ -209,15 +207,6 @@ command DevzatCopy :call DevzatCopy_fnc()
 set listchars=eol:↵,tab:⇤-⇥,trail:○,extends:>,precedes:<,space:·,nbsp:●
 noremap <F8> :set list!<CR>
 inoremap <F8> <Esc>:set list!<CR>a
-
-
-" Prevent error when scroling right after entering in normal mode
-let s:i = 10
-while s:i <= 99
-    let s:cmd = "cnoremap ;" . s:i . "M <bs><bs><bs><bs><bs><bs><bs><bs><bs><bs><bs><cr>" 
-    exec s:cmd
-    let s:i += 1
-endwhile
 
 " Consider *.bin and *.exe files as binaries
 augroup Binary

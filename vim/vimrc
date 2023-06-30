@@ -148,6 +148,11 @@ inoremap <C-T><C-M> ™
 " Remove anoying history popup
 nnoremap q: :q
 nnoremap Q: q:
+" Better pararaph move
+nnoremap { {zz
+vnoremap { {zz
+nnoremap } }zz
+vnoremap } }zz
 " Rainbow parenthesis
 nnoremap <F7> :RainbowParenthesesToggle<Cr>:RainbowParenthesesLoadSquare<Cr>:RainbowParenthesesLoadBraces<Cr>
 

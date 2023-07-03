@@ -160,6 +160,8 @@ nnoremap } }zz
 vnoremap } }zz
 " Rainbow parenthesis
 nnoremap <F7> :RainbowParenthesesToggle<Cr>:RainbowParenthesesLoadSquare<Cr>:RainbowParenthesesLoadBraces<Cr>
+" Cmd on qwerty
+nnoremap ; :
 
 
 " Tabs

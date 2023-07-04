@@ -149,10 +149,7 @@ update_master: update_branch
 
 .PHONY: scripts
 scripts:
-	cd install && \
-		./get-lua-5.2.sh && \
-		cd -
-		cd $(configDir)/vim && \
+	cd $(configDir)/vim && \
 		./install.sh && \
 		cd - && \
 		cd $(configDir)/vim/bundle/vim-hex/autoload && \

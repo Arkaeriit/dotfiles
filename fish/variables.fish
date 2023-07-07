@@ -55,3 +55,30 @@ set -Ux EDITOR vim
 set -Ux BROWSER firefox
 set -Ux PAGER (string split " " (best-pager))
 
+# Colors
+set -Ux fish_color_autosuggestion 5f5f5f
+set -Ux fish_color_cancel normal
+set -Ux fish_color_command ffd700
+set -Ux fish_color_comment 990000
+set -Ux fish_color_cwd 008000
+set -Ux fish_color_cwd_root 800000
+set -Ux fish_color_end 0000ff
+set -Ux fish_color_error ff0000
+set -Ux fish_color_escape 00a6b2
+set -Ux fish_color_history_current normal
+set -Ux fish_color_host normal
+set -Ux fish_color_host_remote \x1d
+set -Ux fish_color_keyword \x1d
+set -Ux fish_color_match normal
+set -Ux fish_color_normal normal
+set -Ux fish_color_operator 00a6b2
+set -Ux fish_color_option \x1d
+set -Ux fish_color_param ff005f
+set -Ux fish_color_quote 87d7ff
+set -Ux fish_color_redirection 00ff00
+set -Ux fish_color_search_match ffff00
+set -Ux fish_color_selection c0c0c0
+set -Ux fish_color_status red
+set -Ux fish_color_user 00ff00
+set -Ux fish_color_valid_path normal
+

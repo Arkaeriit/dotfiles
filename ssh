@@ -79,9 +79,18 @@ Host arrakis-debian-vm
     User max
     Hostname 192.168.122.162
 
+# Caen cloud
+Host caen-cloud
+    User ark
+    Hostname caen.bobignou.red
+
 # Caen server
+#Host caen-server
+    #ProxyJump arrakis-debian-vm
+    #Hostname 192.168.1.53
+    #User ark
 Host caen-server
-    ProxyJump arrakis-debian-vm
+    ProxyJump caen-cloud
     Hostname 192.168.1.53
     User ark
 

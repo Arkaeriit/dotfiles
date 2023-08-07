@@ -67,7 +67,7 @@ function Set_indent_space(size)
 endfunction
 call Set_indent_space(4)
 
-"écrit des espaces quand on fait tab
+" use space as leader key
 set expandtab  
 
 "indique le numéro de la ligne

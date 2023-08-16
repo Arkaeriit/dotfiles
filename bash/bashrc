@@ -48,8 +48,9 @@ tcli () {
     else
         dir="tmp"
     fi
-    transmission-cli -w "/home/maki/ssh-arrakis/$dir/" -M -p $(__tcli-port "$1") "$2"
+    transmission-cli -w "$dir/" -M -p $(__tcli-port "$1") "$2"
 }
 
 alias arrakis-connect="sshfs -o IdentityFile=/home/maki/.ssh/id_ed25519 -o allow_other -p 2255 maki@arrakis.bobignou.red:/mnt/hdd2/data/maki/Video/ /home/maki/ssh-arrakis/"
+alias caen-connect="sshfs -o IdentityFile=/home/maki/.ssh/id_ed25519 -o allow_other ark@129.213.138.3:/home/ark/seed /home/maki/ssh-caen/"
 

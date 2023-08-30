@@ -95,6 +95,6 @@ Host caen-server
     User ark
 
 Host caen-NAS
-    Hostname 129.213.138.3
+    Hostname 152.70.194.64
     User ark
 

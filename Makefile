@@ -119,7 +119,7 @@ restoreAmfora :
 	mkdir -p $(configDir)/amfora
 	mkdir -p $(dataDir)/amfora
 	cp -f amfora/*.toml $(configDir)/amfora/
-	cp -f amfora/*.xml amfora/*.json $(dataDir)/amfora/
+	cp -f amfora/*.xml $(dataDir)/amfora/
 
 .PHONY: restoreAlacritty
 restoreAlacritty :

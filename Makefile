@@ -49,7 +49,7 @@ saveOnivim2 : createSaveDirs
 .PHONY: saveAmfora
 saveAmfora : createSaveDirs
 	cp -f $(configDir)/amfora/* amfora/
-	cp -f $(dataDir)/amfora/*.json $(dataDir)/amfora/*.xml amfora/
+	cp -f $(dataDir)/amfora/*.xml amfora/
 
 .PHONY: saveAlacritty
 saveAlacritty :

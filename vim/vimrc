@@ -105,6 +105,11 @@ augroup project
     autocmd BufRead,BufNewFile *.nelua set filetype=lua
 augroup END
 
+" .vh are verilog headers
+augroup verilog
+    autocmd BufRead,BufNewFile *.vh set filetype=verilog
+augroup END
+
 " With some filetypes, change some rules
 augroup indent_gt
     autocmd BufRead,BufNewFile *.ino call Set_indent_space(2)

@@ -45,7 +45,7 @@ set -Ux XAUTHORITY "$XDG_RUNTIME_DIR"/Xauthority
 set -Ux PASSWORD_STORE_DIR "$XDG_DATA_HOME"/pass
 
 # Path
-set PATH $HOME/.local/bin $PATH /mnt/m.2_1/Quartus/quartus/bin $HOME/embedded-software/embedded/toolchain/arm-cortex-nano/arm-cortex-nano/bin
+set PATH $HOME/.local/bin $PATH /mnt/m.2_1/Quartus/quartus/bin $HOME/embedded-software/embedded/toolchain/gcc-7.2.0/arm-cortex-nano/arm-cortex-nano/bin
 
 # Java
 set -Ux JAVA_HOME /usr/lib64/jvm/java-11-openjdk-11/

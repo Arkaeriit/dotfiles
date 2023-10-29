@@ -79,6 +79,12 @@ Host arrakis-debian-vm
     User max
     Hostname 192.168.122.162
 
+# Salusa Secundus
+Host salusa-secundus
+    Hostname salusa-secundus.bobignou.red
+    User maki
+    Port 2256
+
 # Caen cloud
 Host caen-cloud
     User ark

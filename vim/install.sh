@@ -10,8 +10,8 @@ rm -Rf cscope_map_fork
 
 # Killersheep
 git clone https://github.com/vim/killersheep.git
-mkdir -p bundle/killersheep/plugin
-mv killersheep/plugin/* bundle/killersheep/plugin/
+mkdir -p bundle/killersheep/
+mv killersheep/* bundle/killersheep/
 rm -Rf killersheep
 
 # YCP

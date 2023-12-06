@@ -45,7 +45,7 @@ set -Ux XAUTHORITY "$XDG_RUNTIME_DIR"/Xauthority
 set -Ux PASSWORD_STORE_DIR "$XDG_DATA_HOME"/pass
 
 # Path
-set PATH $HOME/.local/bin $PATH /mnt/m.2_1/Quartus/quartus/bin $HOME/embedded-software/embedded/toolchain/gcc-7.2.0/arm-cortex-nano/arm-cortex-nano/bin
+set PATH $HOME/.local/bin $PATH /mnt/m.2_1/Quartus/quartus/bin $HOME/embedded-software/embedded/toolchain/gcc-13.1.0/arm-cortex-nano-patched/arm-cortex-nano/bin
 
 # z.lua
 set -Ux _ZL_DATA "$XDG_DATA_HOME/zlua"
@@ -84,4 +84,7 @@ set -Ux fish_color_selection c0c0c0
 set -Ux fish_color_status red
 set -Ux fish_color_user 00ff00
 set -Ux fish_color_valid_path normal
+
+# LOL
+set -Ux DSCI_ALGOS_ALLOW_DIRTY_VERSION
 

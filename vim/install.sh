@@ -3,10 +3,10 @@
 /bin/rm -rfv bundle
 
 # CSCOPE
+mkdir -p bundle
+cd bundle
 git clone https://github.com/Arkaeriit/cscope_map_fork.git
-mkdir -p bundle/cscope/plugin
-mv cscope_map_fork/* bundle/cscope/plugin
-rm -Rf cscope_map_fork
+cd ..
 
 # Killersheep
 git clone https://github.com/vim/killersheep.git

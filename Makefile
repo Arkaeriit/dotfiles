@@ -153,9 +153,6 @@ scripts:
 	cd $(configDir)/vim && \
 		./install.sh && \
 		cd - && \
-		cd $(configDir)/vim/bundle/vim-hex/autoload && \
-		make && \
-		cd - && \
 		cd install && \
 		./get-lua-5.4.sh && \
 		./ASCnotes.sh && \

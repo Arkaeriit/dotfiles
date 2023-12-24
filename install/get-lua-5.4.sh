@@ -1,5 +1,5 @@
 #!/bin/sh
-curl -R -O http://www.lua.org/ftp/lua-5.4.4.tar.gz &&
+curl -R -L -O http://www.lua.org/ftp/lua-5.4.4.tar.gz &&
     tar -xzf lua-5.4.4.tar.gz &&
     cd lua-5.4.4 &&
     make all test &&

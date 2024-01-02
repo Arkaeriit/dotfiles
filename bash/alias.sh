@@ -134,7 +134,7 @@ make() {
         printf '\a'
         return $s
     }
-    MAKE=$(which make)
+    MAKE=/usr/bin/make
     $MAKE $@; bell_and_report
 }
 

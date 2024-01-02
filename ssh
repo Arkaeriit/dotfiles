@@ -111,3 +111,9 @@ Host localDevzat
     IdentitiesOnly yes
     IdentityFile ~/dev/perso/mining_Devzat_id/key.mine
 
+# Oracle VPS (pythie)
+Host pythie
+    User maki
+    Port 22
+    HostName pythie.bobignou.red
+

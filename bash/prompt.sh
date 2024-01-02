@@ -32,8 +32,8 @@ On_White='\e[47m'       # White
 
 NC="\e[m"               # Color Reset
 
-SMILE1="^[n.n]^"
-SMILE2=">[o.o]>"
+SMILE1="o[>.<]o"
+SMILE2=">[x.x]>"
 
 # When $1 is 0, return the color code of the PWD.
 # If it is not, return the error color code.
@@ -50,9 +50,9 @@ dynamic_chevron_color() {
 }
 COL_ERROR_ON_STATUS="\e\$(dynamic_chevron_color \$((\$?==0?0:1)))"
 
-COL_ERROR="$Red"
-COL_PWD="$BCyan"
-COL_EXTRA="$BBlue"
+COL_ERROR="$Yellow"
+COL_PWD="$BRed"
+COL_EXTRA="$BWhite"
 
 PS1="\[$COL_EXTRA\]$SMILE1\[\e[$COL_PWD\] \w \[$COL_ERROR_ON_STATUS\]>$NC"
 PS2="\[$COL_EXTRA\]$SMILE2\[\e[$COL_PWD\] \[$COL_PWD\]>>$NC"

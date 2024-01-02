@@ -73,7 +73,7 @@ let s:clear       = [-1, -1, -1]
 
 " From a color defined in the palette, returns a string with the 256 colors
 " code.
-function s:smol_rgb_to_256(srgb)
+function! s:smol_rgb_to_256(srgb)
     if a:srgb == s:clear
         return "NONE"
     endif
@@ -82,7 +82,7 @@ function s:smol_rgb_to_256(srgb)
 endfunction
 
 " Convert a single channel color code from 0 to 5 to 0 to 255.
-function s:range_5_to_range_255(n)
+function! s:range_5_to_range_255(n)
     if a:n == 0
         return "00"
     elseif a:n == 1
@@ -102,7 +102,7 @@ endfunction
 
 " From a color defined in the palette, returns a string with the true color
 " code.
-function s:smol_rgb_to_rgb(srgb)
+function! s:smol_rgb_to_rgb(srgb)
     if a:srgb == s:clear
         return "NONE"
     endif
@@ -110,12 +110,12 @@ function s:smol_rgb_to_rgb(srgb)
 endfunction
 
 " Apply some colors from the palette to a group.
-function s:highlight_group_style(group, fg, bg, style)
+function! s:highlight_group_style(group, fg, bg, style)
     exec "highlight " . a:group . " ctermfg=" . s:smol_rgb_to_256(a:fg) . " ctermbg=" . s:smol_rgb_to_256(a:bg) . " guifg=" . s:smol_rgb_to_rgb(a:fg) . " guibg=" . s:smol_rgb_to_rgb(a:bg) . " cterm=" . a:style . " gui=" . a:style
 endfunction
 
 " Apply some colors from the palette to a group with so special style.
-function s:highlight_group(group, fg, bg)
+function! s:highlight_group(group, fg, bg)
     call s:highlight_group_style(a:group, a:fg, a:bg, "NONE")
 endfunction
 

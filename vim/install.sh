@@ -15,13 +15,14 @@ mv killersheep/* bundle/killersheep/
 rm -Rf killersheep
 
 # YCP
-mkdir -p bundle
-cd bundle
-git clone https://github.com/ycm-core/YouCompleteMe.git
-cd YouCompleteMe
-git submodule update --init --recursive
-python3 install.py
-cd ../..
+#mkdir -p bundle
+#cd bundle
+#git clone https://github.com/ycm-core/YouCompleteMe.git
+#cd YouCompleteMe
+#git checkout c6e80b0d786dc3d54fae3728b4506bd131b6951a
+#git submodule update --init --recursive
+#python3 install.py
+#cd ../..
 
 # NerdCommenter
 cd bundle

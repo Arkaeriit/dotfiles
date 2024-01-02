@@ -104,3 +104,9 @@ Host caen-NAS
     Hostname 150.136.116.168
     User ark
 
+# Oracle VPS (pythie)
+Host pythie
+    User maki
+    Port 22
+    HostName pythie.bobignou.red
+

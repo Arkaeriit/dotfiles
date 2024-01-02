@@ -144,7 +144,7 @@ rm() {
     then
         rem --rm-mode $args
     else
-        rm $args
+        command rm $args
     fi
 }
 

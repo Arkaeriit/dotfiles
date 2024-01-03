@@ -32,19 +32,13 @@ On_White='\e[47m'       # White
 
 NC="\e[m"               # Color Reset
 
-#test de début cool
-#fancy cursor
-#PS1="\[\e[1;34m\]^[n.n]^\[\e[1;36m\] \w ➤\[\e[m\]"
-#PS2="\[\e[1;34m\]>[o.-]>\[\e[1;36m\] ➤➤\[\e[m\]"
-#normal cursor
-PS1="\[$BBlue\]^[n.n]^\[\e[$BCyan\] \w >\[\e[m\]"
-PS2="\[$BBlue\]>[o.o]>\[\e[$BCyan] >>\[\e[m\]"
+SMILE1="^[n.n]^"
+SMILE2=">[o.o]>"
 
-#root
-#PS1="\[$BRed\]o[>.<]o\[\e[$BYellow\] \w \[$BRed\]>\[\e[m\]"
-#PS2="\[$BRed\]>[x.x]>\[\e[$BYellow] \[$BRed\]>>\[\e[m\]"
+COL_PWD="$BCyan"
+COL_EXTRA="$BBlue"
+COL_RED_ON_ERROR="\[\e[0;\$((\$?==0?0:91))m\]"
 
-#travail
-#PS1="\[$BGreen\]o[^.^]o\[\e[$BWhite\] \w \[$BGreen\]>\[\e[m\]"
-#PS2="\[$BGreen\]>[o.o]>\[\e[$BWhite] >>\[\e[m\]"
+PS1="\[$COL_EXTRA\]$SMILE1\[\e[$COL_PWD\] \w \[$COL_EXTRA\]$COL_RED_ON_ERROR>$NC"
+PS2="\[$COL_EXTRA\]$SMILE2\[\e[$COL_PWD\] \[$COL_PWD\]>>$NC"
 

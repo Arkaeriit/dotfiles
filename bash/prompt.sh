@@ -35,10 +35,25 @@ NC="\e[m"               # Color Reset
 SMILE1="^[n.n]^"
 SMILE2=">[o.o]>"
 
+# When $1 is 0, return the color code of the PWD.
+# If it is not, return the error color code.
+# An escape char needs to be put before the code to use it.
+dynamic_chevron_color() {
+    if [ "$1" = "0" ]
+    then
+        used_color="$COL_PWD"
+    else
+        used_color="$COL_ERROR"
+    fi
+    color_code=$(echo $used_color | cut -d '[' -f 2)
+    printf '%c%s' '[' "$color_code"
+}
+COL_ERROR_ON_STATUS="\e\$(dynamic_chevron_color \$((\$?==0?0:1)))"
+
+COL_ERROR="$Red"
 COL_PWD="$BCyan"
 COL_EXTRA="$BBlue"
-COL_RED_ON_ERROR="\e[0;\$((\$?==0?0:91))m"
 
-PS1="\[$COL_EXTRA\]$SMILE1\[\e[$COL_PWD\] \w \[$COL_EXTRA\]\[$COL_RED_ON_ERROR\]>\[$NC\]"
-PS2="\[$COL_EXTRA\]$SMILE2\[\e[$COL_PWD\] \[$COL_PWD\]>>\[$NC\]"
+PS1="\[$COL_EXTRA\]$SMILE1\[\e[$COL_PWD\] \w \[$COL_ERROR_ON_STATUS\]>$NC"
+PS2="\[$COL_EXTRA\]$SMILE2\[\e[$COL_PWD\] \[$COL_PWD\]>>$NC"
 

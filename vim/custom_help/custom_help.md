@@ -267,6 +267,7 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 * `<C-space>` in insert mode adds a non breaking space.
 * `OnO` in insert mode writes "ÓnÒ".
 * `<C-T><C-M>` in insert mode writes "™".
+* `<C-N>` in insert mode writes "\n".
 
 ### Search
 

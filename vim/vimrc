@@ -150,6 +150,7 @@ inoremap <C-P><C-P><C-P> …
 inoremap <C-space>  
 inoremap OnO ÓnÒ
 inoremap <C-T><C-M> ™
+inoremap <C-N> \n
 " Remove anoying history popup
 nnoremap q: :q
 nnoremap Q: q:

@@ -19,6 +19,7 @@ mkdir -p bundle
 cd bundle
 git clone https://github.com/ycm-core/YouCompleteMe.git
 cd YouCompleteMe
+git checkout 7b83740a
 git submodule update --init --recursive
 python3 install.py
 cd ../..

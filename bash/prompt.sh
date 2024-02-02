@@ -37,8 +37,8 @@ SMILE2=">[o.o]>"
 
 COL_PWD="$BCyan"
 COL_EXTRA="$BBlue"
-COL_RED_ON_ERROR="\[\e[0;\$((\$?==0?0:91))m\]"
+COL_RED_ON_ERROR="\e[0;\$((\$?==0?0:91))m"
 
-PS1="\[$COL_EXTRA\]$SMILE1\[\e[$COL_PWD\] \w \[$COL_EXTRA\]$COL_RED_ON_ERROR>$NC"
-PS2="\[$COL_EXTRA\]$SMILE2\[\e[$COL_PWD\] \[$COL_PWD\]>>$NC"
+PS1="\[$COL_EXTRA\]$SMILE1\[\e[$COL_PWD\] \w \[$COL_EXTRA\]\[$COL_RED_ON_ERROR\]>\[$NC\]"
+PS2="\[$COL_EXTRA\]$SMILE2\[\e[$COL_PWD\] \[$COL_PWD\]>>\[$NC\]"
 

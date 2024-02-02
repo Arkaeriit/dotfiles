@@ -86,5 +86,5 @@ set -Ux fish_color_user 00ff00
 set -Ux fish_color_valid_path normal
 
 # LOL
-set -Ux DSCI_ALGOS_ALLOW_DIRTY_VERSION
+set -Ux DSCI_ALGOS_ALLOW_DIRTY_VERSION "Hihihi-je-suis-un-vilain-dev"
 

@@ -59,7 +59,9 @@ cd ..
 # Vim-Hex
 cd bundle
 git clone https://github.com/Arkaeriit/vim-hex.git
-cd ..
+cd vim-hex
+make
+cd ../..
 
 # Vim-localrc
 cd bundle

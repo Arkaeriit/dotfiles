@@ -110,3 +110,9 @@ Host pythie
     Port 22
     HostName pythie.bobignou.red
 
+# Caladan
+Host caladan
+    User maki
+    Port 2257
+    Hostname caladan.bobignou.red
+

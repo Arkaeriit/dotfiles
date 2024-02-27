@@ -87,22 +87,8 @@ Host salusa-secundus
 
 # Caen cloud
 Host caen-cloud
-    User ark
+    User arkaeriit
     Hostname caen.bobignou.red
-
-# Caen server
-#Host caen-server
-    #ProxyJump arrakis-debian-vm
-    #Hostname 192.168.1.53
-    #User ark
-Host caen-server
-    ProxyJump caen-cloud
-    Hostname 192.168.1.53
-    User ark
-
-Host caen-NAS
-    Hostname 150.136.116.168
-    User ark
 
 # Oracle VPS (pythie)
 Host pythie

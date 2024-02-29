@@ -36,6 +36,14 @@ __tcli-port () {
             echo 9097;;
         9)
             echo 9098;;
+        10)
+            echo 9100;;
+        11)
+            echo 9101;;
+        12)
+            echo 9102;;
+        13)
+            echo 9103;;
         *)
             echo 9099;;
     esac

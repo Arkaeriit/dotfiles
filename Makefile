@@ -12,6 +12,7 @@ createSaveDirs :
 .PHONY: saveVim
 saveVim : createSaveDirs
 	cp -fR $(configDir)/vim/* vim/
+	rm -rf vim/bundle
 
 .PHONY: saveFish
 saveFish : createSaveDirs

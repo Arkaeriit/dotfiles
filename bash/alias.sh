@@ -139,12 +139,11 @@ make() {
 }
 
 rm() {
-    args=("$@")
     if command -v rem > /dev/null
     then
-        rem --rm-mode $args
+        rem --rm-mode "$@"
     else
-        command rm $args
+        command rm "$@"
     fi
 }
 

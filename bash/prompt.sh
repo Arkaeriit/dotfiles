@@ -35,6 +35,10 @@ NC="\e[m"               # Color Reset
 SMILE1="o[^.^]o"
 SMILE2=">[o.o]>"
 
+COL_ERROR="$BRed"
+COL_PWD="$BWhite"
+COL_EXTRA="$BGreen"
+
 # When $1 is 0, return the color code of the PWD.
 # If it is not, return the error color code.
 # An escape char needs to be put before the code to use it.
@@ -49,10 +53,6 @@ dynamic_chevron_color() {
     printf '%c%s' '[' "$color_code"
 }
 COL_ERROR_ON_STATUS="\e\$(dynamic_chevron_color \$((\$?==0?0:1)))"
-
-COL_PWD="$BWhite"
-COL_EXTRA="$BGreen"
-COL_EXTRA="$BBlue"
 
 PS1="\[$COL_EXTRA\]$SMILE1\[\e[$COL_PWD\] \w \[$COL_ERROR_ON_STATUS\]>$NC"
 PS2="\[$COL_EXTRA\]$SMILE2\[\e[$COL_PWD\] \[$COL_PWD\]>>$NC"

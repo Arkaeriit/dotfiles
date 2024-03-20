@@ -116,7 +116,7 @@ os.path.sep = windows and '\\' or '/'
 -- Global Variable
 -----------------------------------------------------------------------
 MAX_AGE = 5000
-DATA_FILE = '~/.local/share/zlua'
+DATA_FILE = '~/.zlua'
 PRINT_MODE = '<stdout>'
 PWD = ''
 Z_METHOD = 'frecent'
@@ -127,8 +127,8 @@ Z_CMD = 'z'
 Z_MATCHMODE = 0
 Z_MATCHNAME = false
 Z_SKIPPWD = false
-Z_HYPHEN = false
-Z_DATA_SEPARATOR = "\0"
+Z_HYPHEN = "auto"
+Z_DATA_SEPARATOR = "|"
 
 os.LOG_NAME = os.getenv('_ZL_LOG_NAME')
 
@@ -1063,6 +1063,26 @@ end
 
 
 -----------------------------------------------------------------------
+-- Read a line of the database and return a list of the 3 fields in it
+-----------------------------------------------------------------------
+function read_data_line(line)
+    local part = string.split(line, Z_DATA_SEPARATOR)
+    if #part <= 3 then
+        return part
+    end
+    -- If the part is made of more than 3 elements, it's probably because the
+    -- path element contains '|' that have been split. Thus, we want to
+    -- reconstruct it and keep the 2 last elements of part intact as the end
+    -- of the returned part.
+    local path = part[1]
+    for i=2,#part-2 do
+        path = path .. Z_DATA_SEPARATOR .. part[i]
+    end
+    return {path, part[#part-1], part[#part]}
+end
+ 
+
+-----------------------------------------------------------------------
 -- load and split data
 -----------------------------------------------------------------------
 function data_load(filename)
@@ -1074,7 +1094,7 @@ function data_load(filename)
 		return {}
 	end
 	for line in fp:lines() do
-		local part = string.split(line, Z_DATA_SEPARATOR)
+		local part = read_data_line(line)
 		local item = {}
 		if part and part[1] and part[2] and part[3] then
 			local key = insensitive and part[1]:lower() or part[1]
@@ -1293,13 +1313,16 @@ end
 -----------------------------------------------------------------------
 -- select matched pathnames
 -----------------------------------------------------------------------
-function data_select(M, patterns, matchlast)
+-- z_hyphen must be `true`, `false``, or `"auto"`.
+function data_select(M, patterns, matchlast, z_hyphen)
 	local N = {}
 	local i = 1
 	local pats = {}
+	local hyphens = false
 	for i = 1, #patterns do
 		local p = patterns[i]
-		if Z_HYPHEN then
+		hyphens = hyphens or string.match(p, "%-")
+		if z_hyphen == true then
 			p = p:gsub('-', '%%-')
 		end
 		table.insert(pats, case_insensitive_pattern(p))
@@ -1309,6 +1332,9 @@ function data_select(M, patterns, matchlast)
 		if path_match(item.name, pats, matchlast) then
 			table.insert(N, item)
 		end
+	end
+	if (hyphens and z_hyphen == "auto" and #N == 0) then
+		N = data_select(M, patterns, matchlast, true)
 	end
 	return N
 end
@@ -1459,10 +1485,10 @@ function z_match(patterns, method, subdir)
 	method = method ~= nil and method or 'frecent'
 	subdir = subdir ~= nil and subdir or false
 	local M = data_load(DATA_FILE)
-	M = data_select(M, patterns, false)
+	M = data_select(M, patterns, false, Z_HYPHEN)
 	M = data_filter(M)
 	if Z_MATCHNAME then
-		local N = data_select(M, patterns, true)
+		local N = data_select(M, patterns, true, Z_HYPHEN)
 		N = data_filter(N)
 		if #N > 0 then
 			M = N
@@ -2068,10 +2094,13 @@ function z_init()
 			Z_SKIPPWD = true
 		end
 	end
+    assert(Z_HYPHEN == "auto", "Z_HYPHEN initialized to an unexpected value")
 	if _zl_hyphen ~= nil then
 		local m = string.lower(_zl_hyphen)
 		if (m == '1' or m == 'yes' or m == 'true' or m == 't') then
 			Z_HYPHEN = true
+		elseif (m == '0' or m == 'no' or m == 'false' or m == 'f') then
+			Z_HYPHEN = false
 		end
 	end
 end
@@ -2102,10 +2131,28 @@ function z_clink_init()
 		end
 		return {}
 	end
+	local dirmatchfunc = function (word)
+		clink.matches_are_files(1)
+		return clink.match_files(word..'*', true, clink.find_dirs)
+	end
+	local dirmatchparser = clink.arg.new_parser():set_arguments({ dirmatchfunc })
 	local z_parser = clink.arg.new_parser()
 	z_parser:set_arguments({ z_match_completion })
-	z_parser:set_flags("-c", "-r", "-i", "--cd", "-e", "-b", "--add", "-x", "--purge",
-		"--init", "-l", "-s", "--complete", "--help", "-h")
+	z_parser:set_flags("-r", "-i", "-I", "-t", "-l", "-c", "-e", "-b", "-x"..dirmatchparser, "-h")
+	if z_parser.adddescriptions then
+		z_parser:adddescriptions({
+			['-r'] = "cd to highest ranked dir matching",
+			['-i'] = "cd with interactive selection",
+			['-I'] = "cd with interactive selection using fzf",
+			['-t'] = "cd to most recently accessed dir matching",
+			['-l'] = "list matches instead of cd",
+			['-c'] = "restrict matches to subdirs of cwd (or %PWD% if set)",
+			['-e'] = "echo the best match, don't cd",
+			['-b'] = "jump backwards to given dir or to project root",
+			['-x'] = { " dir", "remove path from history" },
+			['-h'] = "show help",
+		})
+	end
 	clink.arg.register_parser("z", z_parser)
 end
 
@@ -2267,6 +2314,30 @@ if [ "${+functions[compdef]}" -ne 0 ]; then
 fi
 ]]
 
+local script_fzf_complete_zsh = [[
+if command -v fzf >/dev/null 2>&1; then
+	# To redraw line after fzf closes (printf '\e[5n')
+	bindkey '\e[0n' kill-whole-line
+	_zlua_zsh_fzf_complete() {
+		local list=$(_zlua -l ${words[2,-1]})
+
+		if [ -n "$list" ]; then
+			local selected=$(print $list | ${=zlua_fzf} | sed 's/^[0-9,.]* *//')
+
+			if [ -n "$selected" ]; then
+				cd ${selected}
+				printf '\e[5n'
+			fi
+		fi
+	}
+
+	if [ "${+functions[compdef]}" -ne 0 ]; then
+		compdef _zlua_zsh_fzf_complete _zlua > /dev/null 2>&1
+		compdef ${_ZL_CMD:-z}=_zlua
+	fi
+fi
+]]
+
 
 -----------------------------------------------------------------------
 -- initialize bash/zsh
@@ -2304,7 +2375,7 @@ function z_shell_init(opts)
 		end
 		print(script_complete_bash)
 		if opts.fzf ~= nil then
-			fzf_cmd = "fzf --nth 2.. --reverse --info=inline --tac "
+			local fzf_cmd = "fzf --nth 2.. --reverse --info=inline --tac "
 			local height = os.environ('_ZL_FZF_HEIGHT', '35%')
 			if height ~= nil and height ~= '' and height ~= '0' then
 				fzf_cmd = fzf_cmd .. ' --height ' .. height .. ' '
@@ -2320,6 +2391,18 @@ function z_shell_init(opts)
 			print(once and script_init_zsh_once or script_init_zsh)
 		end
 		print(script_complete_zsh)
+		if opts.fzf ~= nil then
+			local fzf_cmd = "fzf --nth 2.. --reverse --info=inline --tac "
+			local height = os.environ('_ZL_FZF_HEIGHT', '35%')
+			if height ~= nil and height ~= '' and height ~= '0' then
+				fzf_cmd = fzf_cmd .. ' --height ' .. height .. ' '
+			end
+			local flag = os.environ('_ZL_FZF_FLAG', '')
+			flag = (flag == '' or flag == nil) and '+s -e' or flag
+			fzf_cmd = fzf_cmd .. ' ' .. flag .. ' '
+			print('zlua_fzf="' .. fzf_cmd .. '"')
+			print(script_fzf_complete_zsh)
+		end
 	elseif opts.posix ~= nil then
 		if prompt_hook then
 			local script = script_init_posix
@@ -2424,7 +2507,9 @@ function _zlua
 end
 
 if test -z "$_ZL_CMD"; set -x _ZL_CMD z; end
-alias "$_ZL_CMD"=_zlua
+function $_ZL_CMD -w _zlua -d "alias $_ZL_CMD=_zlua"
+	_zlua $argv
+end
 ]]
 
 script_init_fish = [[
@@ -2774,26 +2859,3 @@ end
 
 -- vim: set ts=4 sw=4 tw=0 noet :
 
---[[
-MIT License
-
-Copyright (c) 2018 Linwei
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-]]

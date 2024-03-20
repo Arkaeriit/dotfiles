@@ -43,6 +43,9 @@ PATH=$PATH:$HOME/.local/bin
 
 export JAVA_HOME=/usr/lib64/jvm/java-11-openjdk-11/
 
+# z.lua
+export _ZL_DATA="$XDG_DATA_HOME/zlua"
+
 # Personal charm cloud
 export CHARM_HOST=charm.bobignou.red
 

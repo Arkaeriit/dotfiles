@@ -241,3 +241,12 @@ nnoremap <F6> :RulerCycle<Cr>
 nnoremap <leader><F6> :RulerCut<Cr>
 let g:rulerList = [80, 50, 100, "50,80"]
 
+" Tests to swap two chars in a range
+function SwapChars(pat1, pat2)
+    let l:tmpp = "$£$¤ù%*^^¨ù*;" " If that string is indeed in the line, there could be issues
+    exec "s/\\V" . a:pat1 . "/" . l:tmpp . "/ge"
+    exec "s/\\V" . a:pat2 . "/" . a:pat1 . "/ge"
+    exec "s/\\V" . l:tmpp . "/" . a:pat2 . "/ge"
+endfunction
+" Ideas to improve it: command with argument handling (seems very hard),
+" command with user input (neat, but not easy for automatic use)

@@ -66,8 +66,6 @@ function Set_indent_space(size)
     let &shiftwidth=a:size
 endfunction
 call Set_indent_space(4)
-
-" use space as leader key
 set expandtab  
 
 "indique le numéro de la ligne
@@ -115,6 +113,9 @@ augroup indent_gt
     autocmd BufRead,BufNewFile *.ino call Set_indent_space(2)
 augroup END
 
+"utilise l'espace en tant que leader
+let mapleader = " "
+
 "permet d'utiliser le clipboard général
 vnoremap <C-c> "+y
 vnoremap <C-x> "+y:'<,'>d<Cr>
@@ -161,6 +162,8 @@ nnoremap } }zz
 vnoremap } }zz
 " Rainbow parenthesis
 nnoremap <F7> :RainbowParenthesesToggle<Cr>:RainbowParenthesesLoadSquare<Cr>:RainbowParenthesesLoadBraces<Cr>
+" vim-blaming
+nnoremap <leader>gb :BlamingToggle<Cr>
 
 
 " Tabs
@@ -183,9 +186,6 @@ nnoremap <F5><Tab> mt:call SwapLeading("    ", "	")<Cr>'t
 
 "empèche les bips en tty
 set visualbell
-
-"utilise l'espace en tant que leader
-let mapleader = " "
 
 "s'assure que les ftplugin marchent
 filetype plugin indent on 
@@ -250,3 +250,4 @@ function SwapChars(pat1, pat2)
 endfunction
 " Ideas to improve it: command with argument handling (seems very hard),
 " command with user input (neat, but not easy for automatic use)
+

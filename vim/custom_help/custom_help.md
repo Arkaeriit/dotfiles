@@ -156,6 +156,9 @@ A ruler can be added to easily see the length of lines. Press `<F6>` to toggle t
 
 It is possible to cut the line to the current ruler with the keybinding `<leader><F6>`.
 
+### `vim-blaming`
+In normal mode, a git blame/log window can be shown with `:BlamingToggle` or `<leader>gb`.
+
 ### Making a new plugin
 
 To make a new plugin, one have to create its directory in `bundle`. In the plugin's directory, a directory named `plugin` have to be made. The plugin's code must be written in the latter. Furthermore, a directory named `autoload` can be made, but as I don't understand well what is `autoload`, I never used it yet.
@@ -220,12 +223,7 @@ __TODO: learn more about this to use it.__
 
 ### Table of content
 
-* C
 * bin and exe
-
-### C
-
-To comply with my company's coding rules, in C, raw tabs are used instead of 4 spaces.
 
 ### `.bin` and `.exe`
 
@@ -271,7 +269,7 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 
 ### Search
 
-* `<C-F>` performs a case-insensitive search.
+* `<C-F>` performs a case-insensitive magic search.
 * `<C-G>` clears the current search.
 
 ### Toggles and cycles
@@ -329,3 +327,6 @@ To comply with my company's coding rules, in C, raw tabs are used instead of 4 s
 * `<F6>` cycles through the rulers.
 * `<leader><F6>` cut the current line to the ruler.
 
+### `vim-blaming`
+* `<leader>gb` toggles the blame window.
+ 

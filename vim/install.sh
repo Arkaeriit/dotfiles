@@ -70,6 +70,11 @@ cd ..
 
 # Vim-ruler
 cd bundle
-git clone https://github.com/Arkaeriit/vim-ruler
+git clone https://github.com/Arkaeriit/vim-ruler.git
+cd ..
+
+# Vim-blaming
+cd bundle
+git clone https://github.com/Arkaeriit/vim-blaming.git
 cd ..
 

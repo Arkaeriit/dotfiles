@@ -39,7 +39,7 @@ export KDEHOME="$XDG_CONFIG_HOME"/kde
 export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 export INPUTRC="$XDG_CONFIG_HOME"/inputrc
 
-PATH=$PATH:$HOME/.local/bin
+PATH=$PATH:$HOME/.local/bin:/opt/netatmo-8-nano-240426-arm-none-eabi/bin
 
 export JAVA_HOME=/usr/lib64/jvm/java-11-openjdk-11/
 
@@ -48,4 +48,7 @@ export _ZL_DATA="$XDG_DATA_HOME/zlua"
 
 # Personal charm cloud
 export CHARM_HOST=charm.bobignou.red
+
+# Work
+export NETATMO_WORK_DIR="${HOME}/netatmo"
 

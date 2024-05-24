@@ -45,7 +45,7 @@ set -Ux XAUTHORITY "$XDG_RUNTIME_DIR"/Xauthority
 set -Ux PASSWORD_STORE_DIR "$XDG_DATA_HOME"/pass
 
 # Path
-set PATH $HOME/.local/bin $PATH /mnt/m.2_1/Quartus/quartus/bin $HOME/embedded-software/embedded/toolchain/gcc-13.1.0/arm-cortex-nano-patched/arm-cortex-nano/bin
+set PATH $HOME/.local/bin $PATH /opt/netatmo-8-nano-240426-arm-none-eabi/bin
 
 # Java
 set -Ux JAVA_HOME /usr/lib64/jvm/java-11-openjdk-11/
@@ -88,6 +88,7 @@ set -Ux fish_color_status red
 set -Ux fish_color_user 00ff00
 set -Ux fish_color_valid_path normal
 
-# LOL
-set -Ux DSCI_ALGOS_ALLOW_DIRTY_VERSION "Hihihi-je-suis-un-vilain-dev"
+# Work
+set -Ux NETATMO_WORK_DIR "$HOME/netatmo"
+set -Ux MULTI_JOBS y
 

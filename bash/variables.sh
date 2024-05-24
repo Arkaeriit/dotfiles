@@ -42,7 +42,7 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 
-PATH=$PATH:$HOME/.local/bin
+PATH=$PATH:$HOME/.local/bin:/opt/netatmo-8-nano-240426-arm-none-eabi/bin
 
 export JAVA_HOME=/usr/lib64/jvm/java-11-openjdk-11/
 
@@ -54,4 +54,7 @@ export CHARM_HOST=charm.bobignou.red
 
 # Ensure bash don't repport itself as fish
 export SHELL=$(which $0)
+
+# Work
+export NETATMO_WORK_DIR="${HOME}/netatmo"
 

@@ -134,3 +134,7 @@ Host pythie
     Port 22
     HostName pythie.bobignou.red
 
+Host gitlab.corp.netatmo.com
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/id_netatmo_pro
+

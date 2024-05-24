@@ -4,6 +4,6 @@ function rm -d "trash a file"
     if command -v rem > /dev/null
         rem --rm-mode $argv
     else
-        rm $argv
+        command rm $argv
     end
 end

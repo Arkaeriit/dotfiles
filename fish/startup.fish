@@ -8,6 +8,7 @@ unset fish_chev_vi
 unset SHELL
 set -Ux SHELL (which fish)
 
+# Add Netatmo compilation passwords
 if [ -z $KEY_MOUNTED ]
     set -Ux KEY_MOUNTED yep
     #$NETATMO_WORK_DIR/embedded/modules/magellan-keys/pass_tool.sh -m

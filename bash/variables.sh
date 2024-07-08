@@ -58,3 +58,6 @@ export SHELL=$(which $0)
 # Work
 export NETATMO_WORK_DIR="${HOME}/netatmo"
 
+# Ensure bash don't repport itself as fish
+export SHELL=$(which $0)
+

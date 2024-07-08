@@ -90,5 +90,4 @@ set -Ux fish_color_valid_path normal
 
 # Work
 set -Ux NETATMO_WORK_DIR "$HOME/netatmo"
-set -Ux MULTI_JOBS y
 

@@ -239,10 +239,11 @@ augroup END
 
 " vim-autoformat
 let g:formatdef_personal_c = '"astyle --style=java --indent=spaces=4 --add-braces --attach-closing-while --attach-extern-c --indent-switches --min-conditional-indent=1 --pad-comma --pad-header --align-pointer=type --attach-return-type --convert-tabs"'
-let g:formatdef_work_c = '"astyle --style=linux --indent=tab --add-braces --attach-closing-while --attach-extern-c --indent-switches --min-conditional-indent=1 --pad-comma --pad-header --align-pointer=middle --attach-return-type --convert-tabs"'
+let g:formatdef_work_c = '"clang-format  --style=file:/home/mbouillot/Downloads/index.clang-format"'
+
 
 let s:local_filename = expand("%")
-let s:is_work_file = trim(system('realpath ' . s:local_filename . ' | grep "/home/mbouillot/embedded-software" > /dev/null || realpath ' . s:local_filename . ' | grep "/home/mbouillot/dev/pro" > /dev/null && echo work || echo nope'))
+let s:is_work_file = trim(system('realpath ' . s:local_filename . ' | grep "/home/mbouillot/netatmo" > /dev/null || realpath ' . s:local_filename . ' | grep "/home/mbouillot/dev/pro" > /dev/null && echo work || echo nope'))
 if s:is_work_file == "work"
     let g:formatters_c   = ['work_c']
     let g:formatters_cpp = ['work_c']
@@ -256,6 +257,7 @@ let g:formatdef_arduino = '"astyle --style=java --indent=spaces=2 --add-braces -
 let g:formatters_arduino  = ['arduino']
 inoremap <C-F> <Esc>:Autoformat<Cr>mzGo<Esc>'zi
 nnoremap <C-A><C-F> <Esc>:Autoformat<Cr>mzGo<Esc>'z
+vnoremap <C-A><C-F> :AutoformatLine<Cr>
 
 " vim-ruler
 nnoremap <F6> :RulerCycle<Cr>

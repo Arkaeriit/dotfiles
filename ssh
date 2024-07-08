@@ -138,3 +138,13 @@ Host gitlab.corp.netatmo.com
     IdentitiesOnly yes
     IdentityFile ~/.ssh/id_netatmo_pro
 
+Host github.com
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/id_netatmo_perso
+
+Host metal57
+    IdentityFile ~/.ssh/id_netatmo_pro
+    IdentitiesOnly yes
+    User metal57
+    Hostname 192.168.1.200
+

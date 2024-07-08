@@ -18,3 +18,7 @@ if [ -z $KEY_MOUNTED ]
     end
 end
 
+# Ensure fish doen't repport itself as bash
+unset SHELL
+set -Ux SHELL (which fish)
+

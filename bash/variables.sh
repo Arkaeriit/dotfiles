@@ -49,3 +49,6 @@ export _ZL_DATA="$XDG_DATA_HOME/zlua"
 # Personal charm cloud
 export CHARM_HOST=charm.bobignou.red
 
+# Ensure bash don't repport itself as fish
+export SHELL=$(which $0)
+

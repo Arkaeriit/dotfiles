@@ -1,13 +1,10 @@
 #!/usr/local/bin/lua
 
 ---Comandes pour acceder aux infos sur la baterie---
-maxC = io.popen("upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E capacity","r")
 perC = io.popen("upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E percentage","r")
 etatC = io.popen("upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E state","r")
-maxS=maxC:read()
 perS=perC:read()
 etatS=etatC:read()
-maxC:close()
 perC:close()
 etatC:close()
 
@@ -33,11 +30,8 @@ findnumber = function(str)
 end
 
 ---On traite ces info pour avoir le vrai pourcentage de baterie (atc)---
---max=tonumber(maxS:sub(#maxS-3,#maxS-1))
---per=tonumber(perS:sub(#perS-3,#perS-1))
-max = findnumber(maxS)
 per = findnumber(perS)
-atc=math.floor((100*per)/max + 0.5)
+atc=math.floor((100*per) / 100 + 0.5)
 
 --symbol for charge. The look depend on the font and the terminal
 elec = '☳'

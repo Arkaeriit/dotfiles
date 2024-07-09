@@ -59,7 +59,7 @@ export WINEPREFIX="$XDG_DATA_HOME"/wine
 export KDEHOME="$XDG_CONFIG_HOME"/kde
 export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 export INPUTRC="$XDG_CONFIG_HOME"/inputrc
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 
-export QSYS_ROOTDIR="/mnt/m.2_1/altera/15.0/quartus/sopc_builder/bin"
-
-export ALTERAOCLSDKROOT="/mnt/m.2_1/altera/15.0/hld"

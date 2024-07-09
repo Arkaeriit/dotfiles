@@ -82,6 +82,7 @@ restoreTmux :
 .PHONY: restoreBash
 restoreBash :
 	mkdir -p $(configDir)/bash
+	mkdir -p $(dataDir)/bash
 	cp -fR bash/* $(configDir)/bash/
 	ln -fs $(configDir)/bash/bashrc ~/.bashrc
 

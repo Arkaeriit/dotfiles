@@ -38,6 +38,9 @@ export WINEPREFIX="$XDG_DATA_HOME"/wine
 export KDEHOME="$XDG_CONFIG_HOME"/kde
 export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 export INPUTRC="$XDG_CONFIG_HOME"/inputrc
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 
 PATH=$PATH:$HOME/.local/bin
 

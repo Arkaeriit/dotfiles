@@ -40,6 +40,9 @@ set -Ux RUSTUP_HOME "$XDG_DATA_HOME"/rustup
 set -Ux WINEPREFIX "$XDG_DATA_HOME"/wine
 set -Ux KDEHOME "$XDG_CONFIG_HOME"/kde
 set -Ux INPUTRC "$XDG_CONFIG_HOME"/inputrc
+set -Ux GNUPGHOME "$XDG_DATA_HOME"/gnupg
+set -Ux XAUTHORITY "$XDG_RUNTIME_DIR"/Xauthority
+set -Ux PASSWORD_STORE_DIR "$XDG_DATA_HOME"/pass
 
 # Path
 set PATH $HOME/.local/bin $PATH /mnt/m.2_1/Quartus/quartus/bin $HOME/embedded-software/embedded/toolchain/arm-cortex-nano/arm-cortex-nano/bin

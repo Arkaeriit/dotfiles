@@ -16,3 +16,5 @@ endif
 "hi def link cCustomFunc  Function
 "hi def link cCustomClass Function
 
+" ALE config
+let b:ale_linters = []

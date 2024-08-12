@@ -274,6 +274,8 @@ endfunction
 " Ideas to improve it: command with argument handling (seems very hard),
 " command with user input (neat, but not easy for automatic use)
 
+let g:ale_python_pylint_options = '--rcfile /home/mbouillot/.config/pylintrc'
+
 let g:openbrowser_browser_commands = [
 \   {'name': 'google-chrome',
 \    'args': ["{browser}", "{uri}"]}

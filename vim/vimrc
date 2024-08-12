@@ -211,8 +211,14 @@ function DevzatCopy_fnc()
     normal 0i```\nkjA```kjV"+yu
     echom "Copied the buffer to be pasted on devzat."
 endfunction
-
 command DevzatCopy :call DevzatCopy_fnc()
+
+" FlatCopy, usefull to copy flat JSON
+function FlatCopy_fnc()
+    %s/\n//
+    normal 0v$"+yu
+endfunction
+command FlatCopy :call FlatCopy_fnc()
 
 " Whitespace characters
 set listchars=eol:↵,tab:⇤-⇥,trail:○,extends:>,precedes:<,space:·,nbsp:●

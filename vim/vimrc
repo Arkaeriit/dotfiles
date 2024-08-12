@@ -103,9 +103,10 @@ augroup project
     autocmd BufRead,BufNewFile *.nelua set filetype=lua
 augroup END
 
-" .vh are verilog headers
+" .vh and .v are verilog
 augroup verilog
     autocmd BufRead,BufNewFile *.vh set filetype=verilog
+    autocmd BufRead,BufNewFile *.v  set filetype=verilog
 augroup END
 
 " With some filetypes, change some rules

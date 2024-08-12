@@ -108,3 +108,10 @@ Host caladan
     Port 2257
     Hostname caladan.bobignou.red
 
+# Devzat dev
+Host localdevzat
+    Hostname localhost
+    Port 2221
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/id_devzat
+

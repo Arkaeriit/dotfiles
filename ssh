@@ -77,7 +77,7 @@ Host arrakis
 Host vultr
     Hostname vltr.bobignou.red
     User maki
-    Port 22
+    Port 2221
 
 # Arrakis's Debian VM
 Host arrakis-debian-vm

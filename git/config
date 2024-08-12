@@ -9,7 +9,7 @@
 	ca = commit --amend
     trash = !git status -s | sed s:^.:: | cut -d ' ' -f 2 | xargs git add && git stash
 	full-restore = !git restore --staged ':/*' && git restore ':/*'
-	deep-restore = "!for i in $(git submodule status --recursive | cut -d ' ' -f 3); do cd $i ; git full-restore ; cd - 1> /dev/null ; done; git full-restore"
+	deep-restore = "!for i in $(git submodule status --recursive | sed s:^.:: | cut -d ' ' -f 2); do cd $i ; git full-restore ; cd - 1> /dev/null ; done; git full-restore"
 	restoreconf = restore ':/**/.config'
     suir = submodule update --init --recursive
     plom = !"REMOTE=origin && if git remote | grep source > /dev/null; then REMOTE=source; fi && if git branch --list | sed 's:*::; s: *:: ' | grep master > /dev/null; then git pull $REMOTE master; else if git branch --list | sed 's:*::; s: *:: ' | grep main > /dev/null; then git pull $REMOTE main; else echo 'No branch named main or master found' > /dev/stderr; false; fi; fi"

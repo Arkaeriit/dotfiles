@@ -79,3 +79,8 @@ cd bundle
 git clone https://github.com/Arkaeriit/vim-blaming.git
 cd ..
 
+# ALE
+cd bundle
+git clone https://github.com/dense-analysis/ale
+cd ..
+

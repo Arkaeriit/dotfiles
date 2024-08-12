@@ -119,3 +119,10 @@ Host git.pptie.de
     IdentitiesOnly yes
     IdentityFile ~/.ssh/id_netatmo_perso
 
+# Devzat dev
+Host localdevzat
+    Hostname localhost
+    Port 2221
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/id_devzat
+

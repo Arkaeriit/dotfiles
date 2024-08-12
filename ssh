@@ -45,6 +45,12 @@ Host devzat
     IdentitiesOnly yes
     IdentityFile ~/.ssh/id_devzat
 
+Host vultrdevzat
+    User Arkaeriit
+    Hostname devzat.bobignou.red
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/id_devzat
+
 # Soft serve
 Host soft-serve
     User mbouillot

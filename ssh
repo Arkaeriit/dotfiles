@@ -126,7 +126,7 @@ Host localDevzat
     Hostname 127.9.9.9
     Port 2222
     IdentitiesOnly yes
-    IdentityFile ~/dev/perso/mining_Devzat_id/key.mine
+    IdentityFile ~/.ssh/id_devzat
 
 # Oracle VPS (pythie)
 Host pythie

@@ -48,7 +48,7 @@ set -Ux PASSWORD_STORE_DIR "$XDG_DATA_HOME"/pass
 set PATH $HOME/.local/bin $PATH /mnt/m.2_1/Quartus/quartus/bin $HOME/embedded-software/embedded/toolchain/arm-cortex-nano/arm-cortex-nano/bin
 
 # Java
-set -Ux JAVA_HOME /usr/lib64/jvm/java-11-openjdk-11/
+set -Ux JAVA_HOME /usr/lib6jvm/java-11-openjdk/
 
 # z.lua
 set -Ux _ZL_DATA "$XDG_DATA_HOME/zlua"

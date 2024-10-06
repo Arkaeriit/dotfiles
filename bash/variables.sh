@@ -44,7 +44,7 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 
 PATH=$PATH:$HOME/.local/bin
 
-export JAVA_HOME=/usr/lib64/jvm/java-11-openjdk-11/
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk/
 
 # z.lua
 export _ZL_DATA="$XDG_DATA_HOME/zlua"

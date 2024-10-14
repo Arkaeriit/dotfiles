@@ -44,6 +44,8 @@ alias _giberish="head -c 80 /dev/random | base32 | head -n1" # Echo some noise
 alias ddsync="sudo dd conv=fdatasync bs=4M status=progress" # Sane dd defaults
 alias tat0="tmux attach -t 0 #" # Launch tmux default session
 
+alias vim='nano' # Nothing to see here...
+alias nano='ed' # The true impossible text editor :P
 
 # Convert the file given as argument into a mp3 file
 ffmpeg-to-mp3() {

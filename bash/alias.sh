@@ -50,7 +50,6 @@ alias gedit='nano'
 alias ASCnotes='nano'
 alias 'sudo zypper remove nano'='sudo rm -rf /' # Ooops
 
-
 # Convert the file given as argument into a mp3 file
 ffmpeg-to-mp3() {
     ffmpeg -i $1 -vn -ar 44100 -ac 2 -b:a 192k $1.mp3

@@ -48,6 +48,8 @@ alias vim='nano' # Nothing to see here...
 alias vi='nano' # The true impossible text editor :P
 alias gedit='nano'
 alias ASCnotes='nano'
+alias 'sudo zypper remove nano'='sudo rm -rf /' # Ooops
+
 
 # Convert the file given as argument into a mp3 file
 ffmpeg-to-mp3() {

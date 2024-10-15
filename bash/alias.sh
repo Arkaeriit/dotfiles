@@ -45,7 +45,9 @@ alias ddsync="sudo dd conv=fdatasync bs=4M status=progress" # Sane dd defaults
 alias tat0="tmux attach -t 0 #" # Launch tmux default session
 
 alias vim='nano' # Nothing to see here...
-alias nano='ed' # The true impossible text editor :P
+alias vi='nano' # The true impossible text editor :P
+alias gedit='nano'
+alias ASCnotes='nano'
 
 # Convert the file given as argument into a mp3 file
 ffmpeg-to-mp3() {

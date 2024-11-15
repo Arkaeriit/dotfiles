@@ -8,7 +8,3 @@ unset fish_chev_vi
 unset SHELL
 set -Ux SHELL (which fish)
 
-# Ensure fish doen't repport itself as bash
-unset SHELL
-set -Ux SHELL (which fish)
-

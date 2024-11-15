@@ -177,3 +177,16 @@ alias hd='hexyl'
     fi
 }
 
+# Reset a file to what it is on the master branch
+# Use the second argument to indicate a specific branch
+reset_to_master () {
+    if [ -n "$2" ]
+    then
+        branch="$2"
+    else
+        branch=master
+    fi
+    target_file="$1"
+    git show "$branch":"$target_file" > "$target_file"
+}
+

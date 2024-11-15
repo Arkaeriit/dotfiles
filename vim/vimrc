@@ -275,6 +275,10 @@ endfunction
 " command with user input (neat, but not easy for automatic use)
 
 let g:ale_python_pylint_options = '--rcfile /home/mbouillot/.config/pylintrc'
+let g:ale_linters = { 'python': ['flake8', 'pylint']}
+nnoremap <leader>ad :ALEDisable<Cr>
+nnoremap <leader>ae :ALEEnable<Cr>
+nnoremap <leader>ai :ALEInfo<Cr>
 
 let g:openbrowser_browser_commands = [
 \   {'name': 'google-chrome',

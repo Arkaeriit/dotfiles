@@ -142,9 +142,18 @@ Host github.com
     IdentitiesOnly yes
     IdentityFile ~/.ssh/id_netatmo_perso
 
+Host codeberg.org
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/id_netatmo_perso
+
 Host metal57
     IdentityFile ~/.ssh/id_netatmo_pro
     IdentitiesOnly yes
     User metal57
     Hostname 192.168.1.200
 
+Host u2004
+    IdentityFile ~/.ssh/id_netatmo_pro
+    IdentitiesOnly yes
+    User max
+    Hostname 192.168.122.196

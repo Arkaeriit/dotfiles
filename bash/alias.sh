@@ -47,7 +47,7 @@ alias tat0="tmux attach -t 0 #" # Launch tmux default session
 
 # Convert the file given as argument into a mp3 file
 ffmpeg-to-mp3() {
-    ffmpeg -i $1 -vn -ar 44100 -ac 2 -b:a 192k $1.mp3
+    ffmpeg -i "$1" -vn -ar 44100 -ac 2 -b:a 192k "$1".mp3
 }
 
 # Open vim as a scratch pad. Give filetype as argument
@@ -65,7 +65,7 @@ vimtmp () {
 # Open vim to write in the X clipboard
 vimtype() {
 	name=$(_giberish)
-	vim $name && sed -z -i -e 's:\n$::' $name && copy $name && /bin/rm -f $name
+	vim "$name" && sed -z -i -e 's:\n$::' "$name" && copy "$name" && /bin/rm -f "$name"
 }
 
 # Open a tldr page from gemini in Amfora
@@ -88,7 +88,7 @@ GENERIC_GTED_GOTO() {
     else
         source='/'
     fi
-    target=$(find "$source" $2 2> /dev/null | fzf -e +m -i) #On inclu les fichiers masqués #on cherche les correspondances exactes, seules, la case ne compte pas 
+    target=$(find "$source" "$2" 2> /dev/null | fzf -e +m -i) #On inclu les fichiers masqués #on cherche les correspondances exactes, seules, la case ne compte pas 
     if test -n "$target"
     then
         "$1" "$target"
@@ -99,12 +99,12 @@ GENERIC_GTED_GOTO() {
 
 #Permet de se diriger vers un dossier ou le dossier contenant le fichier activé par fzf on peut donner un argument en entrée pour choisir le dossier de départ
 goto() {
-    GENERIC_GTED_GOTO cd "-type d" $1
+    GENERIC_GTED_GOTO cd "-type d" "$1"
 }
 
 #Permet de se modifier un fichier trouvé gràce à fzf. On peut donner un argument pour choisir le fichier de départ
 gted() {
-    GENERIC_GTED_GOTO $EDITOR "" $1
+    GENERIC_GTED_GOTO "$EDITOR" "" "$1"
 }
 
 # Run cppckeck with all options and pipe the result into the pager
@@ -123,9 +123,9 @@ sayFR() {
 # Initialize an empty cscope database
 cscope-init() {
     FILENAME=$(_giberish).c
-    touch $FILENAME
-    cscope -b $FILENAME 
-    /bin/rm -f $FILENAME
+    touch "$FILENAME"
+    cscope -b "$FILENAME"
+    /bin/rm -f "$FILENAME"
 }
 
 make() {

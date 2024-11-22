@@ -151,9 +151,9 @@ rm() {
 edit_addr () {
     if [ -n "$1" ]
     then
-        if arm-none-eabi-addr2line $1 -e objs/app.elf > /dev/null 2> /dev/null
+        if arm-none-eabi-addr2line "$1" -e objs/app.elf > /dev/null 2> /dev/null
         then
-            arm-none-eabi-addr2line $1 -e objs/app.elf | sed "s: .*::" | sed "s/:/ +/" | xargs vim
+            arm-none-eabi-addr2line "$1" -e objs/app.elf | sed "s: .*::" | sed "s/:/ +/" | xargs vim
         else
             echo "Elf file or address invalid." > /dev/stderr
             return 2

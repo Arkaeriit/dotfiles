@@ -22,6 +22,7 @@
     pristine = !"git clean -fdx :/; for submodule in $(git submodule | cut -d ' ' -f 3); do cd \"$submodule\"; git clean -fdx :/; cd -; done"
     sui = submodule update --init
     unstage = restore --staged :/
+    perso = !"/home/mbouillot/dev/perso/git-perso.sh"
 
 [color]
 	branch = auto

@@ -86,7 +86,7 @@ GENERIC_GTED_GOTO() {
     then
         source=$3
     else
-        source='/'
+        source='.'
     fi
     target=$(find "$source" "$2" 2> /dev/null | fzf -e +m -i) #On inclu les fichiers masqués #on cherche les correspondances exactes, seules, la case ne compte pas 
     if test -n "$target"

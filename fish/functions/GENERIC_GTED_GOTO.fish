@@ -10,7 +10,7 @@ function GENERIC_GTED_GOTO
     if test -n "$argv[3]"
         set source $argv[3]
     else
-        set source '/'
+        set source '.'
     end
     set target (find "$source" (echo $argv[2] | string split " ") 2> /dev/null | fzf -e +m -i) #On inclu les fichiers masqués #on cherche les correspondances exactes, seules, la case ne compte pas 
     if test -n "$target"

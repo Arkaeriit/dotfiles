@@ -78,3 +78,20 @@ cd bundle
 git clone https://github.com/Arkaeriit/vim-blaming.git
 cd ..
 
+# PlantUML
+cd bundle
+git clone https://github.com/tyru/open-browser.vim.git
+git clone https://github.com/weirongxu/plantuml-previewer.vim.git
+git clone https://github.com/aklt/plantuml-syntax.git
+cd ..
+
+# OpenCL
+cd bundle
+git clone https://github.com/petRUShka/vim-opencl.git
+cd ..
+
+#Copilot
+cd bundle
+git clone https://github.com/github/copilot.vim.git
+git clone https://github.com/DanBradbury/copilot-chat.vim.git
+cd ..

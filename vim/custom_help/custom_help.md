@@ -159,6 +159,14 @@ It is possible to cut the line to the current ruler with the keybinding `<leader
 ### `vim-blaming`
 In normal mode, a git blame/log window can be shown with `:BlamingToggle` or `<leader>gb`.
 
+### `copilot` and `copilot chat`
+There are plugins to use copilot installed. They are dormant by default. To start them do
+
+```
+:Copilot setup
+:CopilotChatOpen
+```
+
 ### Making a new plugin
 
 To make a new plugin, one have to create its directory in `bundle`. In the plugin's directory, a directory named `plugin` have to be made. The plugin's code must be written in the latter. Furthermore, a directory named `autoload` can be made, but as I don't understand well what is `autoload`, I never used it yet.
@@ -330,3 +338,9 @@ __TODO: learn more about this to use it.__
 ### `vim-blaming`
 * `<leader>gb` toggles the blame window.
  
+### `copilot` and `copilot chat`
+* `<leader>pe` enable copilot completion.
+* `<leader>pd` disable copilot completion.
+* `<leader>pp` if copilot completion is enabled, open a panel of completion options.
+* `<leader>pc` open a copilot chat panel.
+

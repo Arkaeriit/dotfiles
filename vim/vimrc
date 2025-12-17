@@ -258,3 +258,15 @@ endfunction
 " Ideas to improve it: command with argument handling (seems very hard),
 " command with user input (neat, but not easy for automatic use)
 
+let g:openbrowser_browser_commands = [
+\   {'name': 'google-chrome',
+\    'args': ["{browser}", "{uri}"]}
+\]
+
+" Copilot
+let b:copilot_enabled = v:false
+nnoremap <leader>pe :unlet b:copilot_enabled<Cr>:Copilot enable<Cr>
+nnoremap <leader>pd :Copilot disable<Cr>:let b:copilot_enabled = v:false<Cr>
+nnoremap <leader>pp :Copilot panel<Cr>
+nnoremap <leader>pc :CopilotChatOpen<Cr>
+

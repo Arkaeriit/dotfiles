@@ -108,3 +108,7 @@ Host caladan
     Port 2257
     Hostname caladan.bobignou.red
 
+Host git.pptie.de
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/id_netatmo_perso
+

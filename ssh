@@ -136,7 +136,7 @@ Host pythie
 
 Host gitlab.corp.netatmo.com
     IdentitiesOnly yes
-    IdentityFile ~/.ssh/id_netatmo_pro
+    IdentityFile ~/.ssh/id_netatmo_pro_2
 
 Host github.com
     IdentitiesOnly yes
@@ -157,3 +157,10 @@ Host u2004
     IdentitiesOnly yes
     User max
     Hostname 192.168.122.196
+
+Host magellan-robot-nlgv4-with-modules
+    IdentityFile ~/.ssh/id_netatmo_pro
+    IdentitiesOnly yes
+    user magellan
+    Hostname 10.15.29.151
+

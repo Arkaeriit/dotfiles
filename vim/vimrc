@@ -4,7 +4,7 @@ set directory=$XDG_DATA_HOME/vim/swap
 set backupdir=$XDG_DATA_HOME/vim/backup
 set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
 set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after
-set packpath=$XDG_CONFIG_HOME/vim/pack
+"set packpath=$XDG_CONFIG_HOME/vim/pack
 
 "Active les plugins
 execute pathogen#infect()
@@ -102,7 +102,7 @@ filetype plugin on
 "considère les .h comme du c et pas du c++
 augroup project
     autocmd!
-    autocmd BufRead,BufNewFile *.h,*.c set filetype=c
+    autocmd BufRead,BufNewFile *.h,*.c,*.c.jinja,*.h.jinja set filetype=c
     autocmd BufRead,BufNewFile *.ino set filetype=arduino
     autocmd BufRead,BufNewFile *.nelua set filetype=lua
 augroup END

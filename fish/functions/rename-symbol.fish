@@ -5,7 +5,8 @@ function rename-symbol -d 'Rename a symbol in the working directory'
         echo "Usage: rename_symbol <old symbol> <new symbol>" > /dev/stderr
         return 1
     end 
-    for file in (grep -RF "$argv[1]" | cut -d : -f 1 | sort | uniq | grep -v git | grep -v cscope.out)
+    for file in (grep -R "$argv[1]" | cut -d : -f 1 | sort | uniq | grep -v git | grep -v cscope.out)
+        echo $file
         sed -i "s:$argv[1]:$argv[2]:g" $file
     end
 end

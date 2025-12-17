@@ -63,3 +63,5 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 
+
+export STM32CubeMX_PATH=/home/mbouillot/.local/share/STM32CubeMX

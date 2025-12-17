@@ -42,7 +42,7 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 
-PATH=$PATH:$HOME/.local/bin:/opt/netatmo-8-nano-240426-arm-none-eabi/bin
+PATH=$PATH:$HOME/.local/bin:/opt/netatmo-8-nano-240426-arm-none-eabi/bin:/opt/efr_tools/commander-cli:/opt/efr_tools/slc_cli:/opt/efr_tools/zap-cli
 
 export JAVA_HOME=/usr/lib64/jvm/java-11-openjdk-11/
 

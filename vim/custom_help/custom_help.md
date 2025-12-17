@@ -41,6 +41,8 @@ The currently installed themes are:
 3. `champ-de-blé` (light low contrast)
 3. `fusain` (light high contrast)
 
+The defalt can be changed by setting `VIMRC_DEFAULT_THEME_COUNT` to the number of cycles to perform on boot. Setting it to 0 will stick to the default.
+
 ### Adding new colors
 
 To add a new color, insert a new field in the `ThemeList` function in the `vimrc`. Then, update the `CycleTheme` function so that the modulo operation chops down to the number of installed colors.

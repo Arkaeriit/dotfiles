@@ -37,7 +37,11 @@ function CycleTheme()
     call ThemeList(g:MyThemeCount)
 endfunction
 nnoremap <F3> :call CycleTheme()<Enter>:echom g:colors_name<Enter>
-let g:MyThemeCount=-1 "Goes to default
+if $VIMRC_DEFAULT_THEME_COUNT != ""
+    let g:MyThemeCount = $VIMRC_DEFAULT_THEME_COUNT - 1
+else
+    let g:MyThemeCount=-1 "Goes to default
+endif
 call CycleTheme()
 
 "Change spell checking on the fly

@@ -108,14 +108,14 @@ Host caladan
     Port 2257
     Hostname caladan.bobignou.red
 
-Host git.pptie.de
-    IdentitiesOnly yes
-    IdentityFile ~/.ssh/id_netatmo_perso
-
 Host devzat-admin
     user ubuntu
     HostName devzat.hackclub.com
     Port 4242
     IdentitiesOnly yes
     IdentityFile ~/.ssh/id_devzat
+
+Host git.pptie.de
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/id_netatmo_perso
 

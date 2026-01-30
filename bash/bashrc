@@ -14,3 +14,5 @@ export QSYS_ROOTDIR="/mnt/m.2_1/altera/15.0/quartus/sopc_builder/bin"
 export ALTERAOCLSDKROOT="/mnt/m.2_1/altera/15.0/hld"
 export PATH="$PATH:$QSYS_ROOTDIR:$QSYS_ROOTDIR/../../bin"
 
+
+export STM32_PRG_PATH=/home/mbouillot/.local/share/STM_Prog/bin

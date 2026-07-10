@@ -96,6 +96,9 @@ endif
 set exrc
 set secure
 
+"Disable file-level configs
+set nomodeline
+
 "permet d'utiliser des plugins specifiques à certain types de fichier
 filetype plugin on
 

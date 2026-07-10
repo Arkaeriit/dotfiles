@@ -137,7 +137,7 @@ Host pythie
 Host gitlab.corp.netatmo.com
     Port 1021
     IdentitiesOnly yes
-    IdentityFile ~/.ssh/id_netatmo_pro_2
+    IdentityFile ~/.ssh/id_netatmo_pro_3
 
 Host github.com
     IdentitiesOnly yes

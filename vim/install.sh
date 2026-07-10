@@ -93,5 +93,4 @@ cd ..
 #Copilot
 cd bundle
 git clone https://github.com/github/copilot.vim.git
-git clone https://github.com/DanBradbury/copilot-chat.vim.git
 cd ..

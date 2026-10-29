@@ -158,6 +158,8 @@ inoremap <C-N><C-F> ∞
 inoremap <C-P><C-P><C-P> …
 inoremap <C-space>  
 inoremap OnO ÓnÒ
+inoremap >-< >ᴗ<
+inoremap o.o õ.o
 inoremap <C-T><C-M> ™
 inoremap <C-N> \n
 " Remove anoying history popup

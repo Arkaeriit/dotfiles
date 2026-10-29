@@ -274,6 +274,8 @@ __TODO: learn more about this to use it.__
 * `<C-P><C-P><C-P>` in insert mode adds a "…".
 * `<C-space>` in insert mode adds a non breaking space.
 * `OnO` in insert mode writes "ÓnÒ".
+* `>-<` in insert mode writes ">ᴗ<".
+* `o.o` in insert mode writes "õ.o".
 * `<C-T><C-M>` in insert mode writes "™".
 * `<C-N>` in insert mode writes "\n".
 

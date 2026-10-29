@@ -55,3 +55,5 @@
 	helper = !/usr/bin/gh auth git-credential
 [url "git@gitlab.corp.netatmo.com:"]
 	insteadOf = https://gitlab.corp.netatmo.com/
+[url "ssh://git@gitlab.corp.netatmo.com:1021/"]
+	insteadOf = https://gitlab.corp.netatmo.com/

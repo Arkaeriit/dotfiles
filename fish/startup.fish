@@ -8,3 +8,16 @@ unset fish_chev_vi
 unset SHELL
 set -Ux SHELL (which fish)
 
+# SiLab gives a tool called commander or commander-cli depending on the version.
+# Those functions create conditional aliases to always have both names available.
+if not command -v commander > /dev/null
+    function commander -d "alias to commander-cli"
+        commander-cli $argv
+    end
+end
+if not command -v commander-cli > /dev/null
+    function commander-cli -d "alias to commander"
+        commander $argv
+    end
+end
+

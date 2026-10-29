@@ -45,7 +45,7 @@ set -Ux XAUTHORITY "$XDG_RUNTIME_DIR"/Xauthority
 set -Ux PASSWORD_STORE_DIR "$XDG_DATA_HOME"/pass
 
 # Path
-set PATH $HOME/.local/bin $PATH /opt/netatmo-8-nano-240426-arm-none-eabi/bin /opt/efr_tools/commander-cli /opt/efr_tools/slc_cli /opt/efr_tools/zap-cli
+set PATH $HOME/.local/bin $PATH /opt/netatmo-8-nano-240426-arm-none-eabi/bin /opt/efr_tools_2026-06-18/commander /opt/efr_tools_2026-06-18/slc-cli /opt/efr_tools_2026-06-18/zap
 
 # z.lua
 set -Ux _ZL_DATA "$XDG_DATA_HOME/zlua"

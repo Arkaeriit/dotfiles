@@ -255,7 +255,7 @@ nnoremap <C-A><C-F> <Esc>:Autoformat<Cr>mzGo<Esc>'z
 " vim-ruler
 nnoremap <F6> :RulerCycle<Cr>
 nnoremap <leader><F6> :RulerCut<Cr>
-let g:rulerList = [80, 50, 100, "50,80"]
+let g:rulerList = [80, 50, 100, "50,80", 64]
 
 " Tests to swap two chars in a range
 function SwapChars(pat1, pat2)

@@ -102,6 +102,11 @@ Host pythie
     Port 22
     HostName pythie.bobignou.red
 
+Host hydrogen
+    User arkaeriit
+    Port 2222
+    HostName hydrogen.pptie.de
+
 # Caladan
 Host caladan
     User maki
